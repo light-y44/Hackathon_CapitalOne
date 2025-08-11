@@ -1,0 +1,7 @@
+earthengine-api==0.1.326
+google-cloud-storage
+pandas
+numpy
+scikit-learn
+python-dotenv
+tqdm

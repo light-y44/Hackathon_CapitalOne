@@ -1,0 +1,41 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Environment & secrets
+.env
+*.json  # service account or other creds
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# Data files
+data/raw/
+data/processed/
+data/models/
+
+# Logs
+*.log
+
+# VSCode & IDE configs
+.vscode/
+.idea/
+
+# Earth Engine auth tokens
+.earthengine/
+
+# Output exports
+GEE_Exports/
