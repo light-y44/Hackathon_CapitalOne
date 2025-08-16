@@ -59,13 +59,40 @@ document.getElementById("startBtn").onclick = async () => {
         let formData = new FormData();
         formData.append("audio", blob, "recording.webm");
 
-        await fetch("/upload_audio", {
+        const response = await fetch("/upload_audio", {
             method: "POST",
             body: formData
         });
+        const data = await response.json();
+        const hindi_msg = data.hindi_text;
 
+        // Create a new user message bubble
+        let messagesDiv = document.getElementById("messages");
+        let userBubble = document.createElement("div");
+        userBubble.classList.add("message", "user");
+
+        // Add audio player
+        const audioElem = document.createElement("audio");
+        audioElem.controls = true;
+        audioElem.src = URL.createObjectURL(blob);
+        userBubble.appendChild(audioElem);
+
+        // Add Hindi transcription below audio
+        const textElem = document.createElement("div");
+        textElem.textContent = hindi_msg;
+        textElem.style.marginTop = "5px"; // spacing below audio
+        userBubble.appendChild(textElem);
+
+        // Append to chat
+        messagesDiv.appendChild(userBubble);
+
+        // Scroll to bottom
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+
+        // Clear audio chunks
         audioChunks = [];
     };
+
 
     document.getElementById("stopBtn").disabled = false;
     document.getElementById("startBtn").disabled = true;

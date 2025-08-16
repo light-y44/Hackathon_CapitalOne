@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, jsonify, redirect, url_for
 import os
 from datetime import datetime
 from pydub import AudioSegment
+from transformers import pipeline
 import sys
 import os
 
@@ -13,6 +14,7 @@ from utils.calIndx import calculate_indices_data
 from utils.utils import  calulateArea, calculateYieldPred, huggingFaceAuth
 from utils.repaymentLogic import preSeasonCalc
 from FT_model.model import FineTunedLlama
+from models.stt import load_asr_model, transcribe_hindi_audio
 
 app = Flask(__name__)
 UPLOAD_FOLDER = "uploads"
@@ -26,6 +28,18 @@ FINANCE_FINETUNED_DIR = os.path.join(current_dir,"../FT_model/finance_adapter")
 
 llama = FineTunedLlama(BASE_MODEL, GEN_FINETUNED_DIR)
 finance_llama = FineTunedLlama(BASE_MODEL, FINANCE_FINETUNED_DIR)
+
+# asr_pipe = pipeline(
+#     "automatic-speech-recognition",
+#     model="ARTPARK-IISc/whisper-tiny-vaani-hindi",
+#     chunk_length_s=30,
+#     device=0
+# )
+# asr_pipe.model.config.forced_decoder_ids = asr_pipe.tokenizer.get_decoder_prompt_ids(
+#     language="hi", task="transcribe"
+# )
+asr_pipe = load_asr_model()
+
 
 # Temporary in-memory store for repayment notifications
 repayment_notifications = []
@@ -79,7 +93,8 @@ def upload_audio():
         return jsonify({"error": "No file uploaded"}), 400
     
     audio_file = request.files['audio']
-    webm_path = os.path.join(UPLOAD_FOLDER, f"recording_{datetime.now().strftime('%Y%m%d_%H%M%S')}.webm")
+    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+    webm_path = os.path.join(UPLOAD_FOLDER, f"recording_{timestamp}.webm")
     audio_file.save(webm_path)
 
     # Convert to WAV
@@ -87,11 +102,18 @@ def upload_audio():
     sound = AudioSegment.from_file(webm_path, format="webm")
     sound.export(wav_path, format="wav")
 
+    # Transcribe
+    hindi_text = asr_pipe(wav_path)["text"]
+    # print("Transcribed Hindi text:", hindi_text)
+
     return jsonify({
-        "message": "Audio uploaded and converted to WAV",
-        "webm_path": webm_path,
-        "wav_path": wav_path
+        "message": "Audio transcribed successfully",
+        "hindi_text": hindi_text
     })
+
+
+
+
 
 @app.route('/submit_query', methods=['POST'])
 def submit_query():
@@ -107,7 +129,7 @@ def submit_query():
     return jsonify({"message": response})
 
 @app.route('/submit_finance_query', methods=['POST'])
-def submit_query():
+def submit_finance_query():
     query = request.form.get("query")
     if not query:
         return jsonify({"message": "No query provided"}), 400
