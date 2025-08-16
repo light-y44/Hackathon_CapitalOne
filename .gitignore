@@ -43,3 +43,5 @@ GEE_Exports/
 crop_yield/data/processed/mp_100m_grid.geojson
 *.safetensors
 crop_yield/data/processed/mp_100m_grid.geojson
+
+district_crop_yield/uploads/*
