@@ -1,0 +1,500 @@
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "When is the best time to sow unirrigated wheat?"},
+    {"role": "assistant", "content": "For unirrigated wheat, the best time for sowing is from mid-October to the first week of November."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "I have semi-irrigated land. When should I plant my wheat?"},
+    {"role": "assistant", "content": "If you have semi-irrigated conditions, you should aim to sow your wheat in the first fortnight of November."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "What is the ideal sowing time for irrigated wheat if I want to be on time?"},
+    {"role": "assistant", "content": "For timely sowing of irrigated wheat, the second fortnight of November is the recommended period."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "I'm running late with my irrigated wheat sowing. When is the latest I can do it?"},
+    {"role": "assistant", "content": "For delayed sowing of irrigated wheat, you should try to finish it by the second week of December at the latest."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "I am in the Malwa zone. What wheat varieties can I use for unirrigated farming?"},
+    {"role": "assistant", "content": "In the Malwa Zone, for unirrigated or semi-irrigated conditions, you can choose from J.W. 17, J.W. 3269, J.W. 3288, H.I. 1500, H.I. 1531, and H.D. 4672 (Kathiya)."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "I'm in the Nimad Zone and have irrigation. What are the best timely sown varieties?"},
+    {"role": "assistant", "content": "For timely sown irrigated wheat in the Nimad Zone, you should consider J.W. 1142, J.W. 1201, G.W. 366, or H.I. 1418."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "I farm in the Vindhya Plateau. What varieties are good for delayed irrigated sowing?"},
+    {"role": "assistant", "content": "In the Vindhya Plateau, if you are sowing late under irrigated conditions, good variety choices would be J.W. 1202, J.W. 1203, M.P. 4010, H.D. 2864, or D.L. 788-2."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "I'm in the Narmada Valley. Which Kathiya varieties are recommended for timely irrigated sowing?"},
+    {"role": "assistant", "content": "For timely irrigated sowing in the Narmada Valley, recommended Kathiya varieties include J.W. 1106, H.I. 8498, and J.W. 1215."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "What is the recommended seed quantity per hectare for wheat?"},
+    {"role": "assistant", "content": "On average, you should use 100 kg of seed per hectare, assuming the thousand-grain weight is around 40 grams."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "My wheat seeds are larger than average. How should I adjust the seed rate?"},
+    {"role": "assistant", "content": "If the thousand-grain weight is over 40 grams, you should increase the seed rate by 2.5 kg per hectare for every 1-gram increase in weight."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "What is the recommended row-to-row distance for unirrigated wheat?"},
+    {"role": "assistant", "content": "For unirrigated or semi-irrigated wheat, maintain a queue-to-queue distance of 25 cm."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "I am sowing irrigated wheat on time. What should be the distance between rows?"},
+    {"role": "assistant", "content": "For timely sown irrigated wheat, the recommended distance between rows is 23 cm."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "Can I mix seeds with fertilizer to save time while sowing?"},
+    {"role": "assistant", "content": "No, you should never mix seeds with fertilizer. Research shows it can reduce germination by up to 32%. It is best to use a seed-less fertilizer drill."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "How should I treat my wheat seeds before sowing?"},
+    {"role": "assistant", "content": "You should treat your seeds before sowing. Use Carbaxin 75% WP or Carbondajim 50% WP at a rate of 2.5-3.0 grams per kg of seed."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "I have a problem with tendon disease in my wheat. How can I prevent it through seed treatment?"},
+    {"role": "assistant", "content": "To prevent tendon disease, you should treat your seeds with Tebukonojal at a rate of 1 gram per kg of seed."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "How can I improve phosphorus availability for my wheat crop?"},
+    {"role": "assistant", "content": "To increase phosphorus availability, you can treat your seeds with a PSB culture at a rate of 5 grams per kg of seed."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "What is the recommended fertilizer dose for unirrigated wheat?"},
+    {"role": "assistant", "content": "For unirrigated wheat, the recommended dose is 40 kg of Nitrogen and 20 kg of Phosphorus per hectare. Potash is not required."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "I have a semi-irrigated wheat crop. What nutrients should I apply?"},
+    {"role": "assistant", "content": "For semi-irrigated wheat, you should apply 60 kg of Nitrogen, 30 kg of Phosphorus, and 15 kg of Potash per hectare."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "What is the full fertilizer recommendation for a timely sown, irrigated wheat crop?"},
+    {"role": "assistant", "content": "For a timely sown, irrigated wheat crop, the recommended dose is 120 kg of Nitrogen, 60 kg of Phosphorus, and 30 kg of Potash per hectare."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "I had to sow my irrigated wheat late. What should be the fertilizer dose?"},
+    {"role": "assistant", "content": "For delayed irrigated wheat, you should apply 80 kg of Nitrogen, 40 kg of Phosphorus, and 20 kg of Potash per hectare."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "My soil test shows a zinc deficiency. What should I do?"},
+    {"role": "assistant", "content": "Zinc deficiency is common. You should apply 25 kg of zinc sulphate per hectare. This application should be done once every three harvests, not every year."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "If I can only provide one irrigation to my wheat, when is the best time to do it?"},
+    {"role": "assistant", "content": "If you can only manage one irrigation, it is most crucial to apply it 40 to 45 days after sowing."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "I have enough water for two irrigations. When should I apply them?"},
+    {"role": "assistant", "content": "With water for two irrigations, you should apply the first one at the Kirit stage (crown root initiation) and the second one after flowering."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "What are the critical stages for three irrigations in wheat?"},
+    {"role": "assistant", "content": "If you plan for three irrigations, apply them at the Kirit stage, when the entire bud comes out, and at the time of grain formation."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "How do I schedule four irrigations for my wheat crop?"},
+    {"role": "assistant", "content": "For four irrigations, the schedule is: first at the Kirit stage, second when the entire flower emerges, third at flowering, and the fourth at the milky stage of the grain."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "Do the new wheat varieties really need 5-6 irrigations?"},
+    {"role": "assistant", "content": "No, many new varieties developed by the university do not require 5-6 irrigations. 3 to 4 irrigations are sufficient to get a high yield of 55-60 quintals."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "I heard about a zero tillage technique. What is it?"},
+    {"role": "assistant", "content": "Zero tillage is a method where you sow wheat directly after harvesting paddy without any plowing. It uses a special seed and fertilizer drill machine to save time, fuel, and reduce costs, which is especially useful for preventing delayed sowing."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "What are the benefits of using zero tillage for wheat?"},
+    {"role": "assistant", "content": "The main benefits are significant savings in fuel, energy, and time (85-90%). It also reduces weed growth and saves about ₹2000-2500 per hectare on field preparation costs, allowing for timely sowing and good production."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "What is the 'Pharo Irrigation Raised Bed' or 'FIRB' sowing technique?"},
+    {"role": "assistant", "content": "The FIRB technique, or sowing on ridges, involves using a tractor-fired drill to sow wheat in two or three rows on raised beds or ridges. This method saves on fertilizer and seeds, prevents the crop from falling, and uses the drains for efficient irrigation and drainage."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "How does sowing on ridges help my wheat crop?"},
+    {"role": "assistant", "content": "Sowing on ridges reduces the cost of seeds, fertilizers, and water. It improves root growth, prevents the crop from lodging (falling over), and makes irrigation and weed control easier."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "The weather is getting warmer. Are there any wheat varieties that can tolerate high temperatures?"},
+    {"role": "assistant", "content": "Yes. Varieties like J.W. 1142, J.W. 1201, J.W. 3211, and J.W. 3288 have been developed to have the ability to deliver production even in higher temperatures."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "I'm worried about the new strain of black ochre (UG 99). Are there resistant varieties available?"},
+    {"role": "assistant", "content": "Yes, to combat the UG 99 strain, you can use resistant varieties like MPO 1215, MP 3336, and MP 4010. These have been tested and shown to be resistant while still providing high yields."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "What are the common broadleaf weeds in wheat fields?"},
+    {"role": "assistant", "content": "Common broadleaf weeds you might find include Bathua, Senji, Dudhi, Kasni, Wild Spinach, Akri, Wild peas, Krishnanil, Satyanashi, and Hirankhuri."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "What kind of narrow-leaf weeds should I look out for in my wheat crop?"},
+    {"role": "assistant", "content": "The main narrow-leaf weeds to watch for are Motha, Kansa, wild oats, Chirayya millet, and other grasses."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "How can I control both narrow and broadleaf weeds with one chemical right after sowing?"},
+    {"role": "assistant", "content": "To control both types of weeds, you can apply Pandimethylene at a rate of 1.0 kg per hectare immediately after sowing."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "I missed the early window for weed control. What can I use up to 35 days after sowing?"},
+    {"role": "assistant", "content": "Up to 35 days after sowing, you can use Sulfosulfuran (33.5g/ha) or Metribusin (250g/ha) to control both narrow and broadleaf weeds."}
+]}
+{"messages": [
+    {"role":"system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "I only have a broadleaf weed problem. What is an effective chemical to use?"},
+    {"role": "assistant", "content": "For controlling only broadleaf weeds, you can spray 2, 4-D at a rate of 0.4 - 0.5 kg per hectare up to 35 days after sowing."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "Aphids are attacking my wheat crop. What should I do?"},
+    {"role": "assistant", "content": "To control aphids, which are common on late-sown crops, you can spray with 200-250 g/ha of dimethoate, oxydemeton-methyl, or monocrotophos mixed with 600 to 750 liters of water."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "I see termites in my field. How can I control them?"},
+    {"role": "assistant", "content": "For termite control, you should treat your seeds before sowing with Chlorpyrifos at a rate of 4 ml per kg. Also, make sure to use fully rotten manure and destroy termite mounds around the fields."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "There are rats in my wheat field. How can I manage them?"},
+    {"role": "assistant", "content": "To control rats, you should plow the field to destroy their burrows. You can also use mousetraps or place zinc phosphide tablets around the holes in the field."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "I have a problem with Alternaria blight in my wheat. How can I control it?"},
+    {"role": "assistant", "content": "For Alternaria blight, you can spray mancozeb at 1 gram per liter or carbendazim at 1.5 grams per liter. Also, ensure you use resistant varieties and certified seeds for the next crop."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "My wheat has black rust (Black Kitt). What is the recommended control measure?"},
+    {"role": "assistant", "content": "To control black rust, you can spray mancozeb at 3 grams per liter or carbendazim at 1.5 grams per liter. Using resistant varieties like W.H. 147 is also a key preventive measure."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "How do I manage Loose Smut disease in my wheat?"},
+    {"role": "assistant", "content": "Loose Smut is a seed-borne disease. The best control is to use certified, disease-free seeds and treat them with Vitavex or Carbendazim at 2.5 to 3 grams per kg of seed before sowing."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "I'm getting Karnal Bunt in my wheat. How can I stop it?"},
+    {"role": "assistant", "content": "Controlling Karnal Bunt is difficult, but you can reduce its severity by spraying Propiconazole 0.1%. It is also important to use resistant Kathia wheat varieties and ensure irrigation is done before the flowering stage."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "What is the protein content of wheat varieties like J.W. 1203?"},
+    {"role": "assistant", "content": "The variety J.W. 1203 has a very high protein content, around 13.50%."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "Are the new wheat varieties rich in micronutrients?"},
+    {"role": "assistant", "content": "Yes, many of the recently developed varieties are rich in trace elements like iron, zinc, and manganese. For example, J.W. 1201 has high levels of all three."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "Is it okay to burn the wheat stubble (Narvai) after harvesting?"},
+    {"role": "assistant", "content": "No, you should not burn the stubble. It destroys beneficial microorganisms in the soil. Instead, you can run a rotavator in the field while there is adequate moisture to cut the stubble and mix it with the soil, which is beneficial."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "How can I reduce the cost of wheat production?"},
+    {"role": "assistant", "content": "To reduce costs, you can adopt techniques like zero tillage or the FIRB (weir-groove) method, which save on fuel, seeds, and fertilizers. Also, always get your soil tested to apply the exact amount of fertilizer needed and use integrated pest and weed management instead of relying only on expensive chemicals."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "What is the main cause of low wheat productivity in unirrigated areas?"},
+    {"role": "assistant", "content": "In unirrigated areas, major problems include moisture loss during germination, high temperatures during grain filling, and root rot issues. Also, delayed sowing after harvesting soybeans is a common problem."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "Why is my wheat maturing too early in irrigated areas?"},
+    {"role": "assistant", "content": "Early maturity in irrigated areas is often caused by a short winter period and a sudden increase in temperature during the pollination stage. This leads to less filling of grains."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "How deep should I plow my fields?"},
+    {"role": "assistant", "content": "It is recommended to do deep plowing once every three years. For regular field preparation, especially in heavy black soil, using a disc harrow or rotavator is appropriate to create a fine tilth."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "I am in the Bundelkhand area. Which wheat varieties are suitable for my unirrigated land?"},
+    {"role": "assistant", "content": "For unirrigated or semi-irrigated conditions in the Bundelkhand area, you can use varieties such as J.W. 3288, J.W. 3211, J.W. 17, H.I. 1500, and H.I. 153."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "Which varieties are recommended for timely irrigated sowing in the Gwalior and Bhind region?"},
+    {"role": "assistant", "content": "In the surrounding area including Gwalior and Bhind, for timely irrigated wheat, you can choose from H.I. 1544, G.W. 273, G.W. 322, J.W. 1201, J.W. 1106, J.W. 1215, and H.I. 8498."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "I am in the Satpura Plateau (Chhindwara/Betul). What should I plant if I have to sow late with irrigation?"},
+    {"role": "assistant", "content": "For delayed irrigated sowing in the Satpura Plateau, recommended varieties are H.D. 2864, M.P. 4010, J.W. 1202, and J.W. 1203."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "I have to do extremely delayed sowing. Is there any special variety for this situation?"},
+    {"role": "assistant", "content": "Yes, in cases of extremely delayed sowing across all areas, the varieties H.D. 2404 and M.P. 1202 are specifically recommended."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "How much of the state's wheat production is Kathia wheat?"},
+    {"role": "assistant", "content": "Kathia varieties contribute about 8 to 10 percent of the total wheat production in the state."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "Can you name some advanced Kathia wheat varieties?"},
+    {"role": "assistant", "content": "Certainly. Some advanced Kathia varieties are H I 8498 (Malvashakti), H I 8663 (Nutrition), M P O 1215, and H D 4672 (Malavaratna)."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "How should I apply nitrogen to my irrigated wheat crop?"},
+    {"role": "assistant", "content": "For irrigated varieties, you should apply nitrogen in three parts: half the amount at the time of sowing, a quarter at the time of the first irrigation, and the final quarter at the time of the second irrigation."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "What is the yield potential of J.W. 3211 with two irrigations?"},
+    {"role": "assistant", "content": "The wheat variety J.W. 3211 has a yield potential of 43-45 quintals per hectare when given two irrigations."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "I have a problem with military insects chewing the leaves at night. How can I control them?"},
+    {"role": "assistant", "content": "For military insects, you should avoid excessive use of nitrogen fertilizer. If the infestation is high (4-5 larvae per meter row), you can spray phenytrotheon, quinalphos, or trichlorfon in the evening."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "What are the symptoms of 'Sehu disease' or Seed Gall Nematode?"},
+    {"role": "assistant", "content": "Sehu disease, caused by nematodes, results in stunted, dwarf plants with twisted leaves. Instead of grains, the affected earrings develop green blisters or galls. This can reduce yield by up to 80%."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "How can I manage Sehu disease (nematodes) in my field?"},
+    {"role": "assistant", "content": "To manage Sehu disease, use certified, nematode-free seeds. Adopt crop rotation with non-host crops. If you must use farm-saved seeds, you can separate the galls by dipping the seeds in a 2% salt water solution; the galls will float and can be removed."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "My wheat leaves have a white or gray fine powder on them. What disease is this?"},
+    {"role": "assistant", "content": "That sounds like Powdery Mildew, or 'Dahiya Disease'. It is favored by cold and humid weather. You can control it by spraying carbendazim at 1.5 grams per liter."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "Is it better to use sprinklers for irrigation?"},
+    {"role": "assistant", "content": "Yes, using sprinklers for irrigation is highly recommended wherever possible. It is a more efficient way to use water."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "Why is my Kathia wheat considered good for export?"},
+    {"role": "assistant", "content": "Kathia wheat has good export potential because it is generally free from diseases like Karnal bunt, yellowberry, and black spot, which are major concerns for quality."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "What is the general fertilizer advice if I haven't done soil testing?"},
+    {"role": "assistant", "content": "While soil testing is always best, a general recommendation for irrigated, early ripening varieties is 80-120 kg Nitrogen, 60 kg Phosphorus, and 30 kg Potash per hectare. You should also add 15-20 tonnes of rotten farmyard manure every two years."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "The temperature is fluctuating a lot in early November. How does this affect my crop?"},
+    {"role": "assistant", "content": "More fluctuations in temperature in early November can negatively impact germination and early growth. It's a key problem related to productivity, especially in unirrigated areas."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "How can I control weeds without chemicals?"},
+    {"role": "assistant", "content": "You can control weeds by adopting the FIRB (sowing on ridges) technique, which makes mechanical weeding easier. Additionally, using the zero tillage method has been shown to reduce the accumulation of weeds."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "I have an issue with wireworms eating my seeds. What should I do?"},
+    {"role": "assistant", "content": "For wireworms, it's important to sow on time and avoid using raw cow dung manure. If the infestation is severe in a standing crop, you can apply Chlorpyrifos with irrigation water as a control measure."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "My plants are getting stunted and have blisters on the roots. What could be the problem?"},
+    {"role": "assistant", "content": "Blisters or lumps on the roots are a classic symptom of Root-knot Nematodes. This leads to stunted, green plants. To manage this, deep plowing in the summer and crop rotation are very effective."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "Why is it important to use pure and healthy seeds?"},
+    {"role": "assistant", "content": "Using pure, healthy, and certified seeds is a key essential for prolific production. It ensures good germination, reduces the risk of seed-borne diseases, and gives you a crop with the desired genetic traits of the variety you have chosen."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "Should I place fertilizer below the seeds?"},
+    {"role": "assistant", "content": "Yes, that is the correct placement. You should put the fertilisers 2-3 cm below the seeds. This contributes to increasing production and the efficiency of fertilizer use."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "I have black heavy soil. What is the best way to prepare my field?"},
+    {"role": "assistant", "content": "For black heavy soil, achieving a fine tilth can be difficult. It's recommended to use a suitable disc harrow or a rotavator for field preparation. Also, deep plowing once in three years is beneficial."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "What is the average wheat productivity in Madhya Pradesh versus India?"},
+    {"role": "assistant", "content": "The average wheat productivity in India is 31.5 quintals per hectare, while in Madhya Pradesh it is 5.3 quintals per hectare."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "What percentage of India's wheat area is in Madhya Pradesh?"},
+    {"role": "assistant", "content": "Madhya Pradesh accounts for 18% of India's total wheat area."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "How do I control Hessian fly in my wheat crop?"},
+    {"role": "assistant", "content": "To manage Hessian fly, you should plow deep in the summer, use resistant varieties, and avoid late sowing. If chemical control is needed, you can spray Dimethoate or Methyl Demeton."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "The lower part of my plants are rotting and turning black. What could this be?"},
+    {"role": "assistant", "content": "This sounds like the 'Apocalyptic disease' of wheat, caused by Gymonomycis graminis. It is more likely in fields where plowing and weeding are not done properly. Ensuring good field cleanliness and using certified seeds is the best prevention."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "What is the I.P.M. strategy for controlling mights in wheat?"},
+    {"role": "assistant", "content": "For Integrated Pest Management (I.P.M.) against mights, you should sow resistant varieties like W.H.-147 and Raj-3836, sow on time, and take good care of the crop."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "Can I use Isoproturon for weed control?"},
+    {"role": "assistant", "content": "Yes, you can use Isoproturon at a rate of 750g per hectare to control hybrid leaf weeds up to 20 days after sowing. You can also mix it with 2,4-D to control both wide and narrow leaf weeds."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "What is the benefit of using cow dung manure?"},
+    {"role": "assistant", "content": "Applying 15-20 tonnes of rotten cow dung manure every two years improves the land structure and increases crop yield. It's an excellent way to maintain soil health."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "I have an infestation of stinkbugs. How do I manage them?"},
+    {"role": "assistant", "content": "To manage stinkbugs, avoid late sowing and excessive use of nitrogen fertilizers. If the infestation is severe, you can spray Dimethoate or Methyl Demeton."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "What is the problem with 'conserved moisture' farming now?"},
+    {"role": "assistant", "content": "Farming on conserved moisture is almost finished. The scenario has changed due to the increased use of sprinkler irrigation systems, which means most areas receive at least one irrigation now."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "Why is it important to control weeds on time?"},
+    {"role": "assistant", "content": "It's crucial to control weeds on time because they can reduce your yield by 25-35%, and sometimes even more. If you wait too long, the weeds become stronger, and controlling them with chemicals becomes more difficult and less effective."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "My wheat grains are discolored and turning black. What disease is this?"},
+    {"role": "assistant", "content": "This could be 'Black dot' disease, which is caused by fungi like Alternaria and Helminthosporium. It occurs in humid weather. The best prevention is to use certified seeds, resistant varieties, and maintain field cleanliness."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "How can I use the sun to help treat my seeds?"},
+    {"role": "assistant", "content": "You can perform a solar heat treatment. In the hot months of May-June, soak the seeds in water for 4 hours in the morning and then dry them thoroughly in the strong afternoon sun. This helps manage several seed-borne diseases."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "The tips of my wheat leaves are turning yellow. What could it be?"},
+    {"role": "assistant", "content": "Yellowing leaves can be a symptom of 'Barley yellow dwarf disease', which is spread by aphids. To control it, you need to manage the aphid population and use resistant varieties."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "I'm in the Banganga Valley (Balaghat/Seoni). What are the best varieties for timely irrigated sowing?"},
+    {"role": "assistant", "content": "In the Banganga Valley, for timely irrigated sowing, you should consider the varieties J.W. 1201, G.W. 366, H.I. 1544, or Raj 3067."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "What is the recommended fertilizer dose if I can provide only one irrigation?"},
+    {"role": "assistant", "content": "If you have a maximum of one irrigation available, the recommended fertilizer dose is 60 kg of Nitrogen, 30 kg of Phosphorus, and 15 kg of Potash per hectare."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "And what if I can provide a maximum of two irrigations? What should be the fertilizer dose then?"},
+    {"role": "assistant", "content": "With a maximum of two irrigations, you should apply 80 kg of Nitrogen, 40 kg of Phosphorus, and 20 kg of Potash per hectare."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "I have an issue with white grubs (Kurmul) in my field. What is the I.P.M. strategy?"},
+    {"role": "assistant", "content": "The document suggests a general I.P.M. strategy for many pests which includes avoiding late sowing, not using excessive nitrogen fertilizer, and taking good care of the crop. For specific grub control, ensuring you don't use raw manure and doing deep summer plowing is also beneficial."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "My wheat plants are crooked and the nodes are small. The earrings are not forming properly. What is this disease?"},
+    {"role": "assistant", "content": "This sounds like Downy Mildew ('Muduromil Asita' or 'Haritbali'). It occurs in humid areas with water accumulation. The best management is to ensure good drainage, use resistant varieties, and maintain a clean field."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "How has the increased use of fertilizers and irrigation affected wheat cultivation?"},
+    {"role": "assistant", "content": "The increased use of irrigation facilities, especially sprinklers, and higher consumption of fertilizers, including micro-elements like zinc, are considered positive developments that have helped improve wheat productivity."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "I planted wheat after paddy. Do I need to apply more nitrogen?"},
+    {"role": "assistant", "content": "Yes. If you have harvested paddy, sugarcane, maize or linseed in the Kharif season, it is recommended to add nitrogen at a rate of 120 kg per hectare for your wheat crop."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "What is the main problem with sowing wheat late in the Soybean-Wheat system?"},
+    {"role": "assistant", "content": "The main problem is that the prevailing wheat varieties are of a longer duration. When soybean harvesting is delayed, it leads to delayed sowing of wheat, which can significantly impact its yield."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "What is the best way to control stem borer insects in wheat?"},
+    {"role": "assistant", "content": "Stem borer attacks unirrigated crops in November-December. You can control it by spraying Methyl Demeton 25 EC, Monocrotophos 36 SL, or Malathion 50 EC at a rate of 600 ml per hectare with 600-750 liters of water."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "My wheat leaves have brown spots that are spreading and becoming irregular. What is it?"},
+    {"role": "assistant", "content": "This sounds like Helminthosporium foliar spot. You can manage this by using certified, registered, and disease-free seeds and planting resistant varieties."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "Why is it important to select the right variety for my specific area?"},
+    {"role": "assistant", "content": "Selecting a variety that is specifically recommended for your agro-climatic zone (like Malwa, Nimad, etc.) is crucial. These varieties have been tested and proven to perform well under the specific soil type, rainfall pattern, and weather conditions of your region, leading to better yield and resilience."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "I can't get timely irrigation water even though I'm in a command area. What can I do?"},
+    {"role": "assistant", "content": "This is a common problem. It's important to choose varieties that have good water and nutrient use capacity. Varieties like J.W. 3211 and J.W. 3269 perform well even with just one or two irrigations. Also, using sprinklers can help you make the most of the water you do get."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "What is 'Flag Kadua Disease' and how do I control it?"},
+    {"role": "assistant", "content": "Flag Kadua disease affects the leaves, showing gray-black sori. To control it, use certified, disease-free seeds and treat them with a fungicide like Vitavex or Carbendazim at 1.5g per kg of seed."}
+]}
+{"messages": [
+    {"role": "system", "content": "You are a friendly and knowledgeable agriculture expert advising farmers."},
+    {"role": "user", "content": "What are the key things I must do to get the best possible wheat yield?"},
+    {"role": "assistant", "content": "For prolific production, you must: use balanced fertilizers based on soil testing, select the right variety for your area, sow on time, manage weeds and pests promptly, and provide irrigation at critical stages. These are the key essentials for a successful harvest."}
+]}

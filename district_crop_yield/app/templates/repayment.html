@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Farmer Adivsor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>👨‍🌾 Krishi Mitr</h1>
+        <h2 class="first-subheader">😊 Aapka Krishi Salahkaar!</h2>
+    </header>
+   
+    <!-- Repayment Notifications -->
+    <div class="container">
+        <!-- Left column: Chat + Notifications -->
+        <div class="left-panel">
+            <div class="section notification-box">
+                <h2>💰 Summary</h2>
+                
+            </div>
+                <!-- General Queries -->
+            <div class="section chat-box">
+                <h2>🤖 General Queries</h2>
+
+                <!-- Messages area -->
+                <div id="messages" class="messages">
+                    <!-- Example bubbles -->
+                    <div class="message bot">Hello! How can I help you today?</div>
+                    <div class="message user">What is the best wheat variety for my region?</div>
+                    <div class="message bot">HD 2967 is a good option due to high yield and disease resistance.</div>
+                </div>
+
+                <!-- Text Input -->
+                <form id="queryForm">
+                    <div class="query-box">
+                        <input type="text" name="query" placeholder="Type your question..." style="flex:1; padding:8px;">
+                        <button type="submit">Send</button>
+                    </div>
+                </form>
+
+                <br>
+
+                <!-- Voice Recording -->
+                <button id="startBtn">🎙️ Start Recording</button>
+                <button id="stopBtn" disabled>⏹ Stop Recording</button>
+            </div>
+        </div>
+        <div class="right-panel">
+            <div class="section info-box">
+                 <!-- Information Input Box -->
+                <h2>📋 Diagram</h2>
+                
+            </div>
+        </div>
+    </div>
+    
+    <!-- Link external JS -->
+    <script src="{{ url_for('static', filename='js/recording.js') }}"></script>
+</body>
+</html>

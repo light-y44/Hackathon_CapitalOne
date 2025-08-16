@@ -1,0 +1,171 @@
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 20px; 
+}
+
+header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.first-subheader {
+    color: #555;
+    text-align: center;
+}
+
+h2 { 
+    color: #333; 
+}
+.section { 
+    margin-bottom: 40px; 
+    padding: 20px; 
+    border: 1px solid #ccc; 
+    border-radius: 10px; 
+}
+
+.notification { 
+    background: #f9f9f9; 
+    padding: 10px; 
+    margin: 5px 0; 
+    border-left: 5px solid orange; 
+}
+
+.query-box { 
+    display: flex; 
+    gap: 10px; 
+}
+
+button { 
+    padding: 8px 12px; 
+    cursor: pointer; 
+}
+
+.container {
+    display: flex;
+    height: 100vh; 
+    gap: 30px;
+}
+
+/* Left side: chat + notifications */
+.left-panel {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Right side: info form */
+.right-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-box {
+    height: 755px; /* fixed height for info box */
+    overflow-y: auto; /* scrollable if content overflows */
+    display: flex;
+    flex-direction: column;
+}
+
+.info-form {
+    display: grid;
+    flex: 1;
+    grid-template-columns: repeat(2, 1fr); /* always 2 fields per row */
+    gap: 20px 30px; /* row gap, column gap */
+    align-items: flex-end;
+}
+
+.info-form label {
+    font-weight: bold;
+    margin-bottom: 3px;
+    display: block;
+}
+
+/* Each field container */
+.field-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-form select,
+.info-form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.info-form select:focus,
+.info-form input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Submit button */
+.info-form button {
+    margin-top: auto; /* pushes it to the bottom */
+    align-self: stretch; /* full width button */
+    grid-column: span 2; /* makes button take entire row */
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+}
+
+.info-form button:hover {
+    background-color: darkorange;
+}
+
+/* Chat messages container */
+.messages {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: 380px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #fafafa;   /* softer gray like .notification */
+}
+
+/* User message bubble */
+.message.user {
+    align-self: flex-end;
+    background: #ffe0b2;   /* soft orange tint */
+    padding: 10px 14px;
+    border-radius: 12px 12px 0 12px;
+    max-width: 80%;
+    font-size: 14px;
+    color: #333;
+    border: 1px solid #ffb74d;
+}
+
+/* Bot message bubble */
+.message.bot {
+    align-self: flex-start;
+    background: #f1f1f1;   /* same gray as notifications */
+    padding: 10px 14px;
+    border-radius: 12px 12px 12px 0;
+    max-width: 80%;
+    font-size: 14px;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+/* Scrollbar styling (to match theme) */
+.messages::-webkit-scrollbar {
+    width: 6px;
+}
+.messages::-webkit-scrollbar-thumb {
+    background: orange;
+    border-radius: 10px;
+}
+.messages::-webkit-scrollbar-track {
+    background: #f5f5f5;
+}

@@ -1,0 +1,1810 @@
+Year,Season,Area,Production,Crop_yield,crop_type,district
+2019 - 2020,Rabi,34,80,2.35,Barley,Agar malwa
+2020 - 2021,Rabi,40,90,2.25,Barley,Agar malwa
+2021 - 2022,Rabi,3,5,1.67,Barley,Agar malwa
+2019 - 2020,Rabi,40,46,1.15,Barley,Agar malwa
+2020 - 2021,Rabi,67,53,0.79,Barley,Agar malwa
+2021 - 2022,Rabi,16,14,0.88,Barley,Anuppur
+2022 - 2023,Rabi,50,41,0.82,Barley,Anuppur
+2019 - 2020,Rabi,67,199,2.97,Barley,Anuppur
+2020 - 2021,Rabi,64,205,3.2,Barley,Anuppur
+2021 - 2022,Rabi,87,188,2.16,Barley,Ashoknagar
+2022 - 2023,Rabi,110,177,1.61,Barley,Ashoknagar
+2019 - 2020,Rabi,1,2,2,Barley,Ashoknagar
+2021 - 2022,Rabi,11,20,1.82,Barley,Balaghat
+2022 - 2023,Rabi,33,36,1.09,Barley,Balaghat
+2019 - 2020,Rabi,28,90,3.21,Barley,Barwani
+2021 - 2022,Rabi,3,5,1.67,Barley,Betul
+2019 - 2020,Rabi,236,677,2.87,Barley,Betul
+2020 - 2021,Rabi,271,444,1.64,Barley,Betul
+2021 - 2022,Rabi,91,245,2.69,Barley,Bhind
+2022 - 2023,Rabi,230,474,2.06,Barley,Bhind
+2019 - 2020,Rabi,4,10,2.5,Barley,Bhind
+2020 - 2021,Rabi,1,1,1,Barley,Bhopal
+2021 - 2022,Rabi,1,1,1,Barley,Bhopal
+2019 - 2020,Rabi,9845,18912,1.92,Barley,Bhopal
+2020 - 2021,Rabi,8480,16070,1.9,Barley,Bhopal
+2021 - 2022,Rabi,6210,13116,2.11,Barley,Chhatarpur
+2022 - 2023,Rabi,9846,13981,1.42,Barley,Chhatarpur
+2019 - 2020,Rabi,17,26,1.53,Barley,Chhatarpur
+2020 - 2021,Rabi,2,3,1.5,Barley,Damoh
+2019 - 2020,Rabi,284,959,3.38,Barley,Damoh
+2020 - 2021,Rabi,327,533,1.63,Barley,Damoh
+2021 - 2022,Rabi,102,253,2.48,Barley,Datia
+2022 - 2023,Rabi,220,407,1.85,Barley,Datia
+2019 - 2020,Rabi,1,2,2,Barley,Datia
+2020 - 2021,Rabi,2,3,1.5,Barley,Dhar
+2019 - 2020,Rabi,2,2,1,Barley,Dindori
+2020 - 2021,Rabi,6,19,3.17,Barley,Guna
+2021 - 2022,Rabi,7,25,3.57,Barley,Guna
+2019 - 2020,Rabi,32,77,2.41,Barley,Guna
+2020 - 2021,Rabi,74,123,1.66,Barley,Guna
+2021 - 2022,Rabi,14,41,2.93,Barley,Gwalior
+2022 - 2023,Rabi,49,85,1.73,Barley,Gwalior
+2019 - 2020,Rabi,2,6,3,Barley,Gwalior
+2020 - 2021,Rabi,2,4,2,Barley,Harda
+2019 - 2020,Rabi,4,11,2.75,Barley,Harda
+2020 - 2021,Rabi,9,28,3.11,Barley,Hoshangabad
+2021 - 2022,Rabi,2,5,2.5,Barley,Hoshangabad
+2019 - 2020,Rabi,1,2,2,Barley,Hoshangabad
+2020 - 2021,Rabi,1,1,1,Barley,Indore
+2021 - 2022,Rabi,1,3,3,Barley,Indore
+2019 - 2020,Rabi,15,34,2.27,Barley,Indore
+2020 - 2021,Rabi,3,4,1.33,Barley,Jhabua
+2019 - 2020,Rabi,99,251,2.54,Barley,Jhabua
+2020 - 2021,Rabi,49,113,2.31,Barley,Jhabua
+2021 - 2022,Rabi,42,96,2.29,Barley,Katni
+2022 - 2023,Rabi,78,118,1.51,Barley,Katni
+2019 - 2020,Rabi,12,20,1.67,Barley,Katni
+2021 - 2022,Rabi,2,1,0.5,Barley,Mandla
+2019 - 2020,Rabi,110,462,4.2,Barley,Mandla
+2020 - 2021,Rabi,64,238,3.72,Barley,Mandla
+2021 - 2022,Rabi,29,94,3.24,Barley,Mandsaur
+2022 - 2023,Rabi,270,671,2.49,Barley,Mandsaur
+2019 - 2020,Rabi,86,294,3.42,Barley,Mandsaur
+2020 - 2021,Rabi,53,174,3.28,Barley,Mandsaur
+2021 - 2022,Rabi,12,36,3,Barley,Morena
+2022 - 2023,Rabi,35,73,2.09,Barley,Morena
+2019 - 2020,Rabi,1471,4772,3.24,Barley,Morena
+2020 - 2021,Rabi,682,1680,2.46,Barley,Morena
+2021 - 2022,Rabi,410,1333,3.25,Barley,Neemuch
+2022 - 2023,Rabi,1775,3724,2.1,Barley,Neemuch
+2019 - 2020,Rabi,621,1439,2.32,Barley,Neemuch
+2020 - 2021,Rabi,1305,2756,2.11,Barley,Neemuch
+2021 - 2022,Rabi,547,1285,2.35,Barley,Niwari
+2022 - 2023,Rabi,710,1126,1.59,Barley,Niwari
+2021 - 2022,Rabi,611,1322,2.16,Barley,Panna
+2022 - 2023,Rabi,840,1310,1.56,Barley,Panna
+2019 - 2020,Rabi,1,4,4,Barley,Raisen
+2019 - 2020,Rabi,20,57,2.85,Barley,Raisen
+2020 - 2021,Rabi,12,37,3.08,Barley,Rajgarh
+2021 - 2022,Rabi,3,9,3,Barley,Rajgarh
+2019 - 2020,Rabi,7,23,3.29,Barley,Rajgarh
+2020 - 2021,Rabi,13,37,2.85,Barley,Ratlam
+2021 - 2022,Rabi,3,9,3,Barley,Ratlam
+2019 - 2020,Rabi,807,1333,1.65,Barley,Ratlam
+2020 - 2021,Rabi,592,877,1.48,Barley,Ratlam
+2021 - 2022,Rabi,283,511,1.81,Barley,Rewa
+2022 - 2023,Rabi,505,697,1.38,Barley,Rewa
+2019 - 2020,Rabi,56,135,2.41,Barley,Rewa
+2020 - 2021,Rabi,52,109,2.1,Barley,Rewa
+2021 - 2022,Rabi,30,50,1.67,Barley,Sagar
+2022 - 2023,Rabi,63,95,1.51,Barley,Sagar
+2019 - 2020,Rabi,3539,5496,1.55,Barley,Sagar
+2020 - 2021,Rabi,2021,4095,2.03,Barley,Sagar
+2021 - 2022,Rabi,1482,2979,2.01,Barley,Satna
+2022 - 2023,Rabi,2225,3248,1.46,Barley,Satna
+2019 - 2020,Rabi,2,5,2.5,Barley,Satna
+2020 - 2021,Rabi,5,18,3.6,Barley,Sehore
+2021 - 2022,Rabi,4,9,2.25,Barley,Sehore
+2019 - 2020,Rabi,272,301,1.11,Barley,Sehore
+2020 - 2021,Rabi,113,111,0.98,Barley,Sehore
+2021 - 2022,Rabi,94,122,1.3,Barley,Shahdol
+2022 - 2023,Rabi,130,109,0.84,Barley,Shahdol
+2019 - 2020,Rabi,1,2,2,Barley,Shajapur
+2019 - 2020,Rabi,27,92,3.41,Barley,Shajapur
+2020 - 2021,Rabi,9,34,3.78,Barley,Sheopur
+2021 - 2022,Rabi,4,15,3.75,Barley,Sheopur
+2019 - 2020,Rabi,1022,1554,1.52,Barley,Sheopur
+2020 - 2021,Rabi,1533,3814,2.49,Barley,Sheopur
+2021 - 2022,Rabi,269,586,2.18,Barley,Shivpuri
+2022 - 2023,Rabi,560,941,1.68,Barley,Shivpuri
+2019 - 2020,Rabi,1911,2781,1.46,Barley,Shivpuri
+2020 - 2021,Rabi,1560,3625,2.32,Barley,Shivpuri
+2021 - 2022,Rabi,953,1369,1.44,Barley,Sidhi
+2022 - 2023,Rabi,1119,1231,1.1,Barley,Sidhi
+2021 - 2022,Rabi,3788,6591,1.74,Barley,Singrauli
+2022 - 2023,Rabi,4280,8688,2.03,Barley,Singrauli
+2019 - 2020,Rabi,1895,4722,2.49,Barley,Singrauli
+2020 - 2021,Rabi,1931,4526,2.34,Barley,Singrauli
+2021 - 2022,Rabi,1054,2477,2.35,Barley,Tikamgarh
+2022 - 2023,Rabi,976,1698,1.74,Barley,Tikamgarh
+2019 - 2020,Rabi,14,38,2.71,Barley,Ujjain
+2019 - 2020,Rabi,85,108,1.27,Barley,Ujjain
+2020 - 2021,Rabi,45,46,1.02,Barley,Ujjain
+2021 - 2022,Rabi,26,34,1.31,Barley,Umaria
+2022 - 2023,Rabi,70,71,1.01,Barley,Umaria
+2019 - 2020,Rabi,13,27,2.08,Barley,Umaria
+2020 - 2021,Rabi,16,28,1.75,Barley,Vidisha
+2021 - 2022,Rabi,14,45,3.21,Barley,Vidisha
+2018 - 2019,Rabi,48638,36868,0.76,Gram,Agar malwa
+2019 - 2020,Rabi,16913,21091,1.25,Gram,Agar malwa
+2020 - 2021,Rabi,15531,25471,1.64,Gram,Agar malwa
+2021 - 2022,Rabi,4980,5314,1.07,Gram,Agar malwa
+2022 - 2023,Rabi,7900,8058,1.02,Gram,Agar malwa
+2018 - 2019,Rabi,9610,12628,1.31,Gram,Agar malwa
+2019 - 2020,Rabi,15191,24989,1.64,Gram,Agar malwa
+2020 - 2021,Rabi,14908,16577,1.11,Gram,Alirajpur
+2021 - 2022,Rabi,19345,24529,1.27,Gram,Alirajpur
+2022 - 2023,Rabi,18760,14614,0.78,Gram,Alirajpur
+2018 - 2019,Rabi,6416,4125,0.64,Gram,Alirajpur
+2019 - 2020,Rabi,10838,10524,0.97,Gram,Alirajpur
+2020 - 2021,Rabi,7810,8786,1.12,Gram,Anuppur
+2021 - 2022,Rabi,6472,8808,1.36,Gram,Anuppur
+2022 - 2023,Rabi,16500,12210,0.74,Gram,Anuppur
+2018 - 2019,Rabi,100024,150336,1.5,Gram,Anuppur
+2019 - 2020,Rabi,67745,95927,1.42,Gram,Anuppur
+2020 - 2021,Rabi,71366,128459,1.8,Gram,Ashoknagar
+2021 - 2022,Rabi,31206,62256,2,Gram,Ashoknagar
+2022 - 2023,Rabi,32710,45467,1.39,Gram,Ashoknagar
+2020 - 2021,Rabi,49437,70695,1.43,Gram,Balaghat
+2021 - 2022,Rabi,46544,88387,1.9,Gram,Balaghat
+2022 - 2023,Rabi,55800,58981,1.06,Gram,Balaghat
+2018 - 2019,Rabi,8969,24530,2.73,Gram,Balaghat
+2019 - 2020,Rabi,7003,11730,1.67,Gram,Balaghat
+2020 - 2021,Rabi,12723,21642,1.7,Gram,Barwani
+2021 - 2022,Rabi,16732,31122,1.86,Gram,Barwani
+2022 - 2023,Rabi,13900,23769,1.71,Gram,Barwani
+2018 - 2019,Rabi,56716,95113,1.68,Gram,Barwani
+2019 - 2020,Rabi,53445,65737,1.23,Gram,Barwani
+2020 - 2021,Rabi,54825,106360,1.94,Gram,Betul
+2021 - 2022,Rabi,54737,69516,1.27,Gram,Betul
+2022 - 2023,Rabi,61800,63530,1.03,Gram,Betul
+2018 - 2019,Rabi,1835,2916,1.59,Gram,Betul
+2019 - 2020,Rabi,1301,1609,1.24,Gram,Betul
+2020 - 2021,Rabi,4427,8080,1.83,Gram,Bhind
+2021 - 2022,Rabi,1631,3117,1.91,Gram,Bhind
+2022 - 2023,Rabi,4350,5907,1.36,Gram,Bhind
+2018 - 2019,Rabi,4789,5838,1.22,Gram,Bhind
+2019 - 2020,Rabi,5238,8716,1.66,Gram,Bhind
+2020 - 2021,Rabi,4552,6064,1.33,Gram,Bhopal
+2021 - 2022,Rabi,2849,4547,1.6,Gram,Bhopal
+2022 - 2023,Rabi,3530,4956,1.4,Gram,Bhopal
+2018 - 2019,Rabi,15217,28243,1.86,Gram,Bhopal
+2019 - 2020,Rabi,9385,18967,2.02,Gram,Bhopal
+2020 - 2021,Rabi,19084,36450,1.91,Gram,Burhanpur
+2021 - 2022,Rabi,22874,42774,1.87,Gram,Burhanpur
+2022 - 2023,Rabi,21500,42355,1.97,Gram,Burhanpur
+2018 - 2019,Rabi,69638,115460,1.66,Gram,Burhanpur
+2019 - 2020,Rabi,78354,128422,1.64,Gram,Burhanpur
+2020 - 2021,Rabi,92851,175488,1.89,Gram,Chhatarpur
+2021 - 2022,Rabi,82851,134136,1.62,Gram,Chhatarpur
+2022 - 2023,Rabi,86900,165110,1.9,Gram,Chhatarpur
+2018 - 2019,Rabi,36698,81066,2.21,Gram,Chhatarpur
+2019 - 2020,Rabi,41853,114803,2.74,Gram,Chhatarpur
+2020 - 2021,Rabi,47207,93471,1.98,Gram,Chhindwara
+2021 - 2022,Rabi,42143,81757,1.94,Gram,Chhindwara
+2022 - 2023,Rabi,55200,112056,2.03,Gram,Chhindwara
+2020 - 2021,Rabi,106976,179185,1.68,Gram,Damoh
+2021 - 2022,Rabi,98697,178049,1.8,Gram,Damoh
+2022 - 2023,Rabi,109900,203315,1.85,Gram,Damoh
+2018 - 2019,Rabi,5474,11353,2.07,Gram,Damoh
+2019 - 2020,Rabi,4251,9752,2.29,Gram,Damoh
+2020 - 2021,Rabi,9968,13657,1.37,Gram,Datia
+2021 - 2022,Rabi,12453,21668,1.74,Gram,Datia
+2022 - 2023,Rabi,16390,26863,1.64,Gram,Datia
+2018 - 2019,Rabi,250864,325621,1.3,Gram,Datia
+2019 - 2020,Rabi,81717,115548,1.41,Gram,Datia
+2020 - 2021,Rabi,78787,148750,1.89,Gram,Dewas
+2021 - 2022,Rabi,88167,148561,1.68,Gram,Dewas
+2022 - 2023,Rabi,72000,142200,1.98,Gram,Dewas
+2018 - 2019,Rabi,151068,114358,0.76,Gram,Dewas
+2019 - 2020,Rabi,53499,80623,1.51,Gram,Dewas
+2020 - 2021,Rabi,46094,72598,1.57,Gram,Dhar
+2021 - 2022,Rabi,65100,85607,1.32,Gram,Dhar
+2022 - 2023,Rabi,61640,90549,1.47,Gram,Dhar
+2018 - 2019,Rabi,8233,5195,0.63,Gram,Dhar
+2019 - 2020,Rabi,13514,12379,0.92,Gram,Dhar
+2020 - 2021,Rabi,10244,12498,1.22,Gram,Dindori
+2021 - 2022,Rabi,74910,70790,0.95,Gram,Dindori
+2022 - 2023,Rabi,24600,31980,1.3,Gram,Dindori
+2018 - 2019,Rabi,98483,140535,1.43,Gram,Dindori
+2019 - 2020,Rabi,73909,111307,1.51,Gram,Dindori
+2020 - 2021,Rabi,89988,156218,1.74,Gram,Guna
+2021 - 2022,Rabi,28798,43456,1.51,Gram,Guna
+2022 - 2023,Rabi,28040,42340,1.51,Gram,Guna
+2018 - 2019,Rabi,5637,9059,1.61,Gram,Guna
+2019 - 2020,Rabi,5949,8656,1.46,Gram,Guna
+2020 - 2021,Rabi,14286,28200,1.97,Gram,Gwalior
+2021 - 2022,Rabi,2507,4986,1.99,Gram,Gwalior
+2022 - 2023,Rabi,8460,16835,1.99,Gram,Gwalior
+2018 - 2019,Rabi,46061,58037,1.26,Gram,Gwalior
+2019 - 2020,Rabi,25836,57718,2.23,Gram,Gwalior
+2020 - 2021,Rabi,52097,83355,1.6,Gram,Harda
+2021 - 2022,Rabi,91360,154581,1.69,Gram,Harda
+2022 - 2023,Rabi,96100,221222,2.3,Gram,Harda
+2020 - 2021,Rabi,24709,46576,1.88,Gram,Hoshangabad
+2021 - 2022,Rabi,49121,83997,1.71,Gram,Hoshangabad
+2022 - 2023,Rabi,64400,129444,2.01,Gram,Hoshangabad
+2018 - 2019,Rabi,79173,74343,0.94,Gram,Hoshangabad
+2019 - 2020,Rabi,14153,24994,1.77,Gram,Hoshangabad
+2020 - 2021,Rabi,8036,12456,1.55,Gram,Indore
+2021 - 2022,Rabi,6252,8922,1.43,Gram,Indore
+2022 - 2023,Rabi,14200,24282,1.71,Gram,Indore
+2018 - 2019,Rabi,32568,60967,1.87,Gram,Indore
+2019 - 2020,Rabi,21712,44987,2.07,Gram,Indore
+2020 - 2021,Rabi,25509,48238,1.89,Gram,Jabalpur
+2021 - 2022,Rabi,25886,50219,1.94,Gram,Jabalpur
+2022 - 2023,Rabi,23500,41713,1.78,Gram,Jabalpur
+2018 - 2019,Rabi,17355,13572,0.78,Gram,Jabalpur
+2019 - 2020,Rabi,15177,18106,1.19,Gram,Jabalpur
+2020 - 2021,Rabi,17093,29057,1.7,Gram,Jhabua
+2021 - 2022,Rabi,18586,21876,1.18,Gram,Jhabua
+2022 - 2023,Rabi,17500,22348,1.28,Gram,Jhabua
+2018 - 2019,Rabi,23533,47042,2,Gram,Jhabua
+2019 - 2020,Rabi,17877,39615,2.22,Gram,Jhabua
+2020 - 2021,Rabi,20273,32822,1.62,Gram,Katni
+2021 - 2022,Rabi,20620,39384,1.91,Gram,Katni
+2022 - 2023,Rabi,32600,55811,1.71,Gram,Katni
+2018 - 2019,Rabi,51544,78708,1.53,Gram,Katni
+2019 - 2020,Rabi,36626,57539,1.57,Gram,Katni
+2020 - 2021,Rabi,58405,85271,1.46,Gram,Khandwa
+2021 - 2022,Rabi,90950,135606,1.49,Gram,Khandwa
+2022 - 2023,Rabi,61430,106888,1.74,Gram,Khandwa
+2018 - 2019,Rabi,83183,94662,1.14,Gram,Khandwa
+2019 - 2020,Rabi,58727,75347,1.28,Gram,Khandwa
+2020 - 2021,Rabi,94672,150055,1.58,Gram,Khargone
+2021 - 2022,Rabi,114532,144654,1.26,Gram,Khargone
+2022 - 2023,Rabi,90540,177458,1.96,Gram,Khargone
+2018 - 2019,Rabi,7790,8600,1.1,Gram,Khargone
+2019 - 2020,Rabi,13909,16454,1.18,Gram,Khargone
+2020 - 2021,Rabi,9690,13566,1.4,Gram,Mandla
+2021 - 2022,Rabi,7933,10464,1.32,Gram,Mandla
+2022 - 2023,Rabi,24000,32472,1.35,Gram,Mandla
+2020 - 2021,Rabi,104995,133973,1.28,Gram,Mandsaur
+2021 - 2022,Rabi,32765,31192,0.95,Gram,Mandsaur
+2022 - 2023,Rabi,32840,41904,1.28,Gram,Mandsaur
+2018 - 2019,Rabi,2987,4842,1.62,Gram,Mandsaur
+2019 - 2020,Rabi,1476,3061,2.07,Gram,Mandsaur
+2020 - 2021,Rabi,2197,4003,1.82,Gram,Morena
+2021 - 2022,Rabi,493,976,1.98,Gram,Morena
+2022 - 2023,Rabi,4100,7101,1.73,Gram,Morena
+2018 - 2019,Rabi,82424,131219,1.59,Gram,Morena
+2019 - 2020,Rabi,75165,126578,1.68,Gram,Morena
+2020 - 2021,Rabi,82435,142777,1.73,Gram,Narsinghpur
+2021 - 2022,Rabi,81812,131717,1.61,Gram,Narsinghpur
+2022 - 2023,Rabi,78800,129153,1.64,Gram,Narsinghpur
+2018 - 2019,Rabi,20972,21811,1.04,Gram,Narsinghpur
+2019 - 2020,Rabi,16582,30610,1.85,Gram,Narsinghpur
+2020 - 2021,Rabi,58262,71663,1.23,Gram,Neemuch
+2021 - 2022,Rabi,15070,22575,1.5,Gram,Neemuch
+2022 - 2023,Rabi,20720,29982,1.45,Gram,Neemuch
+2019 - 2020,Rabi,1382,1788,1.29,Gram,Neemuch
+2020 - 2021,Rabi,2326,3350,1.44,Gram,Neemuch
+2021 - 2022,Rabi,1689,2993,1.77,Gram,Niwari
+2022 - 2023,Rabi,1700,2162,1.27,Gram,Niwari
+2018 - 2019,Rabi,86655,135788,1.57,Gram,Niwari
+2019 - 2020,Rabi,72156,123098,1.71,Gram,Niwari
+2020 - 2021,Rabi,71865,129644,1.8,Gram,Panna
+2021 - 2022,Rabi,65150,115055,1.77,Gram,Panna
+2022 - 2023,Rabi,68600,118404,1.73,Gram,Panna
+2018 - 2019,Rabi,144261,250870,1.74,Gram,Panna
+2019 - 2020,Rabi,110435,179126,1.62,Gram,Panna
+2020 - 2021,Rabi,114529,218750,1.91,Gram,Raisen
+2021 - 2022,Rabi,102068,160247,1.57,Gram,Raisen
+2022 - 2023,Rabi,113420,231377,2.04,Gram,Raisen
+2018 - 2019,Rabi,110839,140876,1.27,Gram,Raisen
+2019 - 2020,Rabi,44028,70841,1.61,Gram,Raisen
+2020 - 2021,Rabi,35171,59440,1.69,Gram,Rajgarh
+2021 - 2022,Rabi,10758,18160,1.69,Gram,Rajgarh
+2022 - 2023,Rabi,54660,87456,1.6,Gram,Rajgarh
+2020 - 2021,Rabi,37231,68654,1.84,Gram,Ratlam
+2021 - 2022,Rabi,17370,18239,1.05,Gram,Ratlam
+2022 - 2023,Rabi,45100,77572,1.72,Gram,Ratlam
+2018 - 2019,Rabi,27882,38143,1.37,Gram,Ratlam
+2019 - 2020,Rabi,21526,26326,1.22,Gram,Ratlam
+2020 - 2021,Rabi,13258,19807,1.49,Gram,Rewa
+2021 - 2022,Rabi,9700,12726,1.31,Gram,Rewa
+2022 - 2023,Rabi,45720,73381,1.61,Gram,Rewa
+2018 - 2019,Rabi,168477,196444,1.17,Gram,Rewa
+2019 - 2020,Rabi,127931,206992,1.62,Gram,Rewa
+2020 - 2021,Rabi,118693,154301,1.3,Gram,Sagar
+2021 - 2022,Rabi,105240,136391,1.3,Gram,Sagar
+2022 - 2023,Rabi,104800,135821,1.3,Gram,Sagar
+2018 - 2019,Rabi,55850,78860,1.41,Gram,Sagar
+2019 - 2020,Rabi,34674,61026,1.76,Gram,Sagar
+2020 - 2021,Rabi,30397,54259,1.79,Gram,Satna
+2021 - 2022,Rabi,22600,34149,1.51,Gram,Satna
+2022 - 2023,Rabi,40000,68080,1.7,Gram,Satna
+2018 - 2019,Rabi,107811,133901,1.24,Gram,Satna
+2019 - 2020,Rabi,47101,77340,1.64,Gram,Satna
+2020 - 2021,Rabi,52163,93894,1.8,Gram,Sehore
+2021 - 2022,Rabi,47357,60191,1.27,Gram,Sehore
+2022 - 2023,Rabi,53500,94481,1.77,Gram,Sehore
+2018 - 2019,Rabi,34827,38414,1.1,Gram,Sehore
+2019 - 2020,Rabi,37105,50092,1.35,Gram,Sehore
+2020 - 2021,Rabi,34771,62101,1.79,Gram,Seoni
+2021 - 2022,Rabi,30676,50922,1.66,Gram,Seoni
+2022 - 2023,Rabi,48000,97920,2.04,Gram,Seoni
+2018 - 2019,Rabi,3970,4248,1.07,Gram,Seoni
+2019 - 2020,Rabi,5208,8671,1.66,Gram,Seoni
+2020 - 2021,Rabi,4407,5972,1.36,Gram,Shahdol
+2021 - 2022,Rabi,4087,6719,1.64,Gram,Shahdol
+2022 - 2023,Rabi,8800,12100,1.38,Gram,Shahdol
+2018 - 2019,Rabi,96983,71379,0.74,Gram,Shahdol
+2019 - 2020,Rabi,30657,79279,2.59,Gram,Shahdol
+2020 - 2021,Rabi,22386,34923,1.56,Gram,Shajapur
+2021 - 2022,Rabi,7935,9839,1.24,Gram,Shajapur
+2022 - 2023,Rabi,18600,24180,1.3,Gram,Shajapur
+2020 - 2021,Rabi,39135,71147,1.82,Gram,Sheopur
+2021 - 2022,Rabi,17365,33341,1.92,Gram,Sheopur
+2022 - 2023,Rabi,28300,54619,1.93,Gram,Sheopur
+2018 - 2019,Rabi,91069,101633,1.12,Gram,Sheopur
+2019 - 2020,Rabi,86406,118808,1.37,Gram,Sheopur
+2020 - 2021,Rabi,81214,128318,1.58,Gram,Shivpuri
+2021 - 2022,Rabi,31314,46846,1.5,Gram,Shivpuri
+2022 - 2023,Rabi,32320,51712,1.6,Gram,Shivpuri
+2018 - 2019,Rabi,15368,16013,1.04,Gram,Shivpuri
+2019 - 2020,Rabi,11850,14635,1.24,Gram,Shivpuri
+2020 - 2021,Rabi,10302,17770,1.72,Gram,Sidhi
+2021 - 2022,Rabi,7450,9216,1.24,Gram,Sidhi
+2022 - 2023,Rabi,17000,22457,1.32,Gram,Sidhi
+2018 - 2019,Rabi,10997,27921,2.54,Gram,Sidhi
+2019 - 2020,Rabi,11756,26827,2.28,Gram,Sidhi
+2020 - 2021,Rabi,11728,21110,1.8,Gram,Singrauli
+2021 - 2022,Rabi,7862,10590,1.35,Gram,Singrauli
+2022 - 2023,Rabi,32300,42604,1.32,Gram,Singrauli
+2018 - 2019,Rabi,10387,13545,1.3,Gram,Singrauli
+2019 - 2020,Rabi,5416,9267,1.71,Gram,Singrauli
+2020 - 2021,Rabi,7849,11381,1.45,Gram,Tikamgarh
+2021 - 2022,Rabi,6513,11977,1.84,Gram,Tikamgarh
+2022 - 2023,Rabi,6200,7725,1.25,Gram,Tikamgarh
+2018 - 2019,Rabi,230532,194569,0.84,Gram,Tikamgarh
+2019 - 2020,Rabi,50357,73572,1.46,Gram,Tikamgarh
+2020 - 2021,Rabi,39187,56822,1.45,Gram,Ujjain
+2021 - 2022,Rabi,19757,28766,1.46,Gram,Ujjain
+2022 - 2023,Rabi,16160,25856,1.6,Gram,Ujjain
+2018 - 2019,Rabi,8119,10668,1.31,Gram,Ujjain
+2019 - 2020,Rabi,9185,9718,1.06,Gram,Ujjain
+2020 - 2021,Rabi,10390,16832,1.62,Gram,Umaria
+2021 - 2022,Rabi,84190,96650,1.15,Gram,Umaria
+2022 - 2023,Rabi,18090,29849,1.65,Gram,Umaria
+2018 - 2019,Rabi,202075,260071,1.29,Gram,Umaria
+2019 - 2020,Rabi,115759,179426,1.55,Gram,Umaria
+2020 - 2021,Rabi,113505,198634,1.75,Gram,Vidisha
+2021 - 2022,Rabi,78513,123344,1.57,Gram,Vidisha
+2022 - 2023,Rabi,94130,174141,1.85,Gram,Vidisha
+2020 - 2021,Rabi,49,33,0.67,Linseed,Agar malwa
+2021 - 2022,Rabi,49,37,0.76,Linseed,Agar malwa
+2022 - 2023,Rabi,390,277,0.71,Linseed,Agar malwa
+2018 - 2019,Rabi,3086,1315,0.43,Linseed,Agar malwa
+2019 - 2020,Rabi,4961,2692,0.54,Linseed,Agar malwa
+2020 - 2021,Rabi,5916,3608,0.61,Linseed,Anuppur
+2021 - 2022,Rabi,5021,2390,0.48,Linseed,Anuppur
+2022 - 2023,Rabi,5686,3639,0.64,Linseed,Anuppur
+2018 - 2019,Rabi,30,42,1.4,Linseed,Anuppur
+2019 - 2020,Rabi,6,9,1.5,Linseed,Anuppur
+2020 - 2021,Rabi,11,6,0.55,Linseed,Ashoknagar
+2021 - 2022,Rabi,14,14,1,Linseed,Ashoknagar
+2022 - 2023,Rabi,98,75,0.77,Linseed,Ashoknagar
+2018 - 2019,Rabi,4950,2930,0.59,Linseed,Ashoknagar
+2019 - 2020,Rabi,4375,2881,0.66,Linseed,Ashoknagar
+2020 - 2021,Rabi,6015,2346,0.39,Linseed,Balaghat
+2021 - 2022,Rabi,6556,3147,0.48,Linseed,Balaghat
+2022 - 2023,Rabi,711,441,0.62,Linseed,Balaghat
+2019 - 2020,Rabi,7,5,0.71,Linseed,Balaghat
+2022 - 2023,Rabi,1,1,1,Linseed,Barwani
+2018 - 2019,Rabi,11,8,0.73,Linseed,Barwani
+2019 - 2020,Rabi,38,25,0.66,Linseed,Barwani
+2020 - 2021,Rabi,22,16,0.73,Linseed,Betul
+2021 - 2022,Rabi,16,14,0.88,Linseed,Betul
+2018 - 2019,Rabi,3,2,0.67,Linseed,Betul
+2019 - 2020,Rabi,1,1,1,Linseed,Betul
+2020 - 2021,Rabi,1,2,2,Linseed,Bhopal
+2021 - 2022,Rabi,3,2,0.67,Linseed,Bhopal
+2022 - 2023,Rabi,2,1,0.5,Linseed,Bhopal
+2020 - 2021,Rabi,1,1,1,Linseed,Burhanpur
+2018 - 2019,Rabi,2255,1610,0.71,Linseed,Burhanpur
+2019 - 2020,Rabi,2715,2116,0.78,Linseed,Burhanpur
+2020 - 2021,Rabi,2040,2244,1.1,Linseed,Chhatarpur
+2021 - 2022,Rabi,1555,790,0.51,Linseed,Chhatarpur
+2022 - 2023,Rabi,1980,1287,0.65,Linseed,Chhatarpur
+2020 - 2021,Rabi,35,37,1.06,Linseed,Chhindwara
+2021 - 2022,Rabi,4,4,1,Linseed,Chhindwara
+2022 - 2023,Rabi,15,14,0.93,Linseed,Chhindwara
+2018 - 2019,Rabi,63,55,0.87,Linseed,Chhindwara
+2019 - 2020,Rabi,89,85,0.96,Linseed,Chhindwara
+2020 - 2021,Rabi,44,39,0.89,Linseed,Damoh
+2021 - 2022,Rabi,130,111,0.85,Linseed,Damoh
+2022 - 2023,Rabi,531,455,0.86,Linseed,Damoh
+2018 - 2019,Rabi,1,1,1,Linseed,Datia
+2019 - 2020,Rabi,8,12,1.5,Linseed,Datia
+2020 - 2021,Rabi,2,2,1,Linseed,Dewas
+2021 - 2022,Rabi,1,1,1,Linseed,Dewas
+2018 - 2019,Rabi,11,10,0.91,Linseed,Dewas
+2019 - 2020,Rabi,11,12,1.09,Linseed,Dewas
+2020 - 2021,Rabi,11,6,0.55,Linseed,Dhar
+2021 - 2022,Rabi,5,3,0.6,Linseed,Dhar
+2022 - 2023,Rabi,9,5,0.56,Linseed,Dhar
+2018 - 2019,Rabi,2261,857,0.38,Linseed,Dhar
+2019 - 2020,Rabi,3888,2317,0.6,Linseed,Dhar
+2020 - 2021,Rabi,3833,2491,0.65,Linseed,Dindori
+2021 - 2022,Rabi,3093,1500,0.48,Linseed,Dindori
+2018 - 2019,Rabi,2,2,1,Linseed,Dindori
+2019 - 2020,Rabi,1,3,3,Linseed,Dindori
+2020 - 2021,Rabi,7,6,0.86,Linseed,Guna
+2021 - 2022,Rabi,13,12,0.92,Linseed,Guna
+2022 - 2023,Rabi,27,20,0.74,Linseed,Guna
+2019 - 2020,Rabi,13,22,1.69,Linseed,Guna
+2020 - 2021,Rabi,1,1,1,Linseed,Gwalior
+2019 - 2020,Rabi,2,3,1.5,Linseed,Gwalior
+2020 - 2021,Rabi,2,2,1,Linseed,Harda
+2018 - 2019,Rabi,25,20,0.8,Linseed,Harda
+2019 - 2020,Rabi,2,3,1.5,Linseed,Harda
+2020 - 2021,Rabi,6,8,1.33,Linseed,Hoshangabad
+2021 - 2022,Rabi,26,20,0.77,Linseed,Hoshangabad
+2022 - 2023,Rabi,29,19,0.66,Linseed,Hoshangabad
+2020 - 2021,Rabi,1,1,1,Linseed,Indore
+2021 - 2022,Rabi,13,8,0.62,Linseed,Indore
+2022 - 2023,Rabi,3,1,0.33,Linseed,Indore
+2018 - 2019,Rabi,63,62,0.98,Linseed,Indore
+2019 - 2020,Rabi,84,106,1.26,Linseed,Indore
+2020 - 2021,Rabi,159,151,0.95,Linseed,Jabalpur
+2021 - 2022,Rabi,76,69,0.91,Linseed,Jabalpur
+2022 - 2023,Rabi,158,130,0.82,Linseed,Jabalpur
+2019 - 2020,Rabi,2,1,0.5,Linseed,Jabalpur
+2022 - 2023,Rabi,1,1,1,Linseed,Jhabua
+2018 - 2019,Rabi,169,139,0.82,Linseed,Jhabua
+2019 - 2020,Rabi,225,266,1.18,Linseed,Jhabua
+2020 - 2021,Rabi,145,158,1.09,Linseed,Katni
+2021 - 2022,Rabi,69,61,0.88,Linseed,Katni
+2022 - 2023,Rabi,182,157,0.86,Linseed,Katni
+2018 - 2019,Rabi,4,2,0.5,Linseed,Katni
+2019 - 2020,Rabi,14,6,0.43,Linseed,Katni
+2020 - 2021,Rabi,2,1,0.5,Linseed,Khandwa
+2019 - 2020,Rabi,16,14,0.88,Linseed,Khandwa
+2020 - 2021,Rabi,1,1,1,Linseed,Khargone
+2021 - 2022,Rabi,2,2,1,Linseed,Khargone
+2018 - 2019,Rabi,658,392,0.6,Linseed,Khargone
+2019 - 2020,Rabi,1677,1292,0.77,Linseed,Khargone
+2020 - 2021,Rabi,2164,1406,0.65,Linseed,Mandla
+2021 - 2022,Rabi,2139,1155,0.54,Linseed,Mandla
+2022 - 2023,Rabi,2242,1480,0.66,Linseed,Mandla
+2018 - 2019,Rabi,8893,7595,0.85,Linseed,Mandla
+2019 - 2020,Rabi,12088,11438,0.95,Linseed,Mandla
+2020 - 2021,Rabi,7625,8235,1.08,Linseed,Mandsaur
+2021 - 2022,Rabi,18253,16245,0.89,Linseed,Mandsaur
+2022 - 2023,Rabi,31665,25332,0.8,Linseed,Mandsaur
+2019 - 2020,Rabi,1,2,2,Linseed,Mandsaur
+2020 - 2021,Rabi,7,6,0.86,Linseed,Narsinghpur
+2021 - 2022,Rabi,8,7,0.88,Linseed,Narsinghpur
+2022 - 2023,Rabi,4,3,0.75,Linseed,Narsinghpur
+2018 - 2019,Rabi,2215,1555,0.7,Linseed,Narsinghpur
+2019 - 2020,Rabi,2748,3462,1.26,Linseed,Narsinghpur
+2020 - 2021,Rabi,2999,2400,0.8,Linseed,Neemuch
+2021 - 2022,Rabi,6128,5270,0.86,Linseed,Neemuch
+2022 - 2023,Rabi,9281,7193,0.78,Linseed,Neemuch
+2019 - 2020,Rabi,3,3,1,Linseed,Niwari
+2018 - 2019,Rabi,34,24,0.71,Linseed,Niwari
+2019 - 2020,Rabi,97,71,0.73,Linseed,Niwari
+2020 - 2021,Rabi,64,55,0.86,Linseed,Panna
+2021 - 2022,Rabi,23,12,0.52,Linseed,Panna
+2022 - 2023,Rabi,59,41,0.69,Linseed,Panna
+2018 - 2019,Rabi,54,39,0.72,Linseed,Panna
+2019 - 2020,Rabi,141,156,1.11,Linseed,Panna
+2020 - 2021,Rabi,14,17,1.21,Linseed,Raisen
+2021 - 2022,Rabi,14,10,0.71,Linseed,Raisen
+2022 - 2023,Rabi,1,1,1,Linseed,Raisen
+2018 - 2019,Rabi,4,4,1,Linseed,Raisen
+2019 - 2020,Rabi,13,14,1.08,Linseed,Raisen
+2020 - 2021,Rabi,15,14,0.93,Linseed,Rajgarh
+2021 - 2022,Rabi,34,29,0.85,Linseed,Rajgarh
+2022 - 2023,Rabi,68,58,0.85,Linseed,Rajgarh
+2018 - 2019,Rabi,2125,3598,1.69,Linseed,Rajgarh
+2019 - 2020,Rabi,2403,3682,1.53,Linseed,Rajgarh
+2020 - 2021,Rabi,1868,3027,1.62,Linseed,Ratlam
+2021 - 2022,Rabi,4447,3913,0.88,Linseed,Ratlam
+2022 - 2023,Rabi,6968,5853,0.84,Linseed,Ratlam
+2018 - 2019,Rabi,2003,1122,0.56,Linseed,Ratlam
+2019 - 2020,Rabi,3286,3292,1,Linseed,Ratlam
+2020 - 2021,Rabi,2077,1416,0.68,Linseed,Rewa
+2021 - 2022,Rabi,2407,1425,0.59,Linseed,Rewa
+2022 - 2023,Rabi,3271,2191,0.67,Linseed,Rewa
+2018 - 2019,Rabi,286,250,0.87,Linseed,Rewa
+2019 - 2020,Rabi,181,194,1.07,Linseed,Rewa
+2020 - 2021,Rabi,136,95,0.7,Linseed,Sagar
+2021 - 2022,Rabi,361,312,0.86,Linseed,Sagar
+2022 - 2023,Rabi,323,246,0.76,Linseed,Sagar
+2020 - 2021,Rabi,246,249,1.01,Linseed,Satna
+2021 - 2022,Rabi,239,101,0.42,Linseed,Satna
+2022 - 2023,Rabi,285,173,0.61,Linseed,Satna
+2018 - 2019,Rabi,14,18,1.29,Linseed,Satna
+2019 - 2020,Rabi,7,12,1.71,Linseed,Satna
+2020 - 2021,Rabi,11,12,1.09,Linseed,Sehore
+2021 - 2022,Rabi,18,19,1.06,Linseed,Sehore
+2022 - 2023,Rabi,12,12,1,Linseed,Sehore
+2018 - 2019,Rabi,3141,1297,0.41,Linseed,Sehore
+2019 - 2020,Rabi,2379,1423,0.6,Linseed,Sehore
+2020 - 2021,Rabi,2191,1008,0.46,Linseed,Seoni
+2021 - 2022,Rabi,25589,1243,0.05,Linseed,Seoni
+2022 - 2023,Rabi,2559,1663,0.65,Linseed,Seoni
+2018 - 2019,Rabi,490,172,0.35,Linseed,Seoni
+2019 - 2020,Rabi,2596,1449,0.56,Linseed,Seoni
+2020 - 2021,Rabi,2751,2270,0.83,Linseed,Shahdol
+2021 - 2022,Rabi,2221,884,0.4,Linseed,Shahdol
+2022 - 2023,Rabi,2745,1620,0.59,Linseed,Shahdol
+2018 - 2019,Rabi,27,26,0.96,Linseed,Shahdol
+2019 - 2020,Rabi,31,45,1.45,Linseed,Shahdol
+2021 - 2022,Rabi,9,8,0.89,Linseed,Shajapur
+2022 - 2023,Rabi,32,24,0.75,Linseed,Shajapur
+2018 - 2019,Rabi,4,7,1.75,Linseed,Shajapur
+2019 - 2020,Rabi,4,8,2,Linseed,Shajapur
+2021 - 2022,Rabi,2,2,1,Linseed,Sheopur
+2018 - 2019,Rabi,4,10,2.5,Linseed,Sheopur
+2019 - 2020,Rabi,4,11,2.75,Linseed,Sheopur
+2020 - 2021,Rabi,14,20,1.43,Linseed,Shivpuri
+2021 - 2022,Rabi,2,2,1,Linseed,Shivpuri
+2022 - 2023,Rabi,23,15,0.65,Linseed,Shivpuri
+2018 - 2019,Rabi,1519,588,0.39,Linseed,Shivpuri
+2019 - 2020,Rabi,2763,1538,0.56,Linseed,Shivpuri
+2020 - 2021,Rabi,2461,2165,0.88,Linseed,Sidhi
+2021 - 2022,Rabi,1751,714,0.41,Linseed,Sidhi
+2022 - 2023,Rabi,2448,1420,0.58,Linseed,Sidhi
+2020 - 2021,Rabi,2509,2259,0.9,Linseed,Singrauli
+2021 - 2022,Rabi,1881,1435,0.76,Linseed,Singrauli
+2022 - 2023,Rabi,2737,1943,0.71,Linseed,Singrauli
+2018 - 2019,Rabi,19,10,0.53,Linseed,Singrauli
+2019 - 2020,Rabi,5,5,1,Linseed,Singrauli
+2020 - 2021,Rabi,8,4,0.5,Linseed,Tikamgarh
+2021 - 2022,Rabi,8,4,0.5,Linseed,Tikamgarh
+2022 - 2023,Rabi,6,4,0.67,Linseed,Tikamgarh
+2018 - 2019,Rabi,129,92,0.71,Linseed,Tikamgarh
+2019 - 2020,Rabi,52,63,1.21,Linseed,Tikamgarh
+2020 - 2021,Rabi,51,41,0.8,Linseed,Ujjain
+2022 - 2023,Rabi,254,201,0.79,Linseed,Ujjain
+2018 - 2019,Rabi,928,659,0.71,Linseed,Ujjain
+2019 - 2020,Rabi,1294,1009,0.78,Linseed,Ujjain
+2020 - 2021,Rabi,1677,1090,0.65,Linseed,Umaria
+2021 - 2022,Rabi,1783,1068,0.6,Linseed,Umaria
+2022 - 2023,Rabi,2124,1272,0.6,Linseed,Umaria
+2018 - 2019,Rabi,27,29,1.07,Linseed,Umaria
+2019 - 2020,Rabi,20,21,1.05,Linseed,Umaria
+2020 - 2021,Rabi,10,11,1.1,Linseed,Vidisha
+2021 - 2022,Rabi,12,13,1.08,Linseed,Vidisha
+2022 - 2023,Rabi,89,93,1.04,Linseed,Vidisha
+2018 - 2019,Rabi,11082,4411,0.4,Masoor,Agar malwa
+2019 - 2020,Rabi,7826,2376,0.3,Masoor,Agar malwa
+2020 - 2021,Rabi,16400,19516,1.19,Masoor,Agar malwa
+2021 - 2022,Rabi,5667,3174,0.56,Masoor,Agar malwa
+2022 - 2023,Rabi,14360,8042,0.56,Masoor,Agar malwa
+2018 - 2019,Rabi,11731,5701,0.49,Masoor,Agar malwa
+2019 - 2020,Rabi,17901,8972,0.5,Masoor,Agar malwa
+2020 - 2021,Rabi,20713,14913,0.72,Masoor,Anuppur
+2021 - 2022,Rabi,17729,12286,0.69,Masoor,Anuppur
+2022 - 2023,Rabi,20800,14414,0.69,Masoor,Anuppur
+2018 - 2019,Rabi,10930,10526,0.96,Masoor,Anuppur
+2019 - 2020,Rabi,8548,9084,1.06,Masoor,Anuppur
+2020 - 2021,Rabi,15480,17028,1.1,Masoor,Ashoknagar
+2021 - 2022,Rabi,19385,24638,1.27,Masoor,Ashoknagar
+2022 - 2023,Rabi,32580,40888,1.26,Masoor,Ashoknagar
+2020 - 2021,Rabi,540,232,0.43,Masoor,Balaghat
+2021 - 2022,Rabi,696,367,0.53,Masoor,Balaghat
+2022 - 2023,Rabi,400,211,0.53,Masoor,Balaghat
+2018 - 2019,Rabi,571,261,0.46,Masoor,Balaghat
+2019 - 2020,Rabi,492,197,0.4,Masoor,Balaghat
+2020 - 2021,Rabi,440,297,0.68,Masoor,Betul
+2021 - 2022,Rabi,224,159,0.71,Masoor,Betul
+2022 - 2023,Rabi,1100,781,0.71,Masoor,Betul
+2018 - 2019,Rabi,243,158,0.65,Masoor,Betul
+2019 - 2020,Rabi,61,30,0.49,Masoor,Betul
+2020 - 2021,Rabi,100,129,1.29,Masoor,Bhind
+2021 - 2022,Rabi,100,150,1.5,Masoor,Bhind
+2022 - 2023,Rabi,600,894,1.49,Masoor,Bhind
+2018 - 2019,Rabi,369,302,0.82,Masoor,Bhind
+2019 - 2020,Rabi,149,147,0.99,Masoor,Bhind
+2020 - 2021,Rabi,295,398,1.35,Masoor,Bhopal
+2021 - 2022,Rabi,135,170,1.26,Masoor,Bhopal
+2022 - 2023,Rabi,300,377,1.26,Masoor,Bhopal
+2018 - 2019,Rabi,1,1,1,Masoor,Bhopal
+2020 - 2021,Rabi,1,1,1,Masoor,Burhanpur
+2018 - 2019,Rabi,4241,2757,0.65,Masoor,Burhanpur
+2019 - 2020,Rabi,2674,1466,0.55,Masoor,Burhanpur
+2020 - 2021,Rabi,3744,4309,1.15,Masoor,Chhatarpur
+2021 - 2022,Rabi,5711,6625,1.16,Masoor,Chhatarpur
+2022 - 2023,Rabi,3660,4246,1.16,Masoor,Chhatarpur
+2018 - 2019,Rabi,1951,987,0.51,Masoor,Chhatarpur
+2019 - 2020,Rabi,1861,1334,0.72,Masoor,Chhatarpur
+2020 - 2021,Rabi,1512,1557,1.03,Masoor,Chhindwara
+2021 - 2022,Rabi,1224,1362,1.11,Masoor,Chhindwara
+2022 - 2023,Rabi,2600,2894,1.11,Masoor,Chhindwara
+2018 - 2019,Rabi,16752,12732,0.76,Masoor,Chhindwara
+2019 - 2020,Rabi,22922,17012,0.74,Masoor,Chhindwara
+2020 - 2021,Rabi,29511,37480,1.27,Masoor,Damoh
+2021 - 2022,Rabi,41969,62954,1.5,Masoor,Damoh
+2022 - 2023,Rabi,45500,66885,1.47,Masoor,Damoh
+2020 - 2021,Rabi,212,223,1.05,Masoor,Datia
+2021 - 2022,Rabi,455,370,0.81,Masoor,Datia
+2022 - 2023,Rabi,800,491,0.61,Masoor,Datia
+2018 - 2019,Rabi,182,103,0.57,Masoor,Datia
+2019 - 2020,Rabi,107,69,0.64,Masoor,Datia
+2020 - 2021,Rabi,372,335,0.9,Masoor,Dewas
+2021 - 2022,Rabi,322,370,1.15,Masoor,Dewas
+2022 - 2023,Rabi,400,460,1.15,Masoor,Dewas
+2018 - 2019,Rabi,1147,720,0.63,Masoor,Dewas
+2019 - 2020,Rabi,306,147,0.48,Masoor,Dewas
+2020 - 2021,Rabi,342,308,0.9,Masoor,Dhar
+2021 - 2022,Rabi,173,162,0.94,Masoor,Dhar
+2022 - 2023,Rabi,970,907,0.94,Masoor,Dhar
+2018 - 2019,Rabi,27413,16749,0.61,Masoor,Dhar
+2019 - 2020,Rabi,42112,33487,0.8,Masoor,Dhar
+2020 - 2021,Rabi,42371,49151,1.16,Masoor,Dindori
+2021 - 2022,Rabi,35519,44576,1.25,Masoor,Dindori
+2022 - 2023,Rabi,39400,49447,1.26,Masoor,Dindori
+2018 - 2019,Rabi,380,365,0.96,Masoor,Dindori
+2019 - 2020,Rabi,524,564,1.08,Masoor,Dindori
+2020 - 2021,Rabi,2077,2616,1.26,Masoor,Guna
+2021 - 2022,Rabi,3906,5000,1.28,Masoor,Guna
+2022 - 2023,Rabi,16160,20200,1.25,Masoor,Guna
+2018 - 2019,Rabi,36,19,0.53,Masoor,Guna
+2019 - 2020,Rabi,12,7,0.58,Masoor,Guna
+2020 - 2021,Rabi,25,28,1.12,Masoor,Gwalior
+2021 - 2022,Rabi,28,37,1.32,Masoor,Gwalior
+2022 - 2023,Rabi,80,106,1.33,Masoor,Gwalior
+2018 - 2019,Rabi,18,6,0.33,Masoor,Gwalior
+2019 - 2020,Rabi,13,6,0.46,Masoor,Gwalior
+2020 - 2021,Rabi,14,11,0.79,Masoor,Harda
+2021 - 2022,Rabi,2,1,0.5,Masoor,Harda
+2022 - 2023,Rabi,200,80,0.4,Masoor,Harda
+2018 - 2019,Rabi,226,136,0.6,Masoor,Harda
+2019 - 2020,Rabi,33,22,0.67,Masoor,Harda
+2020 - 2021,Rabi,56,84,1.5,Masoor,Hoshangabad
+2021 - 2022,Rabi,59,94,1.59,Masoor,Hoshangabad
+2022 - 2023,Rabi,770,1109,1.44,Masoor,Hoshangabad
+2020 - 2021,Rabi,135,146,1.08,Masoor,Indore
+2021 - 2022,Rabi,63,69,1.1,Masoor,Indore
+2022 - 2023,Rabi,140,154,1.1,Masoor,Indore
+2018 - 2019,Rabi,6810,6647,0.98,Masoor,Indore
+2019 - 2020,Rabi,5075,4892,0.96,Masoor,Indore
+2020 - 2021,Rabi,5401,6805,1.26,Masoor,Jabalpur
+2021 - 2022,Rabi,4882,9974,2.04,Masoor,Jabalpur
+2022 - 2023,Rabi,4600,7558,1.64,Masoor,Jabalpur
+2020 - 2021,Rabi,15,17,1.13,Masoor,Jhabua
+2018 - 2019,Rabi,4661,4055,0.87,Masoor,Jhabua
+2019 - 2020,Rabi,2382,2127,0.89,Masoor,Jhabua
+2020 - 2021,Rabi,1920,1580,0.82,Masoor,Katni
+2021 - 2022,Rabi,1350,1523,1.13,Masoor,Katni
+2022 - 2023,Rabi,4200,4738,1.13,Masoor,Katni
+2018 - 2019,Rabi,70,32,0.46,Masoor,Katni
+2019 - 2020,Rabi,42,14,0.33,Masoor,Katni
+2020 - 2021,Rabi,35,19,0.54,Masoor,Khandwa
+2021 - 2022,Rabi,8,4,0.5,Masoor,Khandwa
+2020 - 2021,Rabi,5,4,0.8,Masoor,Khargone
+2018 - 2019,Rabi,12890,8379,0.65,Masoor,Khargone
+2019 - 2020,Rabi,23768,15449,0.65,Masoor,Khargone
+2020 - 2021,Rabi,26779,27314,1.02,Masoor,Mandla
+2021 - 2022,Rabi,19126,19968,1.04,Masoor,Mandla
+2022 - 2023,Rabi,29500,30385,1.03,Masoor,Mandla
+2018 - 2019,Rabi,5173,2757,0.53,Masoor,Mandla
+2019 - 2020,Rabi,5261,3214,0.61,Masoor,Mandla
+2020 - 2021,Rabi,15438,16055,1.04,Masoor,Mandsaur
+2021 - 2022,Rabi,4686,3374,0.72,Masoor,Mandsaur
+2022 - 2023,Rabi,8930,6430,0.72,Masoor,Mandsaur
+2018 - 2019,Rabi,16,10,0.63,Masoor,Mandsaur
+2019 - 2020,Rabi,38,32,0.84,Masoor,Mandsaur
+2020 - 2021,Rabi,5,5,1,Masoor,Morena
+2022 - 2023,Rabi,200,122,0.61,Masoor,Morena
+2018 - 2019,Rabi,19752,13392,0.68,Masoor,Morena
+2019 - 2020,Rabi,18956,14596,0.77,Masoor,Morena
+2020 - 2021,Rabi,19497,17742,0.91,Masoor,Narsinghpur
+2021 - 2022,Rabi,25834,32525,1.26,Masoor,Narsinghpur
+2022 - 2023,Rabi,31200,39000,1.25,Masoor,Narsinghpur
+2020 - 2021,Rabi,2747,3077,1.12,Masoor,Neemuch
+2021 - 2022,Rabi,923,1246,1.35,Masoor,Neemuch
+2022 - 2023,Rabi,2050,2768,1.35,Masoor,Neemuch
+2019 - 2020,Rabi,25,17,0.68,Masoor,Neemuch
+2020 - 2021,Rabi,144,136,0.94,Masoor,Neemuch
+2021 - 2022,Rabi,480,454,0.95,Masoor,Niwari
+2022 - 2023,Rabi,400,378,0.95,Masoor,Niwari
+2018 - 2019,Rabi,16954,23024,1.36,Masoor,Niwari
+2019 - 2020,Rabi,12715,13213,1.04,Masoor,Niwari
+2020 - 2021,Rabi,12583,12683,1.01,Masoor,Panna
+2021 - 2022,Rabi,18555,20744,1.12,Masoor,Panna
+2022 - 2023,Rabi,18250,20404,1.12,Masoor,Panna
+2018 - 2019,Rabi,25731,22798,0.89,Masoor,Panna
+2019 - 2020,Rabi,23675,20965,0.89,Masoor,Panna
+2020 - 2021,Rabi,31207,40257,1.29,Masoor,Raisen
+2021 - 2022,Rabi,28391,37590,1.32,Masoor,Raisen
+2022 - 2023,Rabi,31520,41291,1.31,Masoor,Raisen
+2018 - 2019,Rabi,47253,37708,0.8,Masoor,Raisen
+2019 - 2020,Rabi,30729,31036,1.01,Masoor,Raisen
+2020 - 2021,Rabi,57608,81804,1.42,Masoor,Rajgarh
+2021 - 2022,Rabi,32439,38927,1.2,Masoor,Rajgarh
+2022 - 2023,Rabi,43470,50425,1.16,Masoor,Rajgarh
+2018 - 2019,Rabi,1471,993,0.68,Masoor,Rajgarh
+2019 - 2020,Rabi,1180,614,0.52,Masoor,Rajgarh
+2020 - 2021,Rabi,2818,2282,0.81,Masoor,Ratlam
+2021 - 2022,Rabi,1343,2082,1.55,Masoor,Ratlam
+2022 - 2023,Rabi,3120,4836,1.55,Masoor,Ratlam
+2018 - 2019,Rabi,16296,9419,0.58,Masoor,Ratlam
+2019 - 2020,Rabi,9934,8617,0.87,Masoor,Ratlam
+2020 - 2021,Rabi,5752,3503,0.61,Masoor,Rewa
+2021 - 2022,Rabi,4690,6238,1.33,Masoor,Rewa
+2022 - 2023,Rabi,18350,24406,1.33,Masoor,Rewa
+2018 - 2019,Rabi,59460,74801,1.26,Masoor,Rewa
+2019 - 2020,Rabi,51091,50876,1,Masoor,Rewa
+2020 - 2021,Rabi,79973,86371,1.08,Masoor,Sagar
+2021 - 2022,Rabi,83848,79069,0.94,Masoor,Sagar
+2022 - 2023,Rabi,85500,80627,0.94,Masoor,Sagar
+2020 - 2021,Rabi,4897,5533,1.13,Masoor,Satna
+2021 - 2022,Rabi,5842,7992,1.37,Masoor,Satna
+2022 - 2023,Rabi,8000,10640,1.33,Masoor,Satna
+2018 - 2019,Rabi,4750,3943,0.83,Masoor,Satna
+2019 - 2020,Rabi,3216,2959,0.92,Masoor,Satna
+2020 - 2021,Rabi,6563,7482,1.14,Masoor,Sehore
+2021 - 2022,Rabi,4244,2703,0.64,Masoor,Sehore
+2022 - 2023,Rabi,4500,2867,0.64,Masoor,Sehore
+2018 - 2019,Rabi,14003,7282,0.52,Masoor,Sehore
+2019 - 2020,Rabi,12494,8671,0.69,Masoor,Sehore
+2020 - 2021,Rabi,11375,9214,0.81,Masoor,Seoni
+2021 - 2022,Rabi,9701,7858,0.81,Masoor,Seoni
+2022 - 2023,Rabi,15000,12150,0.81,Masoor,Seoni
+2018 - 2019,Rabi,423,273,0.65,Masoor,Seoni
+2019 - 2020,Rabi,260,195,0.75,Masoor,Seoni
+2020 - 2021,Rabi,399,347,0.87,Masoor,Shahdol
+2021 - 2022,Rabi,250,223,0.89,Masoor,Shahdol
+2022 - 2023,Rabi,850,757,0.89,Masoor,Shahdol
+2018 - 2019,Rabi,24236,11391,0.47,Masoor,Shahdol
+2019 - 2020,Rabi,17018,8747,0.51,Masoor,Shahdol
+2020 - 2021,Rabi,31602,35394,1.12,Masoor,Shajapur
+2021 - 2022,Rabi,18342,27513,1.5,Masoor,Shajapur
+2022 - 2023,Rabi,31900,45298,1.42,Masoor,Shajapur
+2018 - 2019,Rabi,14,21,1.5,Masoor,Shajapur
+2019 - 2020,Rabi,5,7,1.4,Masoor,Shajapur
+2020 - 2021,Rabi,2,2,1,Masoor,Sheopur
+2021 - 2022,Rabi,1,1,1,Masoor,Sheopur
+2022 - 2023,Rabi,80,113,1.41,Masoor,Sheopur
+2018 - 2019,Rabi,10001,4140,0.41,Masoor,Sheopur
+2019 - 2020,Rabi,13479,6699,0.5,Masoor,Sheopur
+2020 - 2021,Rabi,25007,30009,1.2,Masoor,Shivpuri
+2021 - 2022,Rabi,31344,36077,1.15,Masoor,Shivpuri
+2022 - 2023,Rabi,32420,36959,1.14,Masoor,Shivpuri
+2018 - 2019,Rabi,4167,3146,0.75,Masoor,Shivpuri
+2019 - 2020,Rabi,2273,1715,0.75,Masoor,Shivpuri
+2020 - 2021,Rabi,2062,2639,1.28,Masoor,Sidhi
+2021 - 2022,Rabi,894,745,0.83,Masoor,Sidhi
+2022 - 2023,Rabi,2700,2249,0.83,Masoor,Sidhi
+2020 - 2021,Rabi,818,997,1.22,Masoor,Singrauli
+2021 - 2022,Rabi,718,856,1.19,Masoor,Singrauli
+2022 - 2023,Rabi,8100,9655,1.19,Masoor,Singrauli
+2018 - 2019,Rabi,1393,786,0.56,Masoor,Singrauli
+2019 - 2020,Rabi,471,314,0.67,Masoor,Singrauli
+2020 - 2021,Rabi,1457,1355,0.93,Masoor,Tikamgarh
+2021 - 2022,Rabi,1750,1684,0.96,Masoor,Tikamgarh
+2022 - 2023,Rabi,1500,1443,0.96,Masoor,Tikamgarh
+2018 - 2019,Rabi,1989,636,0.32,Masoor,Tikamgarh
+2019 - 2020,Rabi,740,421,0.57,Masoor,Tikamgarh
+2020 - 2021,Rabi,1658,1575,0.95,Masoor,Ujjain
+2021 - 2022,Rabi,1092,1256,1.15,Masoor,Ujjain
+2022 - 2023,Rabi,1920,2208,1.15,Masoor,Ujjain
+2018 - 2019,Rabi,3118,2354,0.75,Masoor,Ujjain
+2019 - 2020,Rabi,2524,1733,0.69,Masoor,Ujjain
+2020 - 2021,Rabi,2450,2817,1.15,Masoor,Umaria
+2021 - 2022,Rabi,1728,1407,0.81,Masoor,Umaria
+2022 - 2023,Rabi,5250,4274,0.81,Masoor,Umaria
+2018 - 2019,Rabi,35777,26904,0.75,Masoor,Umaria
+2019 - 2020,Rabi,26541,16628,0.63,Masoor,Umaria
+2020 - 2021,Rabi,57991,70169,1.21,Masoor,Vidisha
+2021 - 2022,Rabi,56506,76283,1.35,Masoor,Vidisha
+2022 - 2023,Rabi,80700,98454,1.22,Masoor,Vidisha
+2018 - 2019,Rabi,536,135,0.25,Other Rabi pulses,Anuppur
+2019 - 2020,Rabi,615,363,0.59,Other Rabi pulses,Anuppur
+2018 - 2019,Rabi,1454,1361,0.94,Other Rabi pulses,Anuppur
+2019 - 2020,Rabi,728,718,0.99,Other Rabi pulses,Ashoknagar
+2018 - 2019,Rabi,4977,4443,0.89,Other Rabi pulses,Ashoknagar
+2019 - 2020,Rabi,4324,2653,0.61,Other Rabi pulses,Balaghat
+2018 - 2019,Rabi,54,32,0.59,Other Rabi pulses,Betul
+2019 - 2020,Rabi,20,16,0.8,Other Rabi pulses,Bhopal
+2018 - 2019,Rabi,1,1,1,Other Rabi pulses,Chhatarpur
+2018 - 2019,Rabi,2,1,0.5,Other Rabi pulses,Chhatarpur
+2019 - 2020,Rabi,1,1,1,Other Rabi pulses,Chhindwara
+2018 - 2019,Rabi,3,2,0.67,Other Rabi pulses,Chhindwara
+2019 - 2020,Rabi,8,6,0.75,Other Rabi pulses,Damoh
+2019 - 2020,Rabi,15,8,0.53,Other Rabi pulses,Dindori
+2018 - 2019,Rabi,1,1,1,Other Rabi pulses,Dindori
+2019 - 2020,Rabi,13,11,0.85,Other Rabi pulses,Guna
+2018 - 2019,Rabi,4,4,1,Other Rabi pulses,Guna
+2019 - 2020,Rabi,4,4,1,Other Rabi pulses,Hoshangabad
+2019 - 2020,Rabi,1,1,1,Other Rabi pulses,Katni
+2018 - 2019,Rabi,494,323,0.65,Other Rabi pulses,Katni
+2019 - 2020,Rabi,828,604,0.73,Other Rabi pulses,Mandla
+2019 - 2020,Rabi,1,1,1,Other Rabi pulses,Mandsaur
+2018 - 2019,Rabi,23,22,0.96,Other Rabi pulses,Mandsaur
+2019 - 2020,Rabi,25,24,0.96,Other Rabi pulses,Narsinghpur
+2018 - 2019,Rabi,2201,1958,0.89,Other Rabi pulses,Narsinghpur
+2019 - 2020,Rabi,1251,1067,0.85,Other Rabi pulses,Raisen
+2018 - 2019,Rabi,156,94,0.6,Other Rabi pulses,Raisen
+2019 - 2020,Rabi,114,71,0.62,Other Rabi pulses,Rewa
+2018 - 2019,Rabi,2927,3131,1.07,Other Rabi pulses,Rewa
+2019 - 2020,Rabi,942,834,0.89,Other Rabi pulses,Sagar
+2018 - 2019,Rabi,2,1,0.5,Other Rabi pulses,Satna
+2018 - 2019,Rabi,11,9,0.82,Other Rabi pulses,Satna
+2019 - 2020,Rabi,7,7,1,Other Rabi pulses,Sehore
+2018 - 2019,Rabi,3372,1701,0.5,Other Rabi pulses,Sehore
+2019 - 2020,Rabi,2755,2060,0.75,Other Rabi pulses,Seoni
+2018 - 2019,Rabi,13,7,0.54,Other Rabi pulses,Seoni
+2019 - 2020,Rabi,24,14,0.58,Other Rabi pulses,Shahdol
+2018 - 2019,Rabi,252,110,0.44,Other Rabi pulses,Shahdol
+2019 - 2020,Rabi,88,44,0.5,Other Rabi pulses,Sidhi
+2018 - 2019,Rabi,1,1,1,Other Rabi pulses,Singrauli
+2018 - 2019,Rabi,5074,3246,0.64,Other Rabi pulses,Singrauli
+2019 - 2020,Rabi,1592,1105,0.69,Other Rabi pulses,Vidisha
+2020 - 2021,Rabi,34,39,1.15,Peas & beans (Pulses),Agar malwa
+2021 - 2022,Rabi,4,2,0.5,Peas & beans (Pulses),Agar malwa
+2018 - 2019,Rabi,41,36,0.88,Peas & beans (Pulses),Agar malwa
+2019 - 2020,Rabi,16,14,0.88,Peas & beans (Pulses),Agar malwa
+2020 - 2021,Rabi,2,1,0.5,Peas & beans (Pulses),Alirajpur
+2021 - 2022,Rabi,1,1,1,Peas & beans (Pulses),Alirajpur
+2020 - 2021,Rabi,1871,1244,0.66,Peas & beans (Pulses),Anuppur
+2021 - 2022,Rabi,2063,1444,0.7,Peas & beans (Pulses),Anuppur
+2022 - 2023,Rabi,1830,1317,0.72,Peas & beans (Pulses),Anuppur
+2018 - 2019,Rabi,320,208,0.65,Peas & beans (Pulses),Anuppur
+2019 - 2020,Rabi,221,144,0.65,Peas & beans (Pulses),Anuppur
+2020 - 2021,Rabi,1063,1658,1.56,Peas & beans (Pulses),Ashoknagar
+2021 - 2022,Rabi,1146,745,0.65,Peas & beans (Pulses),Ashoknagar
+2022 - 2023,Rabi,932,806,0.86,Peas & beans (Pulses),Ashoknagar
+2018 - 2019,Rabi,502,227,0.45,Peas & beans (Pulses),Ashoknagar
+2019 - 2020,Rabi,573,255,0.45,Peas & beans (Pulses),Ashoknagar
+2020 - 2021,Rabi,530,243,0.46,Peas & beans (Pulses),Balaghat
+2021 - 2022,Rabi,656,300,0.46,Peas & beans (Pulses),Balaghat
+2022 - 2023,Rabi,559,311,0.56,Peas & beans (Pulses),Balaghat
+2020 - 2021,Rabi,2,2,1,Peas & beans (Pulses),Barwani
+2018 - 2019,Rabi,1539,1612,1.05,Peas & beans (Pulses),Barwani
+2019 - 2020,Rabi,1358,618,0.46,Peas & beans (Pulses),Barwani
+2020 - 2021,Rabi,2050,2131,1.04,Peas & beans (Pulses),Betul
+2021 - 2022,Rabi,1550,701,0.45,Peas & beans (Pulses),Betul
+2022 - 2023,Rabi,1498,1138,0.76,Peas & beans (Pulses),Betul
+2018 - 2019,Rabi,825,1033,1.25,Peas & beans (Pulses),Betul
+2019 - 2020,Rabi,1433,1388,0.97,Peas & beans (Pulses),Betul
+2020 - 2021,Rabi,2395,3281,1.37,Peas & beans (Pulses),Bhind
+2021 - 2022,Rabi,3448,3086,0.9,Peas & beans (Pulses),Bhind
+2022 - 2023,Rabi,2952,4221,1.43,Peas & beans (Pulses),Bhind
+2018 - 2019,Rabi,30,13,0.43,Peas & beans (Pulses),Bhind
+2019 - 2020,Rabi,28,15,0.54,Peas & beans (Pulses),Bhind
+2020 - 2021,Rabi,23,29,1.26,Peas & beans (Pulses),Bhopal
+2021 - 2022,Rabi,17,15,0.88,Peas & beans (Pulses),Bhopal
+2022 - 2023,Rabi,17,14,0.82,Peas & beans (Pulses),Bhopal
+2018 - 2019,Rabi,1,1,1,Peas & beans (Pulses),Bhopal
+2020 - 2021,Rabi,2,2,1,Peas & beans (Pulses),Burhanpur
+2018 - 2019,Rabi,4791,5126,1.07,Peas & beans (Pulses),Burhanpur
+2019 - 2020,Rabi,6426,5799,0.9,Peas & beans (Pulses),Burhanpur
+2020 - 2021,Rabi,16065,19278,1.2,Peas & beans (Pulses),Chhatarpur
+2021 - 2022,Rabi,40054,32444,0.81,Peas & beans (Pulses),Chhatarpur
+2022 - 2023,Rabi,41350,40316,0.97,Peas & beans (Pulses),Chhatarpur
+2020 - 2021,Rabi,4705,2720,0.58,Peas & beans (Pulses),Chhindwara
+2021 - 2022,Rabi,3942,2365,0.6,Peas & beans (Pulses),Chhindwara
+2022 - 2023,Rabi,4366,3222,0.74,Peas & beans (Pulses),Chhindwara
+2018 - 2019,Rabi,729,532,0.73,Peas & beans (Pulses),Chhindwara
+2019 - 2020,Rabi,902,643,0.71,Peas & beans (Pulses),Chhindwara
+2020 - 2021,Rabi,795,580,0.73,Peas & beans (Pulses),Damoh
+2021 - 2022,Rabi,946,691,0.73,Peas & beans (Pulses),Damoh
+2022 - 2023,Rabi,982,738,0.75,Peas & beans (Pulses),Damoh
+2018 - 2019,Rabi,2878,5548,1.93,Peas & beans (Pulses),Damoh
+2019 - 2020,Rabi,3769,7266,1.93,Peas & beans (Pulses),Damoh
+2020 - 2021,Rabi,9628,11554,1.2,Peas & beans (Pulses),Datia
+2021 - 2022,Rabi,20032,16466,0.82,Peas & beans (Pulses),Datia
+2022 - 2023,Rabi,16106,25609,1.59,Peas & beans (Pulses),Datia
+2018 - 2019,Rabi,178,105,0.59,Peas & beans (Pulses),Datia
+2019 - 2020,Rabi,179,113,0.63,Peas & beans (Pulses),Datia
+2020 - 2021,Rabi,218,180,0.83,Peas & beans (Pulses),Dewas
+2021 - 2022,Rabi,29,23,0.79,Peas & beans (Pulses),Dewas
+2022 - 2023,Rabi,132,109,0.83,Peas & beans (Pulses),Dewas
+2018 - 2019,Rabi,4254,2483,0.58,Peas & beans (Pulses),Dewas
+2019 - 2020,Rabi,3022,2733,0.9,Peas & beans (Pulses),Dewas
+2020 - 2021,Rabi,3160,2614,0.83,Peas & beans (Pulses),Dhar
+2021 - 2022,Rabi,2135,1089,0.51,Peas & beans (Pulses),Dhar
+2022 - 2023,Rabi,1721,1229,0.71,Peas & beans (Pulses),Dhar
+2018 - 2019,Rabi,3831,2196,0.57,Peas & beans (Pulses),Dhar
+2019 - 2020,Rabi,4166,2895,0.69,Peas & beans (Pulses),Dhar
+2020 - 2021,Rabi,3802,3707,0.98,Peas & beans (Pulses),Dindori
+2021 - 2022,Rabi,2866,2046,0.71,Peas & beans (Pulses),Dindori
+2022 - 2023,Rabi,3394,2423,0.71,Peas & beans (Pulses),Dindori
+2018 - 2019,Rabi,67,87,1.3,Peas & beans (Pulses),Dindori
+2019 - 2020,Rabi,126,168,1.33,Peas & beans (Pulses),Dindori
+2020 - 2021,Rabi,229,227,0.99,Peas & beans (Pulses),Guna
+2021 - 2022,Rabi,226,204,0.9,Peas & beans (Pulses),Guna
+2022 - 2023,Rabi,204,180,0.88,Peas & beans (Pulses),Guna
+2018 - 2019,Rabi,2293,1238,0.54,Peas & beans (Pulses),Guna
+2019 - 2020,Rabi,2239,1322,0.59,Peas & beans (Pulses),Guna
+2020 - 2021,Rabi,2568,3570,1.39,Peas & beans (Pulses),Gwalior
+2021 - 2022,Rabi,1939,1276,0.66,Peas & beans (Pulses),Gwalior
+2022 - 2023,Rabi,1126,1158,1.03,Peas & beans (Pulses),Gwalior
+2020 - 2021,Rabi,19,18,0.95,Peas & beans (Pulses),Harda
+2021 - 2022,Rabi,9,890,98.89,Peas & beans (Pulses),Harda
+2022 - 2023,Rabi,29,17,0.59,Peas & beans (Pulses),Harda
+2018 - 2019,Rabi,60,29,0.48,Peas & beans (Pulses),Harda
+2019 - 2020,Rabi,39,20,0.51,Peas & beans (Pulses),Harda
+2020 - 2021,Rabi,33,41,1.24,Peas & beans (Pulses),Hoshangabad
+2021 - 2022,Rabi,14,1450,103.57,Peas & beans (Pulses),Hoshangabad
+2022 - 2023,Rabi,22,13,0.59,Peas & beans (Pulses),Hoshangabad
+2018 - 2019,Rabi,450,179,0.4,Peas & beans (Pulses),Hoshangabad
+2019 - 2020,Rabi,406,175,0.43,Peas & beans (Pulses),Hoshangabad
+2020 - 2021,Rabi,736,685,0.93,Peas & beans (Pulses),Indore
+2021 - 2022,Rabi,304,203,0.67,Peas & beans (Pulses),Indore
+2022 - 2023,Rabi,284,218,0.77,Peas & beans (Pulses),Indore
+2018 - 2019,Rabi,4630,6326,1.37,Peas & beans (Pulses),Indore
+2019 - 2020,Rabi,2155,2944,1.37,Peas & beans (Pulses),Indore
+2020 - 2021,Rabi,4186,5903,1.41,Peas & beans (Pulses),Jabalpur
+2021 - 2022,Rabi,13279,14474,1.09,Peas & beans (Pulses),Jabalpur
+2022 - 2023,Rabi,18609,23969,1.29,Peas & beans (Pulses),Jabalpur
+2018 - 2019,Rabi,141,81,0.57,Peas & beans (Pulses),Jabalpur
+2019 - 2020,Rabi,103,79,0.77,Peas & beans (Pulses),Jabalpur
+2020 - 2021,Rabi,169,160,0.95,Peas & beans (Pulses),Jhabua
+2021 - 2022,Rabi,54,37,0.69,Peas & beans (Pulses),Jhabua
+2022 - 2023,Rabi,130,89,0.68,Peas & beans (Pulses),Jhabua
+2018 - 2019,Rabi,547,691,1.26,Peas & beans (Pulses),Jhabua
+2019 - 2020,Rabi,158,199,1.26,Peas & beans (Pulses),Jhabua
+2020 - 2021,Rabi,297,347,1.17,Peas & beans (Pulses),Katni
+2021 - 2022,Rabi,185,181,0.98,Peas & beans (Pulses),Katni
+2022 - 2023,Rabi,258,331,1.28,Peas & beans (Pulses),Katni
+2018 - 2019,Rabi,179,66,0.37,Peas & beans (Pulses),Katni
+2019 - 2020,Rabi,142,50,0.35,Peas & beans (Pulses),Katni
+2020 - 2021,Rabi,218,117,0.54,Peas & beans (Pulses),Khandwa
+2021 - 2022,Rabi,93,50,0.54,Peas & beans (Pulses),Khandwa
+2022 - 2023,Rabi,143,76,0.53,Peas & beans (Pulses),Khandwa
+2018 - 2019,Rabi,12,6,0.5,Peas & beans (Pulses),Khandwa
+2019 - 2020,Rabi,7,4,0.57,Peas & beans (Pulses),Khandwa
+2020 - 2021,Rabi,18,14,0.78,Peas & beans (Pulses),Khargone
+2021 - 2022,Rabi,4,3,0.75,Peas & beans (Pulses),Khargone
+2020 - 2021,Rabi,5225,1829,0.35,Peas & beans (Pulses),Mandla
+2021 - 2022,Rabi,4924,2757,0.56,Peas & beans (Pulses),Mandla
+2022 - 2023,Rabi,4410,2469,0.56,Peas & beans (Pulses),Mandla
+2018 - 2019,Rabi,322,156,0.48,Peas & beans (Pulses),Mandla
+2019 - 2020,Rabi,367,216,0.59,Peas & beans (Pulses),Mandla
+2020 - 2021,Rabi,654,632,0.97,Peas & beans (Pulses),Mandsaur
+2021 - 2022,Rabi,1256,749,0.6,Peas & beans (Pulses),Mandsaur
+2022 - 2023,Rabi,307,214,0.7,Peas & beans (Pulses),Mandsaur
+2018 - 2019,Rabi,313,222,0.71,Peas & beans (Pulses),Mandsaur
+2019 - 2020,Rabi,195,184,0.94,Peas & beans (Pulses),Mandsaur
+2020 - 2021,Rabi,283,347,1.23,Peas & beans (Pulses),Morena
+2021 - 2022,Rabi,152,137,0.9,Peas & beans (Pulses),Morena
+2022 - 2023,Rabi,139,117,0.84,Peas & beans (Pulses),Morena
+2018 - 2019,Rabi,894,905,1.01,Peas & beans (Pulses),Morena
+2019 - 2020,Rabi,613,644,1.05,Peas & beans (Pulses),Morena
+2020 - 2021,Rabi,834,876,1.05,Peas & beans (Pulses),Narsinghpur
+2021 - 2022,Rabi,2760,2553,0.93,Peas & beans (Pulses),Narsinghpur
+2022 - 2023,Rabi,2360,2192,0.93,Peas & beans (Pulses),Narsinghpur
+2018 - 2019,Rabi,135,87,0.64,Peas & beans (Pulses),Narsinghpur
+2019 - 2020,Rabi,128,117,0.91,Peas & beans (Pulses),Narsinghpur
+2020 - 2021,Rabi,204,184,0.9,Peas & beans (Pulses),Neemuch
+2021 - 2022,Rabi,80,68,0.85,Peas & beans (Pulses),Neemuch
+2022 - 2023,Rabi,131,111,0.85,Peas & beans (Pulses),Neemuch
+2019 - 2020,Rabi,444,550,1.24,Peas & beans (Pulses),Neemuch
+2020 - 2021,Rabi,1043,1076,1.03,Peas & beans (Pulses),Neemuch
+2021 - 2022,Rabi,4114,3661,0.89,Peas & beans (Pulses),Niwari
+2022 - 2023,Rabi,1621,2074,1.28,Peas & beans (Pulses),Niwari
+2018 - 2019,Rabi,345,671,1.94,Peas & beans (Pulses),Niwari
+2019 - 2020,Rabi,276,424,1.54,Peas & beans (Pulses),Niwari
+2020 - 2021,Rabi,422,539,1.28,Peas & beans (Pulses),Panna
+2021 - 2022,Rabi,2050,1743,0.85,Peas & beans (Pulses),Panna
+2022 - 2023,Rabi,4659,4892,1.05,Peas & beans (Pulses),Panna
+2018 - 2019,Rabi,583,502,0.86,Peas & beans (Pulses),Panna
+2019 - 2020,Rabi,681,517,0.76,Peas & beans (Pulses),Panna
+2020 - 2021,Rabi,272,242,0.89,Peas & beans (Pulses),Raisen
+2021 - 2022,Rabi,110,80,0.73,Peas & beans (Pulses),Raisen
+2022 - 2023,Rabi,148,140,0.95,Peas & beans (Pulses),Raisen
+2020 - 2021,Rabi,131,115,0.88,Peas & beans (Pulses),Rajgarh
+2021 - 2022,Rabi,24,20,0.83,Peas & beans (Pulses),Rajgarh
+2022 - 2023,Rabi,95,79,0.83,Peas & beans (Pulses),Rajgarh
+2018 - 2019,Rabi,3334,3473,1.04,Peas & beans (Pulses),Rajgarh
+2019 - 2020,Rabi,2142,1476,0.69,Peas & beans (Pulses),Rajgarh
+2020 - 2021,Rabi,3117,4114,1.32,Peas & beans (Pulses),Ratlam
+2021 - 2022,Rabi,2633,2054,0.78,Peas & beans (Pulses),Ratlam
+2022 - 2023,Rabi,1863,1993,1.07,Peas & beans (Pulses),Ratlam
+2018 - 2019,Rabi,639,589,0.92,Peas & beans (Pulses),Ratlam
+2019 - 2020,Rabi,216,176,0.81,Peas & beans (Pulses),Ratlam
+2020 - 2021,Rabi,286,259,0.91,Peas & beans (Pulses),Rewa
+2021 - 2022,Rabi,291,237,0.81,Peas & beans (Pulses),Rewa
+2022 - 2023,Rabi,304,254,0.84,Peas & beans (Pulses),Rewa
+2018 - 2019,Rabi,960,1171,1.22,Peas & beans (Pulses),Rewa
+2019 - 2020,Rabi,772,821,1.06,Peas & beans (Pulses),Rewa
+2020 - 2021,Rabi,495,494,1,Peas & beans (Pulses),Sagar
+2021 - 2022,Rabi,954,878,0.92,Peas & beans (Pulses),Sagar
+2022 - 2023,Rabi,1615,1562,0.97,Peas & beans (Pulses),Sagar
+2018 - 2019,Rabi,917,338,0.37,Peas & beans (Pulses),Sagar
+2019 - 2020,Rabi,352,175,0.5,Peas & beans (Pulses),Sagar
+2020 - 2021,Rabi,450,498,1.11,Peas & beans (Pulses),Satna
+2021 - 2022,Rabi,358,296,0.83,Peas & beans (Pulses),Satna
+2022 - 2023,Rabi,511,422,0.83,Peas & beans (Pulses),Satna
+2018 - 2019,Rabi,234,117,0.5,Peas & beans (Pulses),Satna
+2019 - 2020,Rabi,143,84,0.59,Peas & beans (Pulses),Satna
+2020 - 2021,Rabi,107,143,1.34,Peas & beans (Pulses),Sehore
+2021 - 2022,Rabi,14,9,0.64,Peas & beans (Pulses),Sehore
+2022 - 2023,Rabi,51,44,0.86,Peas & beans (Pulses),Sehore
+2018 - 2019,Rabi,2514,1272,0.51,Peas & beans (Pulses),Sehore
+2019 - 2020,Rabi,2723,1673,0.61,Peas & beans (Pulses),Sehore
+2020 - 2021,Rabi,2088,1207,0.58,Peas & beans (Pulses),Seoni
+2021 - 2022,Rabi,2129,1277,0.6,Peas & beans (Pulses),Seoni
+2022 - 2023,Rabi,1961,1243,0.63,Peas & beans (Pulses),Seoni
+2018 - 2019,Rabi,306,189,0.62,Peas & beans (Pulses),Seoni
+2019 - 2020,Rabi,488,360,0.74,Peas & beans (Pulses),Seoni
+2020 - 2021,Rabi,838,761,0.91,Peas & beans (Pulses),Shahdol
+2021 - 2022,Rabi,717,528,0.74,Peas & beans (Pulses),Shahdol
+2022 - 2023,Rabi,824,625,0.76,Peas & beans (Pulses),Shahdol
+2020 - 2021,Rabi,111,84,0.76,Peas & beans (Pulses),Shajapur
+2021 - 2022,Rabi,26,11,0.42,Peas & beans (Pulses),Shajapur
+2022 - 2023,Rabi,37,23,0.62,Peas & beans (Pulses),Shajapur
+2018 - 2019,Rabi,11,17,1.55,Peas & beans (Pulses),Shajapur
+2019 - 2020,Rabi,9,12,1.33,Peas & beans (Pulses),Shajapur
+2020 - 2021,Rabi,26,31,1.19,Peas & beans (Pulses),Sheopur
+2021 - 2022,Rabi,5,4,0.8,Peas & beans (Pulses),Sheopur
+2022 - 2023,Rabi,21,24,1.14,Peas & beans (Pulses),Sheopur
+2018 - 2019,Rabi,394,273,0.69,Peas & beans (Pulses),Sheopur
+2019 - 2020,Rabi,477,310,0.65,Peas & beans (Pulses),Sheopur
+2020 - 2021,Rabi,1239,1759,1.42,Peas & beans (Pulses),Shivpuri
+2021 - 2022,Rabi,1140,857,0.75,Peas & beans (Pulses),Shivpuri
+2022 - 2023,Rabi,1189,1023,0.86,Peas & beans (Pulses),Shivpuri
+2018 - 2019,Rabi,546,271,0.5,Peas & beans (Pulses),Shivpuri
+2019 - 2020,Rabi,468,233,0.5,Peas & beans (Pulses),Shivpuri
+2020 - 2021,Rabi,557,585,1.05,Peas & beans (Pulses),Sidhi
+2021 - 2022,Rabi,418,291,0.7,Peas & beans (Pulses),Sidhi
+2022 - 2023,Rabi,454,316,0.7,Peas & beans (Pulses),Sidhi
+2018 - 2019,Rabi,1053,1316,1.25,Peas & beans (Pulses),Sidhi
+2019 - 2020,Rabi,952,1259,1.32,Peas & beans (Pulses),Sidhi
+2020 - 2021,Rabi,2089,2214,1.06,Peas & beans (Pulses),Singrauli
+2021 - 2022,Rabi,3427,3050,0.89,Peas & beans (Pulses),Singrauli
+2022 - 2023,Rabi,4236,4558,1.08,Peas & beans (Pulses),Singrauli
+2018 - 2019,Rabi,2399,2028,0.85,Peas & beans (Pulses),Singrauli
+2019 - 2020,Rabi,1718,2129,1.24,Peas & beans (Pulses),Singrauli
+2020 - 2021,Rabi,4062,5281,1.3,Peas & beans (Pulses),Tikamgarh
+2021 - 2022,Rabi,7962,7245,0.91,Peas & beans (Pulses),Tikamgarh
+2022 - 2023,Rabi,3518,3905,1.11,Peas & beans (Pulses),Tikamgarh
+2018 - 2019,Rabi,8208,3155,0.38,Peas & beans (Pulses),Tikamgarh
+2019 - 2020,Rabi,5305,3329,0.63,Peas & beans (Pulses),Tikamgarh
+2020 - 2021,Rabi,5455,5509,1.01,Peas & beans (Pulses),Ujjain
+2021 - 2022,Rabi,4091,2250,0.55,Peas & beans (Pulses),Ujjain
+2022 - 2023,Rabi,2715,2036,0.75,Peas & beans (Pulses),Ujjain
+2018 - 2019,Rabi,1032,597,0.58,Peas & beans (Pulses),Ujjain
+2019 - 2020,Rabi,628,369,0.59,Peas & beans (Pulses),Ujjain
+2020 - 2021,Rabi,1162,790,0.68,Peas & beans (Pulses),Umaria
+2021 - 2022,Rabi,1037,615,0.59,Peas & beans (Pulses),Umaria
+2022 - 2023,Rabi,1985,1211,0.61,Peas & beans (Pulses),Umaria
+2020 - 2021,Rabi,303,194,0.64,Peas & beans (Pulses),Vidisha
+2021 - 2022,Rabi,170,123,0.72,Peas & beans (Pulses),Vidisha
+2022 - 2023,Rabi,212,171,0.81,Peas & beans (Pulses),Vidisha
+2020 - 2021,Rabi,5332,9278,1.74,Rapeseed &Mustard,Agar malwa
+2021 - 2022,Rabi,8406,7204,0.86,Rapeseed &Mustard,Agar malwa
+2022 - 2023,Rabi,8926,9283,1.04,Rapeseed &Mustard,Agar malwa
+2018 - 2019,Rabi,1,1,1,Rapeseed &Mustard,Agar malwa
+2019 - 2020,Rabi,21,15,0.71,Rapeseed &Mustard,Alirajpur
+2022 - 2023,Rabi,520,405,0.78,Rapeseed &Mustard,Alirajpur
+2018 - 2019,Rabi,5584,1301,0.23,Rapeseed &Mustard,Alirajpur
+2019 - 2020,Rabi,7654,3169,0.41,Rapeseed &Mustard,Alirajpur
+2020 - 2021,Rabi,6046,3978,0.66,Rapeseed &Mustard,Anuppur
+2021 - 2022,Rabi,4163,1915,0.46,Rapeseed &Mustard,Anuppur
+2022 - 2023,Rabi,5477,3724,0.68,Rapeseed &Mustard,Anuppur
+2018 - 2019,Rabi,11229,9713,0.86,Rapeseed &Mustard,Anuppur
+2019 - 2020,Rabi,10887,16407,1.51,Rapeseed &Mustard,Anuppur
+2020 - 2021,Rabi,14619,18698,1.28,Rapeseed &Mustard,Ashoknagar
+2021 - 2022,Rabi,68410,90096,1.32,Rapeseed &Mustard,Ashoknagar
+2022 - 2023,Rabi,68930,89609,1.3,Rapeseed &Mustard,Ashoknagar
+2018 - 2019,Rabi,1734,858,0.49,Rapeseed &Mustard,Ashoknagar
+2019 - 2020,Rabi,2346,3064,1.31,Rapeseed &Mustard,Ashoknagar
+2020 - 2021,Rabi,3337,2166,0.65,Rapeseed &Mustard,Balaghat
+2021 - 2022,Rabi,9091,5546,0.61,Rapeseed &Mustard,Balaghat
+2022 - 2023,Rabi,9611,6718,0.7,Rapeseed &Mustard,Balaghat
+2020 - 2021,Rabi,3,2,0.67,Rapeseed &Mustard,Barwani
+2022 - 2023,Rabi,520,521,1,Rapeseed &Mustard,Barwani
+2018 - 2019,Rabi,459,361,0.79,Rapeseed &Mustard,Barwani
+2019 - 2020,Rabi,916,952,1.04,Rapeseed &Mustard,Barwani
+2020 - 2021,Rabi,1397,2329,1.67,Rapeseed &Mustard,Betul
+2021 - 2022,Rabi,4471,4341,0.97,Rapeseed &Mustard,Betul
+2022 - 2023,Rabi,4991,6588,1.32,Rapeseed &Mustard,Betul
+2020 - 2021,Rabi,203852,447455,2.19,Rapeseed &Mustard,Bhind
+2021 - 2022,Rabi,249387,472588,1.89,Rapeseed &Mustard,Bhind
+2022 - 2023,Rabi,249907,478572,1.92,Rapeseed &Mustard,Bhind
+2018 - 2019,Rabi,38,25,0.66,Rapeseed &Mustard,Bhind
+2019 - 2020,Rabi,69,99,1.43,Rapeseed &Mustard,Bhind
+2020 - 2021,Rabi,95,128,1.35,Rapeseed &Mustard,Bhopal
+2021 - 2022,Rabi,485,469,0.97,Rapeseed &Mustard,Bhopal
+2022 - 2023,Rabi,1780,2225,1.25,Rapeseed &Mustard,Bhopal
+2018 - 2019,Rabi,1,1,1,Rapeseed &Mustard,Bhopal
+2020 - 2021,Rabi,2,4,2,Rapeseed &Mustard,Burhanpur
+2022 - 2023,Rabi,520,411,0.79,Rapeseed &Mustard,Burhanpur
+2018 - 2019,Rabi,18220,9675,0.53,Rapeseed &Mustard,Burhanpur
+2019 - 2020,Rabi,21706,20642,0.95,Rapeseed &Mustard,Burhanpur
+2020 - 2021,Rabi,23940,22935,0.96,Rapeseed &Mustard,Chhatarpur
+2021 - 2022,Rabi,61412,49805,0.81,Rapeseed &Mustard,Chhatarpur
+2022 - 2023,Rabi,61932,76176,1.23,Rapeseed &Mustard,Chhatarpur
+2018 - 2019,Rabi,283,179,0.63,Rapeseed &Mustard,Chhatarpur
+2019 - 2020,Rabi,620,1266,2.04,Rapeseed &Mustard,Chhatarpur
+2020 - 2021,Rabi,1636,2403,1.47,Rapeseed &Mustard,Chhindwara
+2021 - 2022,Rabi,2730,2495,0.91,Rapeseed &Mustard,Chhindwara
+2022 - 2023,Rabi,3250,4284,1.32,Rapeseed &Mustard,Chhindwara
+2018 - 2019,Rabi,973,662,0.68,Rapeseed &Mustard,Chhindwara
+2019 - 2020,Rabi,1094,1201,1.1,Rapeseed &Mustard,Chhindwara
+2020 - 2021,Rabi,877,1162,1.32,Rapeseed &Mustard,Damoh
+2021 - 2022,Rabi,2436,2302,0.94,Rapeseed &Mustard,Damoh
+2022 - 2023,Rabi,4396,4616,1.05,Rapeseed &Mustard,Damoh
+2018 - 2019,Rabi,13998,8077,0.58,Rapeseed &Mustard,Damoh
+2019 - 2020,Rabi,11935,15838,1.33,Rapeseed &Mustard,Damoh
+2020 - 2021,Rabi,12127,13813,1.14,Rapeseed &Mustard,Datia
+2021 - 2022,Rabi,28497,22256,0.78,Rapeseed &Mustard,Datia
+2022 - 2023,Rabi,29017,32789,1.13,Rapeseed &Mustard,Datia
+2018 - 2019,Rabi,219,201,0.92,Rapeseed &Mustard,Datia
+2019 - 2020,Rabi,93,188,2.02,Rapeseed &Mustard,Datia
+2020 - 2021,Rabi,70,81,1.16,Rapeseed &Mustard,Dewas
+2021 - 2022,Rabi,316,386,1.22,Rapeseed &Mustard,Dewas
+2022 - 2023,Rabi,836,985,1.18,Rapeseed &Mustard,Dewas
+2020 - 2021,Rabi,12,10,0.83,Rapeseed &Mustard,Dhar
+2021 - 2022,Rabi,23,29,1.26,Rapeseed &Mustard,Dhar
+2022 - 2023,Rabi,543,717,1.32,Rapeseed &Mustard,Dhar
+2018 - 2019,Rabi,10900,3532,0.32,Rapeseed &Mustard,Dhar
+2019 - 2020,Rabi,14940,12848,0.86,Rapeseed &Mustard,Dhar
+2020 - 2021,Rabi,11122,14670,1.32,Rapeseed &Mustard,Dindori
+2021 - 2022,Rabi,9231,6176,0.67,Rapeseed &Mustard,Dindori
+2022 - 2023,Rabi,9751,10073,1.03,Rapeseed &Mustard,Dindori
+2018 - 2019,Rabi,14265,15264,1.07,Rapeseed &Mustard,Dindori
+2019 - 2020,Rabi,8882,17666,1.99,Rapeseed &Mustard,Dindori
+2020 - 2021,Rabi,31593,55193,1.75,Rapeseed &Mustard,Guna
+2021 - 2022,Rabi,88532,132975,1.5,Rapeseed &Mustard,Guna
+2022 - 2023,Rabi,89052,129125,1.45,Rapeseed &Mustard,Guna
+2018 - 2019,Rabi,51649,46484,0.9,Rapeseed &Mustard,Guna
+2019 - 2020,Rabi,46592,73755,1.58,Rapeseed &Mustard,Guna
+2020 - 2021,Rabi,38584,40590,1.05,Rapeseed &Mustard,Gwalior
+2021 - 2022,Rabi,62848,85913,1.37,Rapeseed &Mustard,Gwalior
+2022 - 2023,Rabi,63368,110260,1.74,Rapeseed &Mustard,Gwalior
+2018 - 2019,Rabi,324,171,0.53,Rapeseed &Mustard,Gwalior
+2019 - 2020,Rabi,124,166,1.34,Rapeseed &Mustard,Gwalior
+2020 - 2021,Rabi,175,158,0.9,Rapeseed &Mustard,Harda
+2021 - 2022,Rabi,845,619,0.73,Rapeseed &Mustard,Harda
+2022 - 2023,Rabi,1365,1029,0.75,Rapeseed &Mustard,Harda
+2018 - 2019,Rabi,190,135,0.71,Rapeseed &Mustard,Harda
+2019 - 2020,Rabi,137,216,1.58,Rapeseed &Mustard,Harda
+2020 - 2021,Rabi,126,175,1.39,Rapeseed &Mustard,Hoshangabad
+2021 - 2022,Rabi,535,528,0.99,Rapeseed &Mustard,Hoshangabad
+2022 - 2023,Rabi,1055,1783,1.69,Rapeseed &Mustard,Hoshangabad
+2018 - 2019,Rabi,15,6,0.4,Rapeseed &Mustard,Hoshangabad
+2019 - 2020,Rabi,3,4,1.33,Rapeseed &Mustard,Hoshangabad
+2020 - 2021,Rabi,2,2,1,Rapeseed &Mustard,Indore
+2021 - 2022,Rabi,5,5,1,Rapeseed &Mustard,Indore
+2022 - 2023,Rabi,525,683,1.3,Rapeseed &Mustard,Indore
+2018 - 2019,Rabi,966,686,0.71,Rapeseed &Mustard,Indore
+2019 - 2020,Rabi,2241,3151,1.41,Rapeseed &Mustard,Indore
+2020 - 2021,Rabi,1556,2379,1.53,Rapeseed &Mustard,Jabalpur
+2021 - 2022,Rabi,1828,1921,1.05,Rapeseed &Mustard,Jabalpur
+2022 - 2023,Rabi,2366,2304,0.97,Rapeseed &Mustard,Jabalpur
+2020 - 2021,Rabi,5,5,1,Rapeseed &Mustard,Jhabua
+2021 - 2022,Rabi,25,22,0.88,Rapeseed &Mustard,Jhabua
+2022 - 2023,Rabi,545,649,1.19,Rapeseed &Mustard,Jhabua
+2018 - 2019,Rabi,2457,1784,0.73,Rapeseed &Mustard,Jhabua
+2019 - 2020,Rabi,4247,5806,1.37,Rapeseed &Mustard,Jhabua
+2020 - 2021,Rabi,5480,7354,1.34,Rapeseed &Mustard,Katni
+2021 - 2022,Rabi,8808,8993,1.02,Rapeseed &Mustard,Katni
+2022 - 2023,Rabi,11243,10366,0.92,Rapeseed &Mustard,Katni
+2018 - 2019,Rabi,75,40,0.53,Rapeseed &Mustard,Katni
+2019 - 2020,Rabi,200,680,3.4,Rapeseed &Mustard,Katni
+2020 - 2021,Rabi,190,181,0.95,Rapeseed &Mustard,Khandwa
+2021 - 2022,Rabi,358,254,0.71,Rapeseed &Mustard,Khandwa
+2022 - 2023,Rabi,878,623,0.71,Rapeseed &Mustard,Khandwa
+2018 - 2019,Rabi,99,47,0.47,Rapeseed &Mustard,Khandwa
+2019 - 2020,Rabi,138,172,1.25,Rapeseed &Mustard,Khandwa
+2020 - 2021,Rabi,291,192,0.66,Rapeseed &Mustard,Khargone
+2021 - 2022,Rabi,537,447,0.83,Rapeseed &Mustard,Khargone
+2022 - 2023,Rabi,1057,1348,1.28,Rapeseed &Mustard,Khargone
+2018 - 2019,Rabi,6235,3778,0.61,Rapeseed &Mustard,Khargone
+2019 - 2020,Rabi,9419,11001,1.17,Rapeseed &Mustard,Khargone
+2020 - 2021,Rabi,7057,8320,1.18,Rapeseed &Mustard,Mandla
+2021 - 2022,Rabi,6304,5176,0.82,Rapeseed &Mustard,Mandla
+2022 - 2023,Rabi,7541,5957,0.79,Rapeseed &Mustard,Mandla
+2018 - 2019,Rabi,29508,17882,0.61,Rapeseed &Mustard,Mandla
+2019 - 2020,Rabi,4178,5039,1.21,Rapeseed &Mustard,Mandla
+2020 - 2021,Rabi,14752,24252,1.64,Rapeseed &Mustard,Mandsaur
+2021 - 2022,Rabi,17403,22746,1.31,Rapeseed &Mustard,Mandsaur
+2022 - 2023,Rabi,17923,26938,1.5,Rapeseed &Mustard,Mandsaur
+2018 - 2019,Rabi,145446,304273,2.09,Rapeseed &Mustard,Mandsaur
+2019 - 2020,Rabi,148173,309682,2.09,Rapeseed &Mustard,Mandsaur
+2020 - 2021,Rabi,155400,337529,2.17,Rapeseed &Mustard,Morena
+2021 - 2022,Rabi,185467,322713,1.74,Rapeseed &Mustard,Morena
+2022 - 2023,Rabi,185287,344634,1.86,Rapeseed &Mustard,Morena
+2018 - 2019,Rabi,29,23,0.79,Rapeseed &Mustard,Morena
+2019 - 2020,Rabi,40,67,1.68,Rapeseed &Mustard,Morena
+2020 - 2021,Rabi,45,77,1.71,Rapeseed &Mustard,Narsinghpur
+2021 - 2022,Rabi,301,362,1.2,Rapeseed &Mustard,Narsinghpur
+2022 - 2023,Rabi,821,969,1.18,Rapeseed &Mustard,Narsinghpur
+2020 - 2021,Rabi,12063,15875,1.32,Rapeseed &Mustard,Neemuch
+2021 - 2022,Rabi,13459,14738,1.1,Rapeseed &Mustard,Neemuch
+2022 - 2023,Rabi,13979,15181,1.09,Rapeseed &Mustard,Neemuch
+2019 - 2020,Rabi,1367,1401,1.02,Rapeseed &Mustard,Neemuch
+2020 - 2021,Rabi,2889,2877,1,Rapeseed &Mustard,Neemuch
+2021 - 2022,Rabi,3387,2605,0.77,Rapeseed &Mustard,Niwari
+2022 - 2023,Rabi,3907,3665,0.94,Rapeseed &Mustard,Niwari
+2018 - 2019,Rabi,6055,3482,0.58,Rapeseed &Mustard,Niwari
+2019 - 2020,Rabi,10772,9727,0.9,Rapeseed &Mustard,Niwari
+2020 - 2021,Rabi,12001,12673,1.06,Rapeseed &Mustard,Panna
+2021 - 2022,Rabi,18850,16079,0.85,Rapeseed &Mustard,Panna
+2022 - 2023,Rabi,19370,18382,0.95,Rapeseed &Mustard,Panna
+2018 - 2019,Rabi,36,24,0.67,Rapeseed &Mustard,Panna
+2019 - 2020,Rabi,85,96,1.13,Rapeseed &Mustard,Panna
+2020 - 2021,Rabi,72,67,0.93,Rapeseed &Mustard,Raisen
+2021 - 2022,Rabi,233,180,0.77,Rapeseed &Mustard,Raisen
+2022 - 2023,Rabi,1071,739,0.69,Rapeseed &Mustard,Raisen
+2018 - 2019,Rabi,5292,3202,0.61,Rapeseed &Mustard,Raisen
+2019 - 2020,Rabi,7420,9527,1.28,Rapeseed &Mustard,Raisen
+2020 - 2021,Rabi,25344,32364,1.28,Rapeseed &Mustard,Rajgarh
+2021 - 2022,Rabi,59305,60550,1.02,Rapeseed &Mustard,Rajgarh
+2022 - 2023,Rabi,59825,83755,1.4,Rapeseed &Mustard,Rajgarh
+2018 - 2019,Rabi,4126,5017,1.22,Rapeseed &Mustard,Rajgarh
+2019 - 2020,Rabi,2294,4035,1.76,Rapeseed &Mustard,Rajgarh
+2020 - 2021,Rabi,3977,7290,1.83,Rapeseed &Mustard,Ratlam
+2021 - 2022,Rabi,4636,7719,1.67,Rapeseed &Mustard,Ratlam
+2022 - 2023,Rabi,5156,7270,1.41,Rapeseed &Mustard,Ratlam
+2018 - 2019,Rabi,6960,3731,0.54,Rapeseed &Mustard,Ratlam
+2019 - 2020,Rabi,17101,18042,1.06,Rapeseed &Mustard,Ratlam
+2020 - 2021,Rabi,15700,11681,0.74,Rapeseed &Mustard,Rewa
+2021 - 2022,Rabi,21073,18123,0.86,Rapeseed &Mustard,Rewa
+2022 - 2023,Rabi,26475,35741,1.35,Rapeseed &Mustard,Rewa
+2018 - 2019,Rabi,607,431,0.71,Rapeseed &Mustard,Rewa
+2019 - 2020,Rabi,1014,1273,1.26,Rapeseed &Mustard,Rewa
+2020 - 2021,Rabi,1018,1072,1.05,Rapeseed &Mustard,Sagar
+2021 - 2022,Rabi,2486,2334,0.94,Rapeseed &Mustard,Sagar
+2022 - 2023,Rabi,4028,3835,0.95,Rapeseed &Mustard,Sagar
+2020 - 2021,Rabi,8777,7162,0.82,Rapeseed &Mustard,Satna
+2021 - 2022,Rabi,13584,11411,0.84,Rapeseed &Mustard,Satna
+2022 - 2023,Rabi,14176,17663,1.25,Rapeseed &Mustard,Satna
+2018 - 2019,Rabi,150,118,0.79,Rapeseed &Mustard,Satna
+2019 - 2020,Rabi,198,286,1.44,Rapeseed &Mustard,Satna
+2020 - 2021,Rabi,222,337,1.52,Rapeseed &Mustard,Sehore
+2021 - 2022,Rabi,441,472,1.07,Rapeseed &Mustard,Sehore
+2022 - 2023,Rabi,961,1023,1.06,Rapeseed &Mustard,Sehore
+2018 - 2019,Rabi,431,245,0.57,Rapeseed &Mustard,Sehore
+2019 - 2020,Rabi,1975,2234,1.13,Rapeseed &Mustard,Sehore
+2020 - 2021,Rabi,2253,2816,1.25,Rapeseed &Mustard,Seoni
+2021 - 2022,Rabi,5920,5150,0.87,Rapeseed &Mustard,Seoni
+2022 - 2023,Rabi,8667,7064,0.82,Rapeseed &Mustard,Seoni
+2018 - 2019,Rabi,1721,558,0.32,Rapeseed &Mustard,Seoni
+2019 - 2020,Rabi,2717,1891,0.7,Rapeseed &Mustard,Seoni
+2020 - 2021,Rabi,2296,1056,0.46,Rapeseed &Mustard,Shahdol
+2021 - 2022,Rabi,2898,1797,0.62,Rapeseed &Mustard,Shahdol
+2022 - 2023,Rabi,3418,2717,0.79,Rapeseed &Mustard,Shahdol
+2018 - 2019,Rabi,322,234,0.73,Rapeseed &Mustard,Shahdol
+2019 - 2020,Rabi,646,1077,1.67,Rapeseed &Mustard,Shahdol
+2020 - 2021,Rabi,1708,2313,1.35,Rapeseed &Mustard,Shajapur
+2021 - 2022,Rabi,3035,3068,1.01,Rapeseed &Mustard,Shajapur
+2022 - 2023,Rabi,3555,3829,1.08,Rapeseed &Mustard,Shajapur
+2018 - 2019,Rabi,43463,57936,1.33,Rapeseed &Mustard,Shajapur
+2019 - 2020,Rabi,39255,85380,2.18,Rapeseed &Mustard,Shajapur
+2020 - 2021,Rabi,42044,95019,2.26,Rapeseed &Mustard,Sheopur
+2021 - 2022,Rabi,75785,136034,1.79,Rapeseed &Mustard,Sheopur
+2022 - 2023,Rabi,77265,132896,1.72,Rapeseed &Mustard,Sheopur
+2018 - 2019,Rabi,39695,21475,0.54,Rapeseed &Mustard,Sheopur
+2019 - 2020,Rabi,31502,32416,1.03,Rapeseed &Mustard,Sheopur
+2020 - 2021,Rabi,41140,67675,1.64,Rapeseed &Mustard,Shivpuri
+2021 - 2022,Rabi,119521,117131,0.98,Rapeseed &Mustard,Shivpuri
+2022 - 2023,Rabi,120041,200468,1.67,Rapeseed &Mustard,Shivpuri
+2018 - 2019,Rabi,2253,764,0.34,Rapeseed &Mustard,Shivpuri
+2019 - 2020,Rabi,5057,3494,0.69,Rapeseed &Mustard,Shivpuri
+2020 - 2021,Rabi,7132,9849,1.38,Rapeseed &Mustard,Sidhi
+2021 - 2022,Rabi,7368,4914,0.67,Rapeseed &Mustard,Sidhi
+2022 - 2023,Rabi,7888,5261,0.67,Rapeseed &Mustard,Sidhi
+2020 - 2021,Rabi,16984,6963,0.41,Rapeseed &Mustard,Singrauli
+2021 - 2022,Rabi,17113,13074,0.76,Rapeseed &Mustard,Singrauli
+2022 - 2023,Rabi,22749,17380,0.76,Rapeseed &Mustard,Singrauli
+2018 - 2019,Rabi,12182,4739,0.39,Rapeseed &Mustard,Singrauli
+2019 - 2020,Rabi,6427,6588,1.03,Rapeseed &Mustard,Singrauli
+2020 - 2021,Rabi,8579,9214,1.07,Rapeseed &Mustard,Tikamgarh
+2021 - 2022,Rabi,18362,14065,0.77,Rapeseed &Mustard,Tikamgarh
+2022 - 2023,Rabi,18882,17239,0.91,Rapeseed &Mustard,Tikamgarh
+2018 - 2019,Rabi,875,489,0.56,Rapeseed &Mustard,Tikamgarh
+2019 - 2020,Rabi,1341,1775,1.32,Rapeseed &Mustard,Tikamgarh
+2020 - 2021,Rabi,1407,2376,1.69,Rapeseed &Mustard,Ujjain
+2021 - 2022,Rabi,1843,1666,0.9,Rapeseed &Mustard,Ujjain
+2022 - 2023,Rabi,2363,2954,1.25,Rapeseed &Mustard,Ujjain
+2018 - 2019,Rabi,2611,1107,0.42,Rapeseed &Mustard,Ujjain
+2019 - 2020,Rabi,3842,2847,0.74,Rapeseed &Mustard,Ujjain
+2020 - 2021,Rabi,2793,2025,0.73,Rapeseed &Mustard,Umaria
+2021 - 2022,Rabi,2544,1704,0.67,Rapeseed &Mustard,Umaria
+2022 - 2023,Rabi,3064,2212,0.72,Rapeseed &Mustard,Umaria
+2018 - 2019,Rabi,1055,634,0.6,Rapeseed &Mustard,Umaria
+2019 - 2020,Rabi,1032,1215,1.18,Rapeseed &Mustard,Umaria
+2020 - 2021,Rabi,1351,1706,1.26,Rapeseed &Mustard,Vidisha
+2021 - 2022,Rabi,11747,10467,0.89,Rapeseed &Mustard,Vidisha
+2022 - 2023,Rabi,12267,17296,1.41,Rapeseed &Mustard,Vidisha
+2018 - 2019,Rabi,3,1,0.33,Rapeseed &Mustard,Balaghat
+2019 - 2020,Rabi,3,1,0.33,Rapeseed &Mustard,Dewas
+2018 - 2019,Rabi,4,1,0.25,Rapeseed &Mustard,Dewas
+2019 - 2020,Rabi,1,1,1,Rapeseed &Mustard,Dhar
+2018 - 2019,Rabi,2,1,0.5,Rapeseed &Mustard,Sagar
+2018 - 2019,Rabi,2,1,0.5,Rapeseed &Mustard,Sagar
+2019 - 2020,Rabi,7,2,0.29,Rapeseed &Mustard,Shajapur
+2020 - 2021,Rabi,104738,233252,2.23,Safflower,Agar malwa
+2021 - 2022,Rabi,127140,322936,2.54,Safflower,Agar malwa
+2022 - 2023,Rabi,124362,328316,2.64,Safflower,Agar malwa
+2018 - 2019,Rabi,21868,50437,2.31,Safflower,Agar malwa
+2019 - 2020,Rabi,36888,84879,2.3,Safflower,Agar malwa
+2020 - 2021,Rabi,41323,113184,2.74,Safflower,Alirajpur
+2021 - 2022,Rabi,37799,107954,2.86,Safflower,Alirajpur
+2022 - 2023,Rabi,32899,93960,2.86,Safflower,Alirajpur
+2018 - 2019,Rabi,13728,24249,1.77,Safflower,Alirajpur
+2019 - 2020,Rabi,20470,33100,1.62,Safflower,Alirajpur
+2020 - 2021,Rabi,18607,29325,1.58,Safflower,Anuppur
+2021 - 2022,Rabi,18237,39301,2.16,Safflower,Anuppur
+2022 - 2023,Rabi,17496,39453,2.25,Safflower,Anuppur
+2018 - 2019,Rabi,173890,583633,3.36,Safflower,Anuppur
+2019 - 2020,Rabi,211876,812544,3.83,Safflower,Anuppur
+2020 - 2021,Rabi,197456,667401,3.38,Safflower,Ashoknagar
+2021 - 2022,Rabi,173252,614698,3.55,Safflower,Ashoknagar
+2022 - 2023,Rabi,119624,424426,3.55,Safflower,Ashoknagar
+2018 - 2019,Rabi,39692,52509,1.32,Safflower,Ashoknagar
+2019 - 2020,Rabi,76811,126585,1.65,Safflower,Ashoknagar
+2020 - 2021,Rabi,71381,193514,2.71,Safflower,Balaghat
+2021 - 2022,Rabi,44403,91115,2.05,Safflower,Balaghat
+2022 - 2023,Rabi,50476,108624,2.15,Safflower,Balaghat
+2018 - 2019,Rabi,101968,384821,3.77,Safflower,Balaghat
+2019 - 2020,Rabi,113489,466667,4.11,Safflower,Balaghat
+2020 - 2021,Rabi,126869,532215,4.19,Safflower,Barwani
+2021 - 2022,Rabi,126959,488538,3.85,Safflower,Barwani
+2022 - 2023,Rabi,110752,426174,3.85,Safflower,Barwani
+2018 - 2019,Rabi,144914,471037,3.25,Safflower,Barwani
+2019 - 2020,Rabi,264808,693267,2.62,Safflower,Barwani
+2020 - 2021,Rabi,274631,902712,3.29,Safflower,Betul
+2021 - 2022,Rabi,269435,770584,2.86,Safflower,Betul
+2022 - 2023,Rabi,281813,807394,2.86,Safflower,Betul
+2018 - 2019,Rabi,98256,414198,4.22,Safflower,Betul
+2019 - 2020,Rabi,115475,411091,3.56,Safflower,Betul
+2020 - 2021,Rabi,119549,475685,3.98,Safflower,Bhind
+2021 - 2022,Rabi,77890,377377,4.84,Safflower,Bhind
+2022 - 2023,Rabi,96666,439347,4.55,Safflower,Bhind
+2020 - 2021,Rabi,145628,500087,3.43,Safflower,Bhopal
+2021 - 2022,Rabi,145334,495153,3.41,Safflower,Bhopal
+2022 - 2023,Rabi,147167,501398,3.41,Safflower,Bhopal
+2018 - 2019,Rabi,14167,41998,2.96,Safflower,Bhopal
+2019 - 2020,Rabi,17743,63857,3.6,Safflower,Bhopal
+2020 - 2021,Rabi,19744,108454,5.49,Safflower,Burhanpur
+2021 - 2022,Rabi,14766,75750,5.13,Safflower,Burhanpur
+2022 - 2023,Rabi,15626,72348,4.63,Safflower,Burhanpur
+2018 - 2019,Rabi,286498,837297,2.92,Safflower,Burhanpur
+2019 - 2020,Rabi,351196,934533,2.66,Safflower,Burhanpur
+2020 - 2021,Rabi,321426,828315,2.58,Safflower,Chhatarpur
+2021 - 2022,Rabi,248232,769132,3.1,Safflower,Chhatarpur
+2022 - 2023,Rabi,315198,852926,2.71,Safflower,Chhatarpur
+2018 - 2019,Rabi,213338,754061,3.53,Safflower,Chhatarpur
+2019 - 2020,Rabi,287244,1566629,5.45,Safflower,Chhatarpur
+2020 - 2021,Rabi,300424,1586840,5.28,Safflower,Chhindwara
+2021 - 2022,Rabi,308313,1419165,4.6,Safflower,Chhindwara
+2022 - 2023,Rabi,307590,1385078,4.5,Safflower,Chhindwara
+2018 - 2019,Rabi,133244,340444,2.56,Safflower,Chhindwara
+2019 - 2020,Rabi,167411,408650,2.44,Safflower,Chhindwara
+2020 - 2021,Rabi,175791,486765,2.77,Safflower,Damoh
+2021 - 2022,Rabi,144956,435883,3.01,Safflower,Damoh
+2022 - 2023,Rabi,172017,517255,3.01,Safflower,Damoh
+2018 - 2019,Rabi,185315,614412,3.32,Safflower,Damoh
+2019 - 2020,Rabi,191215,651661,3.41,Safflower,Damoh
+2020 - 2021,Rabi,180979,611709,3.38,Safflower,Datia
+2021 - 2022,Rabi,146077,527922,3.61,Safflower,Datia
+2022 - 2023,Rabi,147578,534232,3.62,Safflower,Datia
+2018 - 2019,Rabi,134126,318605,2.38,Safflower,Datia
+2019 - 2020,Rabi,304846,1330043,4.36,Safflower,Datia
+2020 - 2021,Rabi,307489,1048537,3.41,Safflower,Dewas
+2021 - 2022,Rabi,287400,1097293,3.82,Safflower,Dewas
+2022 - 2023,Rabi,305016,1164551,3.82,Safflower,Dewas
+2018 - 2019,Rabi,233817,809679,3.46,Safflower,Dewas
+2019 - 2020,Rabi,364792,1314710,3.6,Safflower,Dewas
+2020 - 2021,Rabi,380980,2053482,5.39,Safflower,Dhar
+2021 - 2022,Rabi,366295,1988982,5.43,Safflower,Dhar
+2022 - 2023,Rabi,374885,1773206,4.73,Safflower,Dhar
+2020 - 2021,Rabi,55026,127660,2.32,Safflower,Dindori
+2021 - 2022,Rabi,59115,152871,2.59,Safflower,Dindori
+2022 - 2023,Rabi,60195,155664,2.59,Safflower,Dindori
+2018 - 2019,Rabi,165089,649906,3.94,Safflower,Dindori
+2019 - 2020,Rabi,211207,835957,3.96,Safflower,Dindori
+2020 - 2021,Rabi,185432,878762,4.74,Safflower,Guna
+2021 - 2022,Rabi,189953,852700,4.49,Safflower,Guna
+2022 - 2023,Rabi,189024,810724,4.29,Safflower,Guna
+2018 - 2019,Rabi,140836,523109,3.71,Safflower,Guna
+2019 - 2020,Rabi,151825,655884,4.32,Safflower,Guna
+2020 - 2021,Rabi,149949,590499,3.94,Safflower,Gwalior
+2021 - 2022,Rabi,141866,513271,3.62,Safflower,Gwalior
+2022 - 2023,Rabi,139382,502472,3.6,Safflower,Gwalior
+2018 - 2019,Rabi,142439,620836,4.36,Safflower,Gwalior
+2019 - 2020,Rabi,162065,568686,3.51,Safflower,Gwalior
+2020 - 2021,Rabi,140206,720659,5.14,Safflower,Harda
+2021 - 2022,Rabi,100919,537900,5.33,Safflower,Harda
+2022 - 2023,Rabi,97146,512931,5.28,Safflower,Harda
+2018 - 2019,Rabi,280763,1254028,4.47,Safflower,Harda
+2019 - 2020,Rabi,308308,1455214,4.72,Safflower,Harda
+2020 - 2021,Rabi,298881,1682999,5.63,Safflower,Hoshangabad
+2021 - 2022,Rabi,275152,154353,0.56,Safflower,Hoshangabad
+2022 - 2023,Rabi,270127,1388453,5.14,Safflower,Hoshangabad
+2018 - 2019,Rabi,126387,521752,4.13,Safflower,Hoshangabad
+2019 - 2020,Rabi,187273,964269,5.15,Safflower,Hoshangabad
+2020 - 2021,Rabi,201533,1211213,6.01,Safflower,Indore
+2021 - 2022,Rabi,202063,1093161,5.41,Safflower,Indore
+2022 - 2023,Rabi,209917,1009701,4.81,Safflower,Indore
+2018 - 2019,Rabi,193246,766680,3.97,Safflower,Indore
+2019 - 2020,Rabi,219428,947929,4.32,Safflower,Indore
+2020 - 2021,Rabi,218372,835928,3.83,Safflower,Jabalpur
+2021 - 2022,Rabi,202130,792754,3.92,Safflower,Jabalpur
+2022 - 2023,Rabi,195672,767426,3.92,Safflower,Jabalpur
+2018 - 2019,Rabi,53062,144515,2.72,Safflower,Jabalpur
+2019 - 2020,Rabi,73534,209204,2.84,Safflower,Jabalpur
+2020 - 2021,Rabi,92146,285745,3.1,Safflower,Jhabua
+2021 - 2022,Rabi,91815,296746,3.23,Safflower,Jhabua
+2022 - 2023,Rabi,87626,283207,3.23,Safflower,Jhabua
+2020 - 2021,Rabi,195189,707365,3.62,Safflower,Katni
+2021 - 2022,Rabi,185660,706436,3.8,Safflower,Katni
+2022 - 2023,Rabi,196089,746119,3.81,Safflower,Katni
+2018 - 2019,Rabi,177418,521915,2.94,Safflower,Katni
+2019 - 2020,Rabi,216164,692589,3.2,Safflower,Katni
+2020 - 2021,Rabi,207445,526910,2.54,Safflower,Khandwa
+2021 - 2022,Rabi,171413,488870,2.85,Safflower,Khandwa
+2022 - 2023,Rabi,186223,531108,2.85,Safflower,Khandwa
+2018 - 2019,Rabi,222195,863787,3.89,Safflower,Khandwa
+2019 - 2020,Rabi,281989,1157283,4.1,Safflower,Khandwa
+2020 - 2021,Rabi,245667,1068897,4.35,Safflower,Khargone
+2021 - 2022,Rabi,197281,842193,4.27,Safflower,Khargone
+2022 - 2023,Rabi,221965,947569,4.27,Safflower,Khargone
+2018 - 2019,Rabi,53435,123324,2.31,Safflower,Khargone
+2019 - 2020,Rabi,82291,160056,1.95,Safflower,Khargone
+2020 - 2021,Rabi,75959,246715,3.25,Safflower,Mandla
+2021 - 2022,Rabi,70707,161495,2.28,Safflower,Mandla
+2022 - 2023,Rabi,78957,182391,2.31,Safflower,Mandla
+2018 - 2019,Rabi,159314,684705,4.3,Safflower,Mandla
+2019 - 2020,Rabi,238130,1338767,5.62,Safflower,Mandla
+2020 - 2021,Rabi,122427,443675,3.62,Safflower,Mandsaur
+2021 - 2022,Rabi,214793,811489,3.78,Safflower,Mandsaur
+2022 - 2023,Rabi,204901,774116,3.78,Safflower,Mandsaur
+2018 - 2019,Rabi,120546,487757,4.05,Safflower,Mandsaur
+2019 - 2020,Rabi,123768,442842,3.58,Safflower,Mandsaur
+2020 - 2021,Rabi,119968,479392,4,Safflower,Morena
+2021 - 2022,Rabi,86097,365654,4.25,Safflower,Morena
+2022 - 2023,Rabi,101586,431436,4.25,Safflower,Morena
+2018 - 2019,Rabi,120227,439773,3.66,Safflower,Morena
+2019 - 2020,Rabi,145047,705509,4.86,Safflower,Morena
+2020 - 2021,Rabi,153258,644910,4.21,Safflower,Narsinghpur
+2021 - 2022,Rabi,147372,623091,4.23,Safflower,Narsinghpur
+2022 - 2023,Rabi,154811,639060,4.13,Safflower,Narsinghpur
+2018 - 2019,Rabi,76801,321795,4.19,Safflower,Narsinghpur
+2019 - 2020,Rabi,103768,492068,4.74,Safflower,Narsinghpur
+2020 - 2021,Rabi,41206,109484,2.66,Safflower,Neemuch
+2021 - 2022,Rabi,88702,368557,4.16,Safflower,Neemuch
+2022 - 2023,Rabi,88493,367688,4.15,Safflower,Neemuch
+2021 - 2022,Rabi,69146,195131,2.82,Safflower,Niwari
+2022 - 2023,Rabi,74106,209127,2.82,Safflower,Niwari
+2018 - 2019,Rabi,105107,285197,2.71,Safflower,Niwari
+2019 - 2020,Rabi,146314,360957,2.47,Safflower,Niwari
+2020 - 2021,Rabi,150010,364524,2.43,Safflower,Panna
+2021 - 2022,Rabi,137911,388909,2.82,Safflower,Panna
+2022 - 2023,Rabi,137478,387688,2.82,Safflower,Panna
+2018 - 2019,Rabi,232380,741781,3.19,Safflower,Panna
+2019 - 2020,Rabi,286929,1168662,4.07,Safflower,Panna
+2020 - 2021,Rabi,279981,968454,3.46,Safflower,Raisen
+2021 - 2022,Rabi,285040,954599,3.35,Safflower,Raisen
+2022 - 2023,Rabi,288918,967586,3.35,Safflower,Raisen
+2018 - 2019,Rabi,229108,807116,3.52,Safflower,Raisen
+2019 - 2020,Rabi,336555,962884,2.86,Safflower,Raisen
+2020 - 2021,Rabi,315181,1020556,3.24,Safflower,Rajgarh
+2021 - 2022,Rabi,335541,1132786,3.38,Safflower,Rajgarh
+2022 - 2023,Rabi,360618,1217446,3.38,Safflower,Rajgarh
+2018 - 2019,Rabi,153934,468977,3.05,Safflower,Rajgarh
+2019 - 2020,Rabi,227752,824462,3.62,Safflower,Rajgarh
+2020 - 2021,Rabi,214917,1076734,5.01,Safflower,Ratlam
+2021 - 2022,Rabi,223781,1070792,4.78,Safflower,Ratlam
+2022 - 2023,Rabi,246133,1153133,4.68,Safflower,Ratlam
+2018 - 2019,Rabi,261238,785462,3.01,Safflower,Ratlam
+2019 - 2020,Rabi,334362,1049562,3.14,Safflower,Ratlam
+2020 - 2021,Rabi,343212,887203,2.58,Safflower,Rewa
+2021 - 2022,Rabi,353260,1010324,2.86,Safflower,Rewa
+2022 - 2023,Rabi,346656,991436,2.86,Safflower,Rewa
+2018 - 2019,Rabi,301969,755948,2.5,Safflower,Rewa
+2019 - 2020,Rabi,360758,1200242,3.33,Safflower,Rewa
+2020 - 2021,Rabi,347618,992449,2.85,Safflower,Sagar
+2021 - 2022,Rabi,342766,947748,2.77,Safflower,Sagar
+2022 - 2023,Rabi,354243,979482,2.77,Safflower,Sagar
+2018 - 2019,Rabi,244840,899821,3.68,Safflower,Sagar
+2019 - 2020,Rabi,308362,986450,3.2,Safflower,Sagar
+2020 - 2021,Rabi,320734,853473,2.66,Safflower,Satna
+2021 - 2022,Rabi,319360,365466,1.14,Safflower,Satna
+2022 - 2023,Rabi,325752,882788,2.71,Safflower,Satna
+2020 - 2021,Rabi,333486,1099837,3.3,Safflower,Sehore
+2021 - 2022,Rabi,334767,1150929,3.44,Safflower,Sehore
+2022 - 2023,Rabi,342604,1177873,3.44,Safflower,Sehore
+2018 - 2019,Rabi,203008,627616,3.09,Safflower,Sehore
+2019 - 2020,Rabi,260669,1125829,4.32,Safflower,Sehore
+2020 - 2021,Rabi,275705,1205107,4.37,Safflower,Seoni
+2021 - 2022,Rabi,259843,1099656,4.23,Safflower,Seoni
+2022 - 2023,Rabi,269794,1114789,4.13,Safflower,Seoni
+2018 - 2019,Rabi,46403,112460,2.42,Safflower,Seoni
+2019 - 2020,Rabi,64772,160829,2.48,Safflower,Seoni
+2020 - 2021,Rabi,74224,139467,1.88,Safflower,Shahdol
+2021 - 2022,Rabi,69279,144724,2.09,Safflower,Shahdol
+2022 - 2023,Rabi,74491,155612,2.09,Safflower,Shahdol
+2018 - 2019,Rabi,119407,336653,2.82,Safflower,Shahdol
+2019 - 2020,Rabi,203701,1097745,5.39,Safflower,Shahdol
+2020 - 2021,Rabi,196447,637274,3.24,Safflower,Shajapur
+2021 - 2022,Rabi,216701,711429,3.28,Safflower,Shajapur
+2022 - 2023,Rabi,232890,764578,3.28,Safflower,Shajapur
+2018 - 2019,Rabi,109134,471747,4.32,Safflower,Shajapur
+2019 - 2020,Rabi,120508,541804,4.5,Safflower,Shajapur
+2020 - 2021,Rabi,96446,527367,5.47,Safflower,Sheopur
+2021 - 2022,Rabi,87814,440475,5.02,Safflower,Sheopur
+2022 - 2023,Rabi,96311,421361,4.38,Safflower,Sheopur
+2018 - 2019,Rabi,287013,889371,3.1,Safflower,Sheopur
+2019 - 2020,Rabi,311478,850958,2.73,Safflower,Sheopur
+2020 - 2021,Rabi,277065,819004,2.96,Safflower,Shivpuri
+2021 - 2022,Rabi,262403,868554,3.31,Safflower,Shivpuri
+2022 - 2023,Rabi,251726,833213,3.31,Safflower,Shivpuri
+2018 - 2019,Rabi,95999,290401,3.03,Safflower,Shivpuri
+2019 - 2020,Rabi,118696,281784,2.37,Safflower,Shivpuri
+2020 - 2021,Rabi,119467,278358,2.33,Safflower,Sidhi
+2021 - 2022,Rabi,122149,308671,2.53,Safflower,Sidhi
+2022 - 2023,Rabi,125388,316855,2.53,Safflower,Sidhi
+2018 - 2019,Rabi,78426,213804,2.73,Safflower,Sidhi
+2019 - 2020,Rabi,94045,454143,4.83,Safflower,Sidhi
+2020 - 2021,Rabi,86908,486598,5.6,Safflower,Singrauli
+2021 - 2022,Rabi,92730,376113,4.06,Safflower,Singrauli
+2022 - 2023,Rabi,86188,349579,4.06,Safflower,Singrauli
+2020 - 2021,Rabi,205836,592190,2.88,Safflower,Tikamgarh
+2021 - 2022,Rabi,192366,577098,3,Safflower,Tikamgarh
+2022 - 2023,Rabi,209544,628632,3,Safflower,Tikamgarh
+2018 - 2019,Rabi,220044,583277,2.65,Safflower,Tikamgarh
+2019 - 2020,Rabi,408353,1765718,4.32,Safflower,Tikamgarh
+2020 - 2021,Rabi,409404,1393202,3.4,Safflower,Ujjain
+2021 - 2022,Rabi,412568,1480706,3.59,Safflower,Ujjain
+2022 - 2023,Rabi,452752,1624927,3.59,Safflower,Ujjain
+2018 - 2019,Rabi,56053,125534,2.24,Safflower,Ujjain
+2019 - 2020,Rabi,75311,148212,1.97,Safflower,Ujjain
+2020 - 2021,Rabi,74548,138957,1.86,Safflower,Umaria
+2021 - 2022,Rabi,70583,146319,2.07,Safflower,Umaria
+2022 - 2023,Rabi,77562,168542,2.17,Safflower,Umaria
+2018 - 2019,Rabi,280644,732061,2.61,Safflower,Umaria
+2019 - 2020,Rabi,383599,1120493,2.92,Safflower,Umaria
+2020 - 2021,Rabi,355461,1089843,3.07,Safflower,Vidisha
+2021 - 2022,Rabi,374697,1277716,3.41,Safflower,Vidisha
+2022 - 2023,Rabi,326580,1113638,3.41,Safflower,Vidisha
+2018 - 2019,Rabi,74218,155914,2.1,Wheat,Agar malwa
+2019 - 2020,Rabi,126577,569597,4.5,Wheat,Agar malwa
+2020 - 2021,Rabi,104738,233252,2.23,Wheat,Agar malwa
+2021 - 2022,Rabi,127140,322936,2.54,Wheat,Agar malwa
+2022 - 2023,Rabi,124362,328316,2.64,Wheat,Agar malwa
+2018 - 2019,Rabi,21868,50437,2.31,Wheat,Agar malwa
+2019 - 2020,Rabi,36888,84879,2.3,Wheat,Agar malwa
+2020 - 2021,Rabi,41323,113184,2.74,Wheat,Alirajpur
+2021 - 2022,Rabi,37799,107954,2.86,Wheat,Alirajpur
+2022 - 2023,Rabi,32899,93960,2.86,Wheat,Alirajpur
+2018 - 2019,Rabi,13728,24249,1.77,Wheat,Alirajpur
+2019 - 2020,Rabi,20470,33100,1.62,Wheat,Alirajpur
+2020 - 2021,Rabi,18607,29325,1.58,Wheat,Anuppur
+2021 - 2022,Rabi,18237,39301,2.16,Wheat,Anuppur
+2022 - 2023,Rabi,17496,39453,2.25,Wheat,Anuppur
+2018 - 2019,Rabi,173890,583633,3.36,Wheat,Anuppur
+2019 - 2020,Rabi,211876,812544,3.83,Wheat,Anuppur
+2020 - 2021,Rabi,197456,667401,3.38,Wheat,Ashoknagar
+2021 - 2022,Rabi,173252,614698,3.55,Wheat,Ashoknagar
+2022 - 2023,Rabi,119624,424426,3.55,Wheat,Ashoknagar
+2018 - 2019,Rabi,39692,52509,1.32,Wheat,Ashoknagar
+2019 - 2020,Rabi,76811,126585,1.65,Wheat,Ashoknagar
+2020 - 2021,Rabi,71381,193514,2.71,Wheat,Balaghat
+2021 - 2022,Rabi,44403,91115,2.05,Wheat,Balaghat
+2022 - 2023,Rabi,50476,108624,2.15,Wheat,Balaghat
+2018 - 2019,Rabi,101968,384821,3.77,Wheat,Balaghat
+2019 - 2020,Rabi,113489,466667,4.11,Wheat,Balaghat
+2020 - 2021,Rabi,126869,532215,4.19,Wheat,Barwani
+2021 - 2022,Rabi,126959,488538,3.85,Wheat,Barwani
+2022 - 2023,Rabi,110752,426174,3.85,Wheat,Barwani
+2018 - 2019,Rabi,144914,471037,3.25,Wheat,Barwani
+2019 - 2020,Rabi,264808,693267,2.62,Wheat,Barwani
+2020 - 2021,Rabi,274631,902712,3.29,Wheat,Betul
+2021 - 2022,Rabi,269435,770584,2.86,Wheat,Betul
+2022 - 2023,Rabi,281813,807394,2.86,Wheat,Betul
+2020 - 2021,Rabi,119549,475685,3.98,Wheat,Bhind
+2021 - 2022,Rabi,77890,377377,4.84,Wheat,Bhind
+2022 - 2023,Rabi,96666,439347,4.55,Wheat,Bhind
+2018 - 2019,Rabi,51175,175571,3.43,Wheat,Bhind
+2019 - 2020,Rabi,141761,427835,3.02,Wheat,Bhind
+2020 - 2021,Rabi,145628,500087,3.43,Wheat,Bhopal
+2021 - 2022,Rabi,145334,495153,3.41,Wheat,Bhopal
+2022 - 2023,Rabi,147167,501398,3.41,Wheat,Bhopal
+2018 - 2019,Rabi,14167,41998,2.96,Wheat,Bhopal
+2019 - 2020,Rabi,17743,63857,3.6,Wheat,Bhopal
+2020 - 2021,Rabi,19744,108454,5.49,Wheat,Burhanpur
+2021 - 2022,Rabi,14766,75750,5.13,Wheat,Burhanpur
+2022 - 2023,Rabi,15626,72348,4.63,Wheat,Burhanpur
+2018 - 2019,Rabi,286498,837297,2.92,Wheat,Burhanpur
+2019 - 2020,Rabi,351196,934533,2.66,Wheat,Burhanpur
+2020 - 2021,Rabi,321426,828315,2.58,Wheat,Chhatarpur
+2021 - 2022,Rabi,248232,769132,3.1,Wheat,Chhatarpur
+2022 - 2023,Rabi,315198,852926,2.71,Wheat,Chhatarpur
+2018 - 2019,Rabi,213338,754061,3.53,Wheat,Chhatarpur
+2019 - 2020,Rabi,287244,1566629,5.45,Wheat,Chhatarpur
+2020 - 2021,Rabi,300424,1586840,5.28,Wheat,Chhindwara
+2021 - 2022,Rabi,308313,1419165,4.6,Wheat,Chhindwara
+2022 - 2023,Rabi,307590,1385078,4.5,Wheat,Chhindwara
+2018 - 2019,Rabi,133244,340444,2.56,Wheat,Chhindwara
+2019 - 2020,Rabi,167411,408650,2.44,Wheat,Chhindwara
+2020 - 2021,Rabi,175791,486765,2.77,Wheat,Damoh
+2021 - 2022,Rabi,144956,435883,3.01,Wheat,Damoh
+2022 - 2023,Rabi,172017,517255,3.01,Wheat,Damoh
+2018 - 2019,Rabi,185315,614412,3.32,Wheat,Damoh
+2019 - 2020,Rabi,191215,651661,3.41,Wheat,Damoh
+2020 - 2021,Rabi,180979,611709,3.38,Wheat,Datia
+2021 - 2022,Rabi,146077,527922,3.61,Wheat,Datia
+2022 - 2023,Rabi,147578,534232,3.62,Wheat,Datia
+2018 - 2019,Rabi,134126,318605,2.38,Wheat,Datia
+2019 - 2020,Rabi,304846,1330043,4.36,Wheat,Datia
+2020 - 2021,Rabi,307489,1048537,3.41,Wheat,Dewas
+2021 - 2022,Rabi,287400,1097293,3.82,Wheat,Dewas
+2022 - 2023,Rabi,305016,1164551,3.82,Wheat,Dewas
+2020 - 2021,Rabi,380980,2053482,5.39,Wheat,Dhar
+2021 - 2022,Rabi,366295,1988982,5.43,Wheat,Dhar
+2022 - 2023,Rabi,374885,1773206,4.73,Wheat,Dhar
+2018 - 2019,Rabi,34942,36048,1.03,Wheat,Dhar
+2019 - 2020,Rabi,52521,83036,1.58,Wheat,Dhar
+2020 - 2021,Rabi,55026,127660,2.32,Wheat,Dindori
+2021 - 2022,Rabi,59115,152871,2.59,Wheat,Dindori
+2022 - 2023,Rabi,60195,155664,2.59,Wheat,Dindori
+2018 - 2019,Rabi,165089,649906,3.94,Wheat,Dindori
+2019 - 2020,Rabi,211207,835957,3.96,Wheat,Dindori
+2020 - 2021,Rabi,185432,878762,4.74,Wheat,Guna
+2021 - 2022,Rabi,189953,852700,4.49,Wheat,Guna
+2022 - 2023,Rabi,189024,810724,4.29,Wheat,Guna
+2018 - 2019,Rabi,140836,523109,3.71,Wheat,Guna
+2019 - 2020,Rabi,151825,655884,4.32,Wheat,Guna
+2020 - 2021,Rabi,149949,590499,3.94,Wheat,Gwalior
+2021 - 2022,Rabi,141866,513271,3.62,Wheat,Gwalior
+2022 - 2023,Rabi,139382,502472,3.6,Wheat,Gwalior
+2018 - 2019,Rabi,142439,620836,4.36,Wheat,Gwalior
+2019 - 2020,Rabi,162065,568686,3.51,Wheat,Gwalior
+2020 - 2021,Rabi,140206,720659,5.14,Wheat,Harda
+2021 - 2022,Rabi,100919,537900,5.33,Wheat,Harda
+2022 - 2023,Rabi,97146,512931,5.28,Wheat,Harda
+2018 - 2019,Rabi,280763,1254028,4.47,Wheat,Harda
+2019 - 2020,Rabi,308308,1455214,4.72,Wheat,Harda
+2020 - 2021,Rabi,298881,1682999,5.63,Wheat,Hoshangabad
+2021 - 2022,Rabi,275152,154353,0.56,Wheat,Hoshangabad
+2022 - 2023,Rabi,270127,1388453,5.14,Wheat,Hoshangabad
+2018 - 2019,Rabi,126387,521752,4.13,Wheat,Hoshangabad
+2019 - 2020,Rabi,187273,964269,5.15,Wheat,Hoshangabad
+2020 - 2021,Rabi,201533,1211213,6.01,Wheat,Indore
+2021 - 2022,Rabi,202063,1093161,5.41,Wheat,Indore
+2022 - 2023,Rabi,209917,1009701,4.81,Wheat,Indore
+2018 - 2019,Rabi,193246,766680,3.97,Wheat,Indore
+2019 - 2020,Rabi,219428,947929,4.32,Wheat,Indore
+2020 - 2021,Rabi,218372,835928,3.83,Wheat,Jabalpur
+2021 - 2022,Rabi,202130,792754,3.92,Wheat,Jabalpur
+2022 - 2023,Rabi,195672,767426,3.92,Wheat,Jabalpur
+2020 - 2021,Rabi,92146,285745,3.1,Wheat,Jhabua
+2021 - 2022,Rabi,91815,296746,3.23,Wheat,Jhabua
+2022 - 2023,Rabi,87626,283207,3.23,Wheat,Jhabua
+2018 - 2019,Rabi,166312,550809,3.31,Wheat,Jhabua
+2019 - 2020,Rabi,194702,674837,3.47,Wheat,Jhabua
+2020 - 2021,Rabi,195189,707365,3.62,Wheat,Katni
+2021 - 2022,Rabi,185660,706436,3.8,Wheat,Katni
+2022 - 2023,Rabi,196089,746119,3.81,Wheat,Katni
+2018 - 2019,Rabi,177418,521915,2.94,Wheat,Katni
+2019 - 2020,Rabi,216164,692589,3.2,Wheat,Katni
+2020 - 2021,Rabi,207445,526910,2.54,Wheat,Khandwa
+2021 - 2022,Rabi,171413,488870,2.85,Wheat,Khandwa
+2022 - 2023,Rabi,186223,531108,2.85,Wheat,Khandwa
+2018 - 2019,Rabi,222195,863787,3.89,Wheat,Khandwa
+2019 - 2020,Rabi,281989,1157283,4.1,Wheat,Khandwa
+2020 - 2021,Rabi,245667,1068897,4.35,Wheat,Khargone
+2021 - 2022,Rabi,197281,842193,4.27,Wheat,Khargone
+2022 - 2023,Rabi,221965,947569,4.27,Wheat,Khargone
+2018 - 2019,Rabi,53435,123324,2.31,Wheat,Khargone
+2019 - 2020,Rabi,82291,160056,1.95,Wheat,Khargone
+2020 - 2021,Rabi,75959,246715,3.25,Wheat,Mandla
+2021 - 2022,Rabi,70707,161495,2.28,Wheat,Mandla
+2022 - 2023,Rabi,78957,182391,2.31,Wheat,Mandla
+2018 - 2019,Rabi,159314,684705,4.3,Wheat,Mandla
+2019 - 2020,Rabi,238130,1338767,5.62,Wheat,Mandla
+2020 - 2021,Rabi,122427,443675,3.62,Wheat,Mandsaur
+2021 - 2022,Rabi,214793,811489,3.78,Wheat,Mandsaur
+2022 - 2023,Rabi,204901,774116,3.78,Wheat,Mandsaur
+2018 - 2019,Rabi,120546,487757,4.05,Wheat,Mandsaur
+2019 - 2020,Rabi,123768,442842,3.58,Wheat,Mandsaur
+2020 - 2021,Rabi,119968,479392,4,Wheat,Morena
+2021 - 2022,Rabi,86097,365654,4.25,Wheat,Morena
+2022 - 2023,Rabi,101586,431436,4.25,Wheat,Morena
+2018 - 2019,Rabi,120227,439773,3.66,Wheat,Morena
+2019 - 2020,Rabi,145047,705509,4.86,Wheat,Morena
+2020 - 2021,Rabi,153258,644910,4.21,Wheat,Narsinghpur
+2021 - 2022,Rabi,147372,623091,4.23,Wheat,Narsinghpur
+2022 - 2023,Rabi,154811,639060,4.13,Wheat,Narsinghpur
+2020 - 2021,Rabi,41206,109484,2.66,Wheat,Neemuch
+2021 - 2022,Rabi,88702,368557,4.16,Wheat,Neemuch
+2022 - 2023,Rabi,88493,367688,4.15,Wheat,Neemuch
+2019 - 2020,Rabi,77809,245332,3.15,Wheat,Neemuch
+2020 - 2021,Rabi,63320,163999,2.59,Wheat,Neemuch
+2021 - 2022,Rabi,69146,195131,2.82,Wheat,Niwari
+2022 - 2023,Rabi,74106,209127,2.82,Wheat,Niwari
+2018 - 2019,Rabi,105107,285197,2.71,Wheat,Niwari
+2019 - 2020,Rabi,146314,360957,2.47,Wheat,Niwari
+2020 - 2021,Rabi,150010,364524,2.43,Wheat,Panna
+2021 - 2022,Rabi,137911,388909,2.82,Wheat,Panna
+2022 - 2023,Rabi,137478,387688,2.82,Wheat,Panna
+2018 - 2019,Rabi,232380,741781,3.19,Wheat,Panna
+2019 - 2020,Rabi,286929,1168662,4.07,Wheat,Panna
+2020 - 2021,Rabi,279981,968454,3.46,Wheat,Raisen
+2021 - 2022,Rabi,285040,954599,3.35,Wheat,Raisen
+2022 - 2023,Rabi,288918,967586,3.35,Wheat,Raisen
+2018 - 2019,Rabi,229108,807116,3.52,Wheat,Raisen
+2019 - 2020,Rabi,336555,962884,2.86,Wheat,Raisen
+2020 - 2021,Rabi,315181,1020556,3.24,Wheat,Rajgarh
+2021 - 2022,Rabi,335541,1132786,3.38,Wheat,Rajgarh
+2022 - 2023,Rabi,360618,1217446,3.38,Wheat,Rajgarh
+2018 - 2019,Rabi,153934,468977,3.05,Wheat,Rajgarh
+2019 - 2020,Rabi,227752,824462,3.62,Wheat,Rajgarh
+2020 - 2021,Rabi,214917,1076734,5.01,Wheat,Ratlam
+2021 - 2022,Rabi,223781,1070792,4.78,Wheat,Ratlam
+2022 - 2023,Rabi,246133,1153133,4.68,Wheat,Ratlam
+2018 - 2019,Rabi,261238,785462,3.01,Wheat,Ratlam
+2019 - 2020,Rabi,334362,1049562,3.14,Wheat,Ratlam
+2020 - 2021,Rabi,343212,887203,2.58,Wheat,Rewa
+2021 - 2022,Rabi,353260,1010324,2.86,Wheat,Rewa
+2022 - 2023,Rabi,346656,991436,2.86,Wheat,Rewa
+2018 - 2019,Rabi,301969,755948,2.5,Wheat,Rewa
+2019 - 2020,Rabi,360758,1200242,3.33,Wheat,Rewa
+2020 - 2021,Rabi,347618,992449,2.85,Wheat,Sagar
+2021 - 2022,Rabi,342766,947748,2.77,Wheat,Sagar
+2022 - 2023,Rabi,354243,979482,2.77,Wheat,Sagar
+2020 - 2021,Rabi,320734,853473,2.66,Wheat,Satna
+2021 - 2022,Rabi,319360,365466,1.14,Wheat,Satna
+2022 - 2023,Rabi,325752,882788,2.71,Wheat,Satna
+2018 - 2019,Rabi,273649,845434,3.09,Wheat,Satna
+2019 - 2020,Rabi,338431,1226812,3.62,Wheat,Satna
+2020 - 2021,Rabi,333486,1099837,3.3,Wheat,Sehore
+2021 - 2022,Rabi,334767,1150929,3.44,Wheat,Sehore
+2022 - 2023,Rabi,342604,1177873,3.44,Wheat,Sehore
+2018 - 2019,Rabi,203008,627616,3.09,Wheat,Sehore
+2019 - 2020,Rabi,260669,1125829,4.32,Wheat,Sehore
+2020 - 2021,Rabi,275705,1205107,4.37,Wheat,Seoni
+2021 - 2022,Rabi,259843,1099656,4.23,Wheat,Seoni
+2022 - 2023,Rabi,269794,1114789,4.13,Wheat,Seoni
+2018 - 2019,Rabi,46403,112460,2.42,Wheat,Seoni
+2019 - 2020,Rabi,64772,160829,2.48,Wheat,Seoni
+2020 - 2021,Rabi,74224,139467,1.88,Wheat,Shahdol
+2021 - 2022,Rabi,69279,144724,2.09,Wheat,Shahdol
+2022 - 2023,Rabi,74491,155612,2.09,Wheat,Shahdol
+2018 - 2019,Rabi,119407,336653,2.82,Wheat,Shahdol
+2019 - 2020,Rabi,203701,1097745,5.39,Wheat,Shahdol
+2020 - 2021,Rabi,196447,637274,3.24,Wheat,Shajapur
+2021 - 2022,Rabi,216701,711429,3.28,Wheat,Shajapur
+2022 - 2023,Rabi,232890,764578,3.28,Wheat,Shajapur
+2018 - 2019,Rabi,109134,471747,4.32,Wheat,Shajapur
+2019 - 2020,Rabi,120508,541804,4.5,Wheat,Shajapur
+2020 - 2021,Rabi,96446,527367,5.47,Wheat,Sheopur
+2021 - 2022,Rabi,87814,440475,5.02,Wheat,Sheopur
+2022 - 2023,Rabi,96311,421361,4.38,Wheat,Sheopur
+2018 - 2019,Rabi,287013,889371,3.1,Wheat,Sheopur
+2019 - 2020,Rabi,311478,850958,2.73,Wheat,Sheopur
+2020 - 2021,Rabi,277065,819004,2.96,Wheat,Shivpuri
+2021 - 2022,Rabi,262403,868554,3.31,Wheat,Shivpuri
+2022 - 2023,Rabi,251726,833213,3.31,Wheat,Shivpuri
+2018 - 2019,Rabi,95999,290401,3.03,Wheat,Shivpuri
+2019 - 2020,Rabi,118696,281784,2.37,Wheat,Shivpuri
+2020 - 2021,Rabi,119467,278358,2.33,Wheat,Sidhi
+2021 - 2022,Rabi,122149,308671,2.53,Wheat,Sidhi
+2022 - 2023,Rabi,125388,316855,2.53,Wheat,Sidhi
+2020 - 2021,Rabi,86908,486598,5.6,Wheat,Singrauli
+2021 - 2022,Rabi,92730,376113,4.06,Wheat,Singrauli
+2022 - 2023,Rabi,86188,349579,4.06,Wheat,Singrauli
+2018 - 2019,Rabi,269967,763774,2.83,Wheat,Singrauli
+2019 - 2020,Rabi,213491,654563,3.07,Wheat,Singrauli
+2020 - 2021,Rabi,205836,592190,2.88,Wheat,Tikamgarh
+2021 - 2022,Rabi,192366,577098,3,Wheat,Tikamgarh
+2022 - 2023,Rabi,209544,628632,3,Wheat,Tikamgarh
+2018 - 2019,Rabi,220044,583277,2.65,Wheat,Tikamgarh
+2019 - 2020,Rabi,408353,1765718,4.32,Wheat,Tikamgarh
+2020 - 2021,Rabi,409404,1393202,3.4,Wheat,Ujjain
+2021 - 2022,Rabi,412568,1480706,3.59,Wheat,Ujjain
+2022 - 2023,Rabi,452752,1624927,3.59,Wheat,Ujjain
+2018 - 2019,Rabi,56053,125534,2.24,Wheat,Ujjain
+2019 - 2020,Rabi,75311,148212,1.97,Wheat,Ujjain
+2020 - 2021,Rabi,74548,138957,1.86,Wheat,Umaria
+2021 - 2022,Rabi,70583,146319,2.07,Wheat,Umaria
+2022 - 2023,Rabi,77562,168542,2.17,Wheat,Umaria
+2018 - 2019,Rabi,280644,732061,2.61,Wheat,Umaria
+2019 - 2020,Rabi,383599,1120493,2.92,Wheat,Umaria
+2020 - 2021,Rabi,355461,1089843,3.07,Wheat,Vidisha
+2021 - 2022,Rabi,374697,1277716,3.41,Wheat,Vidisha
+2022 - 2023,Rabi,326580,1113638,3.41,Wheat,Vidisha
