@@ -65,6 +65,7 @@ document.getElementById("startBtn").onclick = async () => {
         });
         const data = await response.json();
         const hindi_msg = data.hindi_text;
+        const english_msg = data.english_text;
 
         // Create a new user message bubble
         let messagesDiv = document.getElementById("messages");
@@ -86,6 +87,22 @@ document.getElementById("startBtn").onclick = async () => {
         // Append to chat
         messagesDiv.appendChild(userBubble);
 
+        // --- Call /submit_query with English text ---
+        let queryFormData = new FormData();
+        queryFormData.append("query", english_msg);
+
+        const queryResponse = await fetch("/submit_query", {
+            method: "POST",
+            body: queryFormData
+        });
+        const queryData = await queryResponse.json();
+
+        // Append bot response to chat box
+        let botMsg = document.createElement("div");
+        botMsg.classList.add("message", "bot");
+        botMsg.textContent = queryData.message;
+        messagesDiv.appendChild(botMsg);
+        
         // Scroll to bottom
         messagesDiv.scrollTop = messagesDiv.scrollHeight;
 
@@ -93,6 +110,7 @@ document.getElementById("startBtn").onclick = async () => {
         audioChunks = [];
     };
 
+    
 
     document.getElementById("stopBtn").disabled = false;
     document.getElementById("startBtn").disabled = true;

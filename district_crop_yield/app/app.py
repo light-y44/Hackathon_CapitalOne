@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, jsonify, redirect, url_for
 import os
 from datetime import datetime
 from pydub import AudioSegment
-from transformers import pipeline
 import sys
 import os
 
@@ -11,10 +10,10 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__),  '..')))
 
 from utils.calcWeather import calculate_weather_data
 from utils.calIndx import calculate_indices_data
-from utils.utils import  calulateArea, calculateYieldPred, huggingFaceAuth
+from utils.utils import  calulateArea, calculateYieldPred, huggingFaceAuth, translate_hi_to_en, translate_en_to_hi
 from utils.repaymentLogic import preSeasonCalc
 from FT_model.model import FineTunedLlama
-from models.stt import load_asr_model, transcribe_hindi_audio
+from models.stt import load_asr_model
 
 app = Flask(__name__)
 UPLOAD_FOLDER = "uploads"
@@ -105,14 +104,13 @@ def upload_audio():
     # Transcribe
     hindi_text = asr_pipe(wav_path)["text"]
     # print("Transcribed Hindi text:", hindi_text)
+    english_text = translate_hi_to_en(hindi_text)
 
     return jsonify({
         "message": "Audio transcribed successfully",
-        "hindi_text": hindi_text
+        "hindi_text": hindi_text,
+        "english_text": english_text
     })
-
-
-
 
 
 @app.route('/submit_query', methods=['POST'])
@@ -126,6 +124,9 @@ def submit_query():
     if "<|assistant|>" in response:
         response = response.split("<|assistant|>")[-1].strip()
 
+    # Translate response to Hindi
+    response = translate_en_to_hi(response)
+    
     return jsonify({"message": response})
 
 @app.route('/submit_finance_query', methods=['POST'])

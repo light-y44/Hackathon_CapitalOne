@@ -6,6 +6,7 @@ import sys
 import torch
 import joblib
 from huggingface_hub import login
+from deep_translator import GoogleTranslator
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__),  '..')))
 from models.crop_yield import YieldNN
@@ -176,3 +177,32 @@ def huggingFaceAuth():
     except Exception as e:
         print(f"Authentication failed: {e}")
         return False
+
+
+
+
+def translate_hi_to_en(text: str) -> str:
+    """
+    Translates Hindi text into English using Google Translator (deep-translator).
+    
+    Args:
+        text (str): Input text in Hindi.
+    
+    Returns:
+        str: Translated English text.
+    """
+    return GoogleTranslator(source="hi", target="en").translate(text)
+
+
+def translate_en_to_hi(text: str) -> str:
+    """
+    Translates English text into Hindi using Google Translator (deep-translator).
+
+    Args:
+        text (str): Input text in English.
+
+    Returns:
+        str: Translated Hindi text.
+    """
+    return GoogleTranslator(source="en", target="hi").translate(text)
+    
