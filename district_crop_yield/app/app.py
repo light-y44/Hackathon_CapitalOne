@@ -116,6 +116,9 @@ def upload_audio():
 @app.route('/submit_query', methods=['POST'])
 def submit_query():
     query = request.form.get("query")
+
+    print("Request form data:", request.form)
+
     if not query:
         return jsonify({"message": "No query provided"}), 400
     

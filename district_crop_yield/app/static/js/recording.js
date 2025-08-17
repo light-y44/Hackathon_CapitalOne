@@ -12,21 +12,22 @@ document.getElementById("queryForm").onsubmit = async (e) => {
     userMsg.textContent = query;
     messagesDiv.appendChild(userMsg);
 
-    queryInput.value = "";
-    queryInput.placeholder = "Type your question...";
+    // Clear input box
+    e.target.query.value = "";
     
+    document.getElementById("thinkingLoader").style.display = "flex";
+
     // Send query to backend
     let res = await fetch("/submit_query", { method: "POST", body: formData });
     let data = await res.json();
+
+    document.getElementById("thinkingLoader").style.display = "none";
 
     // Append bot response to chat box
     let botMsg = document.createElement("div");
     botMsg.classList.add("message", "bot");
     botMsg.textContent = data.message;
     messagesDiv.appendChild(botMsg);
-
-    // Clear input box
-    e.target.query.value = "";
 
     // Auto-scroll to latest message
     messagesDiv.scrollTop = messagesDiv.scrollHeight;
@@ -52,9 +53,12 @@ document.getElementById("startBtn").onclick = async () => {
     mediaRecorder = new MediaRecorder(stream);
     mediaRecorder.start();
 
+    document.getElementById("recordingLoader").style.display = "flex";
+
     mediaRecorder.ondataavailable = e => audioChunks.push(e.data);
 
     mediaRecorder.onstop = async () => {
+        document.getElementById("recordingLoader").style.display = "none";
         let blob = new Blob(audioChunks, { type: 'audio/webm' });
         let formData = new FormData();
         formData.append("audio", blob, "recording.webm");
@@ -87,6 +91,9 @@ document.getElementById("startBtn").onclick = async () => {
         // Append to chat
         messagesDiv.appendChild(userBubble);
 
+        document.getElementById("thinkingLoader").style.display = "flex";
+
+        
         // --- Call /submit_query with English text ---
         let queryFormData = new FormData();
         queryFormData.append("query", english_msg);
@@ -95,6 +102,9 @@ document.getElementById("startBtn").onclick = async () => {
             method: "POST",
             body: queryFormData
         });
+        
+        document.getElementById("thinkingLoader").style.display = "none";
+
         const queryData = await queryResponse.json();
 
         // Append bot response to chat box

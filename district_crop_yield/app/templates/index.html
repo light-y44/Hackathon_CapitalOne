@@ -43,6 +43,11 @@
                 <div id="messages" class="messages">
                     <!-- Example bubbles -->
                     <div class="message bot">Hello! How can I help you today?</div>
+                    <!-- Thinking Loader -->
+                </div>
+                <div id="thinkingLoader" class="loader" style="display: none;">
+                    Thinking...can take up to several minutes
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
                 </div>
 
                 <!-- Text Input -->
@@ -56,8 +61,13 @@
                 <br>
 
                 <!-- Voice Recording -->
+                <div id="recordingLoader" class="loader" style="display: none;">
+                    Listening
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                </div>
                 <button id="startBtn">🎙️ Start Recording</button>
                 <button id="stopBtn" disabled>⏹ Stop Recording</button>
+                
             </div>
         </div>
         <div class="right-panel">

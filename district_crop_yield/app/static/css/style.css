@@ -1,10 +1,12 @@
 body { 
     font-family: Arial, sans-serif; 
-    margin: 20px; 
+    margin-left: 20px; 
+    margin-right: 20px;
+    margin-top: 10px;
 }
 
 header {
-    margin-bottom: 30px;
+    margin-bottom: 5px;
     text-align: center;
 }
 
@@ -17,7 +19,7 @@ h2 {
     color: #333; 
 }
 .section { 
-    margin-bottom: 40px; 
+    margin-bottom: 20px; 
     padding: 20px; 
     border: 1px solid #ccc; 
     border-radius: 10px; 
@@ -30,19 +32,41 @@ h2 {
     border-left: 5px solid orange; 
 }
 
+.notification p { 
+    margin: 0; 
+    color: #333; 
+    height: 100%;
+}
+
 .query-box { 
     display: flex; 
-    gap: 10px; 
+    gap: 10px;
+    margin-top: 60px; 
 }
 
 button { 
     padding: 8px 12px; 
     cursor: pointer; 
+    border-radius: 5px;
+    border: none;
+    background-color: orange;
+    color: white;
+}
+
+button:hover { 
+    background-color: darkorange; 
+}
+
+button:disabled {
+    background-color: #ccc;   /* gray when disabled */
+    color: #666;              /* dull text */
+    cursor: not-allowed;      /* "X" cursor */
+    opacity: 0.7;             /* slightly faded */
 }
 
 .container {
     display: flex;
-    height: 100vh; 
+    height: calc(100vh - 120px); 
     gap: 30px;
 }
 
@@ -62,7 +86,7 @@ button {
 }
 
 .info-box {
-    height: 755px; /* fixed height for info box */
+    height: 100%; /* fixed height for info box */
     overflow-y: auto; /* scrollable if content overflows */
     display: flex;
     flex-direction: column;
@@ -77,7 +101,7 @@ button {
 }
 
 .info-form label {
-    font-weight: bold;
+    
     margin-bottom: 3px;
     display: block;
 }
@@ -120,12 +144,17 @@ button {
     background-color: darkorange;
 }
 
+.chat-box {
+    height: 100%;
+}
+
 /* Chat messages container */
 .messages {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    height: 380px;
+    height: 100%;
+    max-height: 380px;
     overflow-y: auto;
     margin-bottom: 15px;
     padding: 12px;
@@ -169,3 +198,32 @@ button {
 .messages::-webkit-scrollbar-track {
     background: #f5f5f5;
 }
+
+/* Loader container */
+.loader {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ff5722;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+}
+
+/* Dots animation */
+.loader .dot {
+    width: 6px;
+    height: 6px;
+    background: #ff5722;
+    border-radius: 50%;
+    display: inline-block;
+    animation: blink 1s infinite ease-in-out;
+}
+.loader .dot:nth-child(2) { animation-delay: 0.2s; }
+.loader .dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes blink {
+    0%, 80%, 100% { transform: scale(0.6); opacity: 0.3; }
+    40% { transform: scale(1); opacity: 1; }
+}
+
