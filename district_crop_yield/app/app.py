@@ -6,6 +6,9 @@ import sys
 import os
 import json 
 import numpy as np
+import math
+from datetime import datetime, date
+from decimal import Decimal
 
 # Add the project root to sys.path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__),  '..')))
@@ -38,6 +41,9 @@ asr_pipe = load_asr_model()
 repayment_notifications = []
 
 huggingFaceAuth()
+
+gl_rec = None
+gl_baseline = None
 
 @app.route('/')
 def index():
@@ -111,7 +117,7 @@ def submit_query():
     if not query:
         return jsonify({"message": "No query provided"}), 400
     
-    response = llama.ask(query)
+    response = llama.ask(query, "agriculture")
 
     if "<|assistant|>" in response:
         response = response.split("<|assistant|>")[-1].strip()
@@ -127,7 +133,7 @@ def submit_finance_query():
     if not query:
         return jsonify({"message": "No query provided"}), 400
     
-    response = finance_llama.ask(query)
+    response = finance_llama.ask(query, "finance", inputs = [gl_baseline, gl_rec])
 
     if "<|assistant|>" in response:
         response = response.split("<|assistant|>")[-1].strip()
@@ -135,10 +141,7 @@ def submit_finance_query():
     return jsonify({"message": response})
 
 
-import math
-import numpy as np
-from datetime import datetime, date
-from decimal import Decimal
+
 
 def to_serializable(val):
     """Convert common non-JSON types to JSON-serializable Python primitives."""
@@ -281,6 +284,9 @@ def submit_initial_inputs():
     recs_serialized = serialize_recommendations(out["recommendations"][:3])
     baseline_serialized = serialize_recommendations(out["baseline"])
     scenarios_serialized = serialize_recommendations(out.get("scenarios"))
+
+    gl_rec = recs_serialized
+    gl_baseline = baseline_serialized
 
     return jsonify({
         "recommendations": recs_serialized,

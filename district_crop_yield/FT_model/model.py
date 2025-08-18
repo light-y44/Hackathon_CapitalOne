@@ -52,8 +52,8 @@ class FineTunedLlama:
 
         self.model = model
 
-    def ask(self, query: str, max_new_tokens: int = 256,
-            temperature: float = 0.7, top_p: float = 0.9) -> str:
+    def ask(self, query: str, query_type: str, inputs: list = None,  max_new_tokens: int = 256,
+            temperature: float = 0.3, top_p: float = 0.95) -> str:
         """
         Generate response from the fine-tuned model.
 
@@ -66,10 +66,63 @@ class FineTunedLlama:
         Returns:
             str: Generated response
         """
-        messages = [
-            {"role": "system", "content": "You are a friendly and knowledgeable agriculture debt manager who advises farmers."},
-            {"role": "user", "content": query}
-        ]
+        extra_context = ""
+        if inputs:
+            # filter out None values
+            valid_inputs = [str(x) for x in inputs if x is not None]
+            if valid_inputs:
+                extra_context = "\nAdditional context: " + ", ".join(valid_inputs)
+
+        if query_type == "agriculture":
+            messages = [
+                {
+                    "role": "system",
+                    "content": (
+                        "You are an agriculture expert for Madhya Pradesh, India. "
+                        "You give clear, concise, and practical advice on crops like wheat, millets, lentils, sorghum, and maize. "
+                        "Always provide actionable recommendations with numeric details in Indian context (₹, kg, acres, etc.). "
+                        "Never repeat instructions or examples, just answer the farmer’s query directly."
+                        "Also you will access to the farmer's predicted profits, loss and recommendations. So if there is a query about it you can read the extra information given to you."
+                    )
+                },
+                {"role": "user", "content": "I have 2 acres of wheat. How much fertilizer should I apply?"},
+                {"role": "assistant", "content": "For 2 acres of wheat in MP, apply about 100 kg nitrogen, 60 kg phosphorus, and 40 kg potassium. Split nitrogen into two doses: half at sowing, half at tillering."},
+                {"role": "user", "content": "When should I irrigate my maize crop during the Kharif season?"},
+                {"role": "assistant", "content": "For maize in MP during Kharif, irrigate every 7–10 days depending on rainfall. Critical stages are vegetative growth and flowering. Provide 1–2 inches of water per irrigation, preferably in early morning."},
+                
+                # 🔑 now insert the real farmer's query
+                {"role": "user", "content": query}
+            ]
+        elif query_type == "finance":
+            messages = [
+                {
+                    "role": "system",
+                    "content": (
+                        "You are an agriculture debt management expert with 10+ years of experience "
+                        "advising farmers in Madhya Pradesh, India. "
+                        "You are friendly, concise, and practical. "
+                        "Always provide actionable advice on loan repayment, subsidies, insurance, "
+                        "and financial planning for farmers. "
+                        "If numeric recommendations are given, use Indian formatting (₹12,345.00, 2 acres, 50 kg). "
+                        "If the farmer’s question is unclear, ask for clarification politely. "
+                        "Never repeat the instructions or examples in your response—just answer the query directly."
+                    ),
+                },
+                # Example 1
+                {"role": "user", "content": "I have a loan of ₹50,000 and expect a yield of 2 tons of wheat. How should I plan my repayment?"},
+                {"role": "assistant", "content": "If your wheat sells at ₹20 per kg, 2 tons = ₹40,000. After deducting input costs, set aside at least ₹25,000–₹30,000 for loan repayment this season. The rest can cover family expenses and savings. If repayment pressure is high, request your bank for restructuring or partial rollover."},
+                
+                # Example 2
+                {"role": "user", "content": "My KCC loan is overdue. What can I do?"},
+                {"role": "assistant", "content": "If your Kisan Credit Card loan is overdue, visit the branch immediately. Explain your crop situation and request rescheduling or one-time settlement. Many banks offer interest waivers or restructuring for genuine cases. Delaying further will increase penalties."},
+                
+                # Example 3
+                {"role": "user", "content": "How can I reduce my debt burden as a small farmer?"},
+                {"role": "assistant", "content": "To reduce debt: diversify crops for steady income, use government subsidies for seeds and fertilizers, and apply for crop insurance under PMFBY. Deposit small savings into a recurring deposit. Even ₹500 per month builds a safety net and reduces loan dependence."},
+
+                # 🔑 now insert the farmer's real query
+                {"role": "user", "content": query + extra_context},
+            ]
 
         # Format input using chat template
         prompt = self.tokenizer.apply_chat_template(
