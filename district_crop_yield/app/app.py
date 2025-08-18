@@ -176,7 +176,7 @@ def submit_initial_inputs():
     insurance_premium = request.form.get("ins-prem", 0.0, type=float)
 
     if month == "November":
-        predicted_yield = preSeasonCalc(
+        predicted_yield, predicted_price = preSeasonCalc(
             area=area,
             district=district,
             crop=crop,
@@ -190,7 +190,7 @@ def submit_initial_inputs():
             principal=loan_amount
         )
     else:
-        print(year, district)
+
         weather_df = calculate_weather_data(year, district)
         indices_df = calculate_indices_data(year, district)
         area_district = calulateArea(district, crop, year) or area

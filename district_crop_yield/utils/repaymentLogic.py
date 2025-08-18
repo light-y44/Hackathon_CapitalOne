@@ -1,9 +1,36 @@
 import pandas as pd
 import os
+import joblib
+
+
 
 current_dir = os.path.dirname(__file__) 
 all_crops_all_districts_path = os.path.join(current_dir, "../data/all_crops_all_districts.csv")
 df = pd.read_csv(all_crops_all_districts_path)
+
+price_path = os.path.join(current_dir, "../models/rf_april.pkl")
+price_df_path = os.path.join(current_dir, "../data/All_Combined_April.xlsx")
+
+price_model = joblib.load(price_path)
+price_df = pd.read_excel(price_df_path)
+
+price_df = pd.read_excel(price_df_path)
+price_df = price_df.rename(columns={
+    'Market Name': 'Market',
+    'Price Date': 'Date',
+    'Modal Price (Rs./Quintal)': 'Price'
+})
+price_df['Date'] = pd.to_datetime(price_df['Date'], errors='coerce')
+price_df['Year'] = price_df['Date'].dt.year
+price_df['Day'] = price_df['Date'].dt.day
+
+
+
+def predPrice(year, district):
+    X  = price_df[(price_df['Year'] == year) & (price_df['District Name'] == district)]
+    X = pd.get_dummies(X[['Market','Year','Day']], drop_first=True)
+    pred = price_model.predict(X)
+    return pred
 
 df['Year'] = df['Year'].str.split('-').str[0].astype(int)
 def revenueProjection_early(area, pred_Yield, pred_price):        
@@ -83,7 +110,7 @@ def preSeasonCalc(**kwargs):
     if pred_Yield is None:
         return {"error": "Yield prediction not available for the given parameters hello."}
 
-    pred_price = 100  # Placeholder for predicted price per unit of yield
+    pred_price = 2000  # Placeholder for predicted price per unit of yield
 
     # Compute financial projections
     revenue = revenueProjection_early(area, pred_Yield, pred_price)
@@ -91,10 +118,5 @@ def preSeasonCalc(**kwargs):
     net_cash_flow = Cnet(revenue, expenses, off_farm_income)
     loan_repayment = loanPayBack(principal, interest_rate, tenure)
 
-    return {
-        "revenue": revenue,
-        "expenses": expenses,
-        "net_cash_flow": net_cash_flow,
-        "loan_repayment": loan_repayment
-    }
+    return pred_Yield, pred_price
 
