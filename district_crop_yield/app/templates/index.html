@@ -14,62 +14,55 @@
     <!-- Repayment Notifications -->
     <div class="container">
         <!-- Left column: Chat + Notifications -->
+        <!-- Left column: Notifications (fixed area) + Chat (fills remaining space) -->
         <div class="left-panel">
-            <div class="section notification-box">
-                <h2>💰 Repayment Updates</h2>
-                {% for n in notifications %}
-                    {% if n.revenue or n.expenses or n.net_cash_flow or n.loan_repayment %}
-                        <a href="{{ url_for('notification_page') }}"
-                        class="notification-link"
-                        data-revenue="{{ n.revenue }}"
-                        data-expenses="{{ n.expenses }}"
-                        data-net_cash_flow="{{ n.net_cash_flow }}"
-                        data-loan_repayment="{{ n.loan_repayment }}">
-                            <div class="notification">
-                                <b>Revenue:</b> {{ n.revenue }} | 
-                                <b>Expenses:</b> {{ n.expenses }} | 
-                                <b>Net Cash Flow:</b> {{ n.net_cash_flow }} |
-                                <b>Loan Repayment:</b> {{ n.loan_repayment }}
-                            </div>
-                        </a>
-                    {% endif %}
-                {% endfor %}
-            </div>
-                <!-- General Queries -->
-            <div class="section chat-box">
-                <h2>🤖 General Queries</h2>
-
-                <!-- Messages area -->
-                <div id="messages" class="messages">
-                    <!-- Example bubbles -->
-                    <div class="message bot">Hello! How can I help you today?</div>
-                    <!-- Thinking Loader -->
-                </div>
-                <div id="thinkingLoader" class="loader" style="display: none;">
-                    Thinking...can take up to several minutes
-                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-                </div>
-
-                <!-- Text Input -->
-                <form id="queryForm">
-                    <div class="query-box">
-                        <input type="text" name="query" placeholder="Type your question..." style="flex:1; padding:8px;">
-                        <button type="submit">Send</button>
-                    </div>
-                </form>
-
-                <br>
-
-                <!-- Voice Recording -->
-                <div id="recordingLoader" class="loader" style="display: none;">
-                    Listening
-                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-                </div>
-                <button id="startBtn">🎙️ Start Recording</button>
-                <button id="stopBtn" disabled>⏹ Stop Recording</button>
-                
+        <!-- notification section: fixed footprint so new items don't push chat-box -->
+        <div class="section notification-section">
+            <h2>💰 Repayment Updates</h2>
+            <div id="notificationList" class="notification-box">
+            <!-- frontend will append .notification-item elements here -->
             </div>
         </div>
+
+        <!-- Chat: fills remaining vertical space inside left-panel -->
+        <div class="section chat-box">
+            <h2>🤖 General Queries</h2>
+
+            <!-- Messages area -->
+            <div id="messages" class="messages">
+            <div class="message bot">Hello! How can I help you today?</div>
+            </div>
+
+            <!-- Loaders (appear above the footer controls) -->
+            <div class="loader-row">
+            <div id="thinkingLoader" class="loader thinking-loader" style="display: none;">
+                🤔 Thinking...
+                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            </div>
+
+            <div id="recordingLoader" class="loader recording-loader" style="display: none;">
+                🎙️ Listening
+                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            </div>
+            </div>
+
+            <!-- Footer: input + send + start/stop (pinned at bottom) -->
+            <div class="chat-footer">
+            <form id="queryForm" class="query-form" style="flex:1; min-width:0;">
+                <div class="query-box" style="width:100%;">
+                <input type="text" name="query" placeholder="Type your question..." autocomplete="off" style="flex:1; padding:8px;">
+                <button type="submit">Send</button>
+                </div>
+            </form>
+
+            <div class="button-row">
+                <button id="startBtn" type="button">🎙️ Start</button>
+                <button id="stopBtn" type="button" disabled>⏹ Stop</button>
+            </div>
+            </div>
+        </div>
+        </div>
+
         <div class="right-panel">
             <div class="section info-box">
                  <!-- Information Input Box -->

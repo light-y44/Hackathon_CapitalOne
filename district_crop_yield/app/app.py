@@ -4,6 +4,8 @@ from datetime import datetime
 from pydub import AudioSegment
 import sys
 import os
+import json 
+import numpy as np
 
 # Add the project root to sys.path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__),  '..')))
@@ -14,6 +16,7 @@ from utils.utils import  calulateArea, calculateYieldPred, huggingFaceAuth, tran
 from utils.repaymentLogic import preSeasonCalc
 from FT_model.model import FineTunedLlama
 from models.stt import load_asr_model
+from models.repayment import FarmInputs, FarmDebtManager
 
 app = Flask(__name__)
 UPLOAD_FOLDER = "uploads"
@@ -28,15 +31,6 @@ FINANCE_FINETUNED_DIR = os.path.join(current_dir,"../FT_model/finance_adapter")
 llama = FineTunedLlama(BASE_MODEL, GEN_FINETUNED_DIR)
 finance_llama = FineTunedLlama(BASE_MODEL, FINANCE_FINETUNED_DIR)
 
-# asr_pipe = pipeline(
-#     "automatic-speech-recognition",
-#     model="ARTPARK-IISc/whisper-tiny-vaani-hindi",
-#     chunk_length_s=30,
-#     device=0
-# )
-# asr_pipe.model.config.forced_decoder_ids = asr_pipe.tokenizer.get_decoder_prompt_ids(
-#     language="hi", task="transcribe"
-# )
 asr_pipe = load_asr_model()
 
 
@@ -49,37 +43,32 @@ huggingFaceAuth()
 def index():
     return render_template("index.html", notifications=repayment_notifications)
 
-@app.route('/notification')
-def notification_detail():
-    global repayment_notifications
-    revenue = request.args.get('revenue')
-    expenses = request.args.get('expenses')
-    net_cash_flow = request.args.get('net_cash_flow')
-    loan_repayment = request.args.get('loan_repayment')
-    notif_dict = {
-        "revenue": f"{float(revenue):.2f}" if revenue is not None else None,
-        "expenses": f"{float(expenses):.2f}" if expenses is not None else None,
-        "net_cash_flow": f"{float(net_cash_flow):.2f}" if net_cash_flow is not None else None,
-        "loan_repayment": f"{float(loan_repayment):.2f}" if loan_repayment is not None else None
-    }
-
-    repayment_notifications.append(notif_dict)
-    return render_template("index.html", notifications=repayment_notifications)
-
 @app.route('/notification_page')
 def notification_page():
-    # revenue = request.args.get('revenue')
-    # expenses = request.args.get('expenses')
-    # net_cash_flow = request.args.get('net_cash_flow')
-    # loan_repayment = request.args.get('loan_repayment')
+    baseline_fields = [
+        "gross_revenue",
+        "net_revenue_after_marketing",
+        "net_farm_income",
+        "seasonal_offfarm_income",
+        "total_available",
+        "seasonal_household_need",
+        "emi_monthly_baseline",
+        "seasonal_loan_outflow_baseline",
+        "surplus_before_loan",
+        "surplus_after_loan",
+        "debt_sustainability_index"
+    ]
+    baseline = {field: request.args.get(field) for field in baseline_fields}
 
-    # notif = {
-    #     "revenue": revenue,
-    #     "expenses": expenses,
-    #     "net_cash_flow": net_cash_flow,
-    #     "loan_repayment": loan_repayment
-    # }
-    return render_template("repayment.html")
+    recs_raw = request.args.get("recommendations", "[]")
+    try:
+        recommendations = json.loads(recs_raw)
+        print("Decoded recommendations:", recommendations)
+    except Exception:
+        print("I am here")
+        recommendations = []
+
+    return render_template("repayment.html", baseline=baseline, recommendations=recommendations)
 
 @app.route('/get_insurance')
 def get_insurance():
@@ -146,6 +135,30 @@ def submit_finance_query():
     return jsonify({"message": response})
 
 
+def to_serializable(val):
+    """Convert numpy / custom values to plain Python types."""
+    if isinstance(val, (np.generic,)):
+        return val.item()
+    if hasattr(val, "__dict__"):
+        return serialize_recommendations([val])[0]  # recursive
+    return val
+
+def serialize_recommendations(recs):
+    """Convert Recommendation objects (or nested stuff) into JSON-safe dicts."""
+    serialized = []
+    for rec in recs:
+        if hasattr(rec, "__dict__"):
+            rec_dict = {}
+            for k, v in rec.__dict__.items():
+                rec_dict[k] = to_serializable(v)
+            serialized.append(rec_dict)
+        elif isinstance(rec, dict):
+            rec_dict = {k: to_serializable(v) for k, v in rec.items()}
+            serialized.append(rec_dict)
+        else:
+            serialized.append(to_serializable(rec))
+    return serialized
+
 @app.route('/submit_initial_inputs', methods=['POST'])
 def submit_initial_inputs():
     # Get form inputs
@@ -156,6 +169,11 @@ def submit_initial_inputs():
     loan_amount = float(request.form.get("loan"))
     interest_rate = float(request.form.get("interest"))
     month = request.form.get("month")
+    off_farm_income = request.form.get("non-farm-inc", 0.0, type=float)
+    input_cost = request.form.get("input-cost", 0.0, type=float)
+    monthly_expenses = request.form.get("monthly-exp", 0.0, type=float)
+    tenure = request.form.get("tenure", 0, type=int)
+    insurance_premium = request.form.get("ins-prem", 0.0, type=float)
 
     if month == "November":
         predicted_yield = preSeasonCalc(
@@ -163,46 +181,49 @@ def submit_initial_inputs():
             district=district,
             crop=crop,
             year=year,
-            monthly_expenses=10000,  # Default value, can be adjusted
-            tenure=6,  # Default value, can be adjusted
-            Insurance_premium=5000,  # Default value, can be adjusted
-            Input_cost=30000,  # Default value, can be adjusted
-            off_farm_income=8000,  # Default value, can be adjusted
+            monthly_expenses=monthly_expenses,
+            tenure=tenure,
+            Insurance_premium=insurance_premium,
+            Input_cost=input_cost,
+            off_farm_income=off_farm_income,
             interest_rate=interest_rate,
             principal=loan_amount
         )
-        return redirect(url_for(
-            'notification_detail',
-            revenue=predicted_yield['revenue'],
-            expenses=predicted_yield['expenses'],
-            net_cash_flow=predicted_yield['net_cash_flow'],
-            loan_repayment=predicted_yield['loan_repayment']
-        ))
-
     else:
-        # Get weather and indices data for the selected year & district
-        weather_df = calculate_weather_data(year, district)   # should return dict or DataFrame
-        indices_df = calculate_indices_data(year, district)   # should return dict or DataFrame
-    
-        # Get area if a match exists, else fallback
-        area_district = calulateArea(district, crop, year)
-        if area_district is None:
-            area_district = area
+        print(year, district)
+        weather_df = calculate_weather_data(year, district)
+        indices_df = calculate_indices_data(year, district)
+        area_district = calulateArea(district, crop, year) or area
 
-        predicted_yield = calculateYieldPred(
+        predicted_yield, predicted_price = calculateYieldPred(
             weather_df, 
             indices_df, 
             area_district, 
             crop, 
             district
         )
-    # Return the predicted yield
+
+    fi = FarmInputs(
+        area_ha=area,
+        loan_principal=loan_amount,
+        annual_interest_rate=interest_rate,
+        off_farm_monthly=off_farm_income,
+        input_cost=input_cost,
+        household_monthly=monthly_expenses,
+        loan_tenure_months=tenure,
+        insurance=insurance_premium,
+        yield_q_per_ha=predicted_yield*10,
+        price_per_q=predicted_price,
+        harvest_months = [4]
+    )
+
+    out = FarmDebtManager(fi).recommend()
 
     return jsonify({
-        "predicted_yield": predicted_yield,
+        "recommendations": serialize_recommendations(out["recommendations"]),
+        "baseline": out["baseline"],
         "message": f"Predicted Yield {predicted_yield} for {crop} in {district} for year {year}"
     })
-
 
 
 if __name__ == "__main__":

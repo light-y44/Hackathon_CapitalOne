@@ -1,8 +1,27 @@
-body { 
-    font-family: Arial, sans-serif; 
-    margin-left: 20px; 
+/* =========================
+   Krishi Mitr - style.css
+   (Replace your old file with this)
+   ========================= */
+
+/* Page base */
+:root {
+  --accent-orange: #ff8c00;
+  --accent-dark: #ff6a00;
+  --green: #28a745;
+  --green-dark: #218838;
+  --red: #dc3545;
+  --red-dark: #b52a37;
+  --muted: #f5f5f5;
+  --text: #333;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin-left: 20px;
     margin-right: 20px;
     margin-top: 10px;
+    color: var(--text);
+    background: #fff;
 }
 
 header {
@@ -15,93 +34,65 @@ header {
     text-align: center;
 }
 
-h2 { 
-    color: #333; 
-}
-.section { 
-    margin-bottom: 20px; 
-    padding: 20px; 
-    border: 1px solid #ccc; 
-    border-radius: 10px; 
+h2 {
+    color: #333;
+    margin: 0 0 10px 0;
 }
 
-.notification { 
-    background: #f9f9f9; 
-    padding: 10px; 
-    margin: 5px 0; 
-    border-left: 5px solid orange; 
+/* Generic section card */
+.section {
+    margin-bottom: 20px;
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: white;
 }
 
-.notification p { 
-    margin: 0; 
-    color: #333; 
-    height: 100%;
-}
-
-.query-box { 
-    display: flex; 
-    gap: 10px;
-    margin-top: 60px; 
-}
-
-button { 
-    padding: 8px 12px; 
-    cursor: pointer; 
-    border-radius: 5px;
-    border: none;
-    background-color: orange;
-    color: white;
-}
-
-button:hover { 
-    background-color: darkorange; 
-}
-
-button:disabled {
-    background-color: #ccc;   /* gray when disabled */
-    color: #666;              /* dull text */
-    cursor: not-allowed;      /* "X" cursor */
-    opacity: 0.7;             /* slightly faded */
-}
+/* =========================
+   Layout: two-column container
+   ========================= */
 
 .container {
     display: flex;
-    height: calc(100vh - 120px); 
     gap: 30px;
+    /* subtract header + margins (adjust if your header height changes) */
+    height: calc(100vh - 120px);
 }
 
-/* Left side: chat + notifications */
+/* columns */
 .left-panel {
     flex: 2;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    min-height: 0; /* allow children to shrink */
 }
 
-/* Right side: info form */
 .right-panel {
     flex: 1;
     display: flex;
     flex-direction: column;
+    min-height: 0;
 }
 
+/* info-box (right column) */
 .info-box {
-    height: 100%; /* fixed height for info box */
-    overflow-y: auto; /* scrollable if content overflows */
+    height: 100%;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
+    min-height: 0;
 }
 
 .info-form {
     display: grid;
     flex: 1;
-    grid-template-columns: repeat(2, 1fr); /* always 2 fields per row */
-    gap: 20px 30px; /* row gap, column gap */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 30px;
     align-items: flex-end;
 }
 
 .info-form label {
-    
     margin-bottom: 3px;
     display: block;
 }
@@ -126,47 +117,122 @@ button:disabled {
     outline: none;
 }
 
-/* Submit button */
+/* Submit button in form */
 .info-form button {
-    margin-top: auto; /* pushes it to the bottom */
-    align-self: stretch; /* full width button */
-    grid-column: span 2; /* makes button take entire row */
+    margin-top: auto;
+    align-self: stretch;
+    grid-column: span 2;
     padding: 12px 20px;
     cursor: pointer;
     border-radius: 5px;
     border: none;
-    background-color: orange;
+    background-color: var(--accent-orange);
     color: white;
     font-weight: bold;
 }
-
-.info-form button:hover {
-    background-color: darkorange;
+.info-form button:hover:not(:disabled) {
+    background-color: var(--accent-dark);
 }
 
+/* =========================
+   Notifications (left column)
+   ========================= */
+
+/* Outer card for notifications */
+.notification-section {
+    /* fixed footprint (prevents notifications from pushing the chat) */
+    flex: 0 0 300px; /* change 300px to your preferred notification area height */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-height: 0;
+}
+
+/* Inner scrollable list where JS appends items */
+.notification-box {
+    flex: 1;
+    overflow-y: auto;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Individual items */
+.notification-item {
+    background: #f9f9f9;
+    padding: 10px;
+    border-left: 5px solid var(--accent-orange);
+    border-radius: 6px;
+    font-size: 14px;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.notification-item:hover {
+    background: #fff3e0;
+}
+
+/* small meta text inside notifications */
+.notification-meta {
+    font-size: 12px;
+    color: #666;
+    margin-top: 6px;
+}
+
+/* Submitted toast (short lived) */
+.toast-submitted {
+    background: #e8f5e9;
+    border-left: 5px solid #4caf50;
+    color: #256029;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+    animation: fadeOut 2.5s ease-in-out forwards;
+}
+
+/* animation for toast fade-out (JS will remove element when done) */
+@keyframes fadeOut {
+    0% { opacity: 1; transform: translateY(0); }
+    80% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-6px); }
+}
+
+/* =========================
+   Chat area (left column)
+   ========================= */
+
+/* Chat card should take remaining space inside left-panel */
 .chat-box {
-    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    gap: 12px;
 }
 
-/* Chat messages container */
+/* Messages: flexible & scrollable */
 .messages {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     gap: 12px;
-    height: 100%;
-    max-height: 380px;
-    overflow-y: auto;
-    margin-bottom: 15px;
+    margin-bottom: 0;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 10px;
-    background: #fafafa;   /* softer gray like .notification */
+    background: var(--muted);
 }
 
-/* User message bubble */
+/* Message bubbles */
 .message.user {
     align-self: flex-end;
-    background: #ffe0b2;   /* soft orange tint */
+    background: #ffe0b2;
     padding: 10px 14px;
     border-radius: 12px 12px 0 12px;
     max-width: 80%;
@@ -175,10 +241,9 @@ button:disabled {
     border: 1px solid #ffb74d;
 }
 
-/* Bot message bubble */
 .message.bot {
     align-self: flex-start;
-    background: #f1f1f1;   /* same gray as notifications */
+    background: #f1f1f1;
     padding: 10px 14px;
     border-radius: 12px 12px 12px 0;
     max-width: 80%;
@@ -187,34 +252,35 @@ button:disabled {
     border: 1px solid #ddd;
 }
 
-/* Scrollbar styling (to match theme) */
-.messages::-webkit-scrollbar {
-    width: 6px;
-}
-.messages::-webkit-scrollbar-thumb {
-    background: orange;
-    border-radius: 10px;
-}
-.messages::-webkit-scrollbar-track {
-    background: #f5f5f5;
+/* custom scrollbar for messages */
+.messages::-webkit-scrollbar { width: 8px; }
+.messages::-webkit-scrollbar-thumb { background: var(--accent-orange); border-radius: 10px; }
+.messages::-webkit-scrollbar-track { background: #f5f5f5; }
+
+/* =========================
+   Loaders (shared base)
+   ========================= */
+
+.loader-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
 }
 
-/* Loader container */
+/* base loader appearance */
 .loader {
-    margin-top: 10px;
-    font-weight: bold;
-    color: #ff5722;
     display: flex;
     align-items: center;
-    gap: 4px;
-    font-size: 14px;
+    gap: 6px;
+    font-weight: 700;
+    font-size: 13px;
+    color: #444;
 }
 
-/* Dots animation */
+/* dot animation */
 .loader .dot {
     width: 6px;
     height: 6px;
-    background: #ff5722;
     border-radius: 50%;
     display: inline-block;
     animation: blink 1s infinite ease-in-out;
@@ -227,3 +293,133 @@ button:disabled {
     40% { transform: scale(1); opacity: 1; }
 }
 
+/* color variants for loaders */
+.recording-loader { color: #e64a19; }
+.recording-loader .dot { background: #e64a19; }
+
+.thinking-loader { color: #1976d2; }
+.thinking-loader .dot { background: #1976d2; }
+
+/* =========================
+   Chat footer - pinned controls
+   ========================= */
+
+.chat-footer {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding-top: 8px;
+    border-top: 1px solid rgba(0,0,0,0.06);
+    flex-wrap: wrap;
+}
+
+/* Query form & input */
+.query-form { flex: 1; min-width: 0; }
+.query-box {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+}
+.query-box input[type="text"] {
+    flex: 1;
+    min-width: 0;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* Send button inside query-box */
+.query-box button[type="submit"] {
+    padding: 8px 12px;
+    border-radius: 6px;
+    background-color: var(--accent-orange);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+.query-box button[type="submit"]:hover:not(:disabled) {
+    background-color: var(--accent-dark);
+}
+
+/* button row for start/stop */
+.button-row { display: flex; gap: 10px; }
+
+/* Start/Stop buttons styling */
+#startBtn, #stopBtn {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* greener start, red stop */
+#startBtn {
+    background-color: var(--green);
+    color: white;
+}
+#startBtn:hover:not(:disabled) { background-color: var(--green-dark); }
+
+#stopBtn {
+    background-color: var(--red);
+    color: white;
+}
+#stopBtn:hover:not(:disabled) { background-color: var(--red-dark); }
+
+/* disabled state for any button */
+button:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+    opacity: 0.75;
+}
+
+/* =========================
+   Small screens responsiveness
+   ========================= */
+
+@media (max-width: 900px) {
+    .container { flex-direction: column; height: auto; }
+    .notification-section { flex: 0 0 auto; }
+    .chat-box { order: 2; }
+    .notification-section { order: 1; }
+    .right-panel { order: 3; }
+    .chat-footer { gap: 8px; }
+}
+
+/* =========================
+   Utility & legacy rules (kept for compatibility)
+   ========================= */
+
+a.notification-link { text-decoration: none; color: inherit; }
+
+
+.summary-box {
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.summary-box h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #2c3e50;
+    font-size: 16px;
+}
+.summary-item {
+    margin-bottom: 6px;
+}
+.recommendation {
+    background: #eef6ff;
+    border-left: 4px solid #007bff;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+.recommendation strong {
+    color: #007bff;
+}

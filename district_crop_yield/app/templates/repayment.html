@@ -13,49 +13,91 @@
    
     <!-- Repayment Notifications -->
     <div class="container">
-        <!-- Left column: Chat + Notifications -->
         <div class="left-panel">
-            <div class="section notification-box">
+            <!-- Summary Section -->
+            <div class="section notification-section">
                 <h2>💰 Summary</h2>
-                
+                <div id="notificationList" class="notification-box summary-box">
+                    
+                    <!-- Baseline Values -->
+                    <h3>📊 Baseline Financials</h3>
+                    {% if baseline %}
+                        {% for key, value in baseline.items() %}
+                            <div class="summary-item"><strong>{{ key.replace("_", " ").title() }}:</strong> {{ value }}</div>
+                        {% endfor %}
+                    {% else %}
+                        <div class="summary-item">No baseline data available.</div>
+                    {% endif %}
+
+                    <!-- Recommendations -->
+                    <h3>📝 Recommendations</h3>
+                    {% if recommendations %}
+                        {% for rec in recommendations %}
+                            <div class="recommendation">
+                                <strong>Option:</strong> {{ rec.option }} <br>
+                                <strong>Surplus Score:</strong> {{ rec.score_surplus }} <br>
+                                <strong>Details:</strong>
+                                <ul>
+                                    {% for key, value in rec.details.items() %}
+                                        <li>{{ key }}: {{ value }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <p>No recommendations available.</p>
+                    {% endif %}
+                </div>
             </div>
-                <!-- General Queries -->
+
+            <!-- Chat -->
             <div class="section chat-box">
                 <h2>🤖 General Queries</h2>
-
-                <!-- Messages area -->
                 <div id="messages" class="messages">
-                    <!-- Example bubbles -->
                     <div class="message bot">Hello! How can I help you today?</div>
-                    <div class="message user">What is the best wheat variety for my region?</div>
-                    <div class="message bot">HD 2967 is a good option due to high yield and disease resistance.</div>
                 </div>
 
-                <!-- Text Input -->
-                <form id="queryForm">
-                    <div class="query-box">
-                        <input type="text" name="query" placeholder="Type your question..." style="flex:1; padding:8px;">
-                        <button type="submit">Send</button>
+                <!-- Loaders -->
+                <div class="loader-row">
+                    <div id="thinkingLoader" class="loader thinking-loader" style="display: none;">
+                        🤔 Thinking...
+                        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
                     </div>
-                </form>
 
-                <br>
+                    <div id="recordingLoader" class="loader recording-loader" style="display: none;">
+                        🎙️ Listening
+                        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                    </div>
+                </div>
 
-                <!-- Voice Recording -->
-                <button id="startBtn">🎙️ Start Recording</button>
-                <button id="stopBtn" disabled>⏹ Stop Recording</button>
+                <!-- Chat Footer -->
+                <div class="chat-footer">
+                    <form id="queryForm" class="query-form" style="flex:1; min-width:0;">
+                        <div class="query-box" style="width:100%;">
+                            <input type="text" name="query" placeholder="Type your question..." autocomplete="off" style="flex:1; padding:8px;">
+                            <button type="submit">Send</button>
+                        </div>
+                    </form>
+                    <div class="button-row">
+                        <button id="startBtn" type="button">🎙️ Start</button>
+                        <button id="stopBtn" type="button" disabled>⏹ Stop</button>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <!-- Right Panel -->
         <div class="right-panel">
             <div class="section info-box">
-                 <!-- Information Input Box -->
                 <h2>📋 Diagram</h2>
-                
+                <div id="diagramContainer">
+                    <!-- Diagram will be rendered here -->
+                </div>
             </div>
         </div>
     </div>
-    
-    <!-- Link external JS -->
+
+    <!-- JS -->
     <script src="{{ url_for('static', filename='js/recording.js') }}"></script>
 </body>
 </html>

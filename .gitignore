@@ -45,3 +45,5 @@ crop_yield/data/processed/mp_100m_grid.geojson
 crop_yield/data/processed/mp_100m_grid.geojson
 
 district_crop_yield/uploads/*
+
+*.pkl

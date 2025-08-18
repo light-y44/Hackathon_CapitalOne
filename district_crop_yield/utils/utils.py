@@ -7,6 +7,7 @@ import torch
 import joblib
 from huggingface_hub import login
 from deep_translator import GoogleTranslator
+from models.Mid_season_price_prediction import evaluate_model
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__),  '..')))
 from models.crop_yield import YieldNN
@@ -17,6 +18,8 @@ scaler_path = os.path.join(current_dir, "../models/scaler.pkl")
 crop_en_path = os.path.join(current_dir, "../models/crop_type_encoder.pkl")
 dist_en_path = os.path.join(current_dir, "../models/district_encoder.pkl")
 weights_path = os.path.join(current_dir, "../models/crop_yield_model_weights.pth")
+price_weight_path = os.path.join(current_dir, "../models/midseason_predictor.pkl")
+price_pred_file_path = os.path.join(current_dir, "../data/preprocessed_all_combined_novtofeb.xlsx")
 
 area_df = pd.read_csv(district_area_path)
 
@@ -26,10 +29,15 @@ district_le = joblib.load(dist_en_path)
 
 label_encoders = {'crop_type': crop_le, 'district': district_le}
 
+price_model = joblib.load(price_weight_path)
 area_df = pd.read_csv(district_area_path)
 model = YieldNN(input_dim=9)
 model.load_state_dict(torch.load(weights_path))
 model.eval()
+
+price_df = pd.read_excel(price_pred_file_path, header=None)
+price_df = price_df.iloc[1:]
+price_df.drop(price_df.columns[0], axis=1, inplace=True)
 
 def preprocess_single_sample(input_dict, label_encoders, scaler):
     """
@@ -142,7 +150,7 @@ def calculateYieldPred(weather_df, indices_df, area_district, crop, district):
         'district': district
     }
 
-
+    print(input_data)
     # Preprocess the single sample using pre-fitted scaler and label encoders
     # Assume these are loaded globally or elsewhere
 
@@ -154,12 +162,16 @@ def calculateYieldPred(weather_df, indices_df, area_district, crop, district):
 
     # Convert to torch tensor for model prediction
     X_tensor = torch.tensor(preprocessed_sample, dtype=torch.float32).unsqueeze(0)  # shape [1, num_features]
-
     # Predict crop yield
     model.eval()
     with torch.no_grad():
         predicted_yield = model(X_tensor).item()
-    return predicted_yield
+
+    # Get the year from the input data
+    predicted_price = evaluate_model(price_model, price_df)
+    print(f"Predicted price: {predicted_price} and Predicted yield: {predicted_yield}")
+    return predicted_yield, predicted_price
+
 
 def huggingFaceAuth():
     """

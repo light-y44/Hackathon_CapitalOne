@@ -69,7 +69,7 @@ def calculate_weather_data(year, district):
 
 if __name__ == "__main__":
     # Example usage
-    year = 2023
+    year = 2025
     district = "Bhopal"
     weather_data = calculate_weather_data(year, district)
     if weather_data:

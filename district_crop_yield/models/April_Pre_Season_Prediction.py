@@ -1,82 +1,91 @@
 import pandas as pd
 import numpy as np
-from statsmodels.tsa.arima.model import ARIMA
-from sklearn.metrics import mean_absolute_error, mean_squared_error
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_squared_error, mean_absolute_error
 
-def forecast_april_price_with_accuracy(district_name ="Ashoknagar", date_col="Price Date", price_col="Modal Price (Rs./Quintal)", district_col="District Name", test_years=1):
-    """
-    Forecasts next April's price for a given district using SARIMA,
-    splits data into train/test, and reports accuracy metrics.
 
-    Parameters:
-        file_path (str): Path to Excel file
-        district_name (str): District name
-        date_col (str): Date column name
-        price_col (str): Price column name
-        district_col (str): District column name
-        test_years (int): Number of years to keep for testing
+# ---------------------------
+# 1. Data loading & cleaning
+# ---------------------------
+def load_april_data(filepath: str) -> pd.DataFrame:
+    df = pd.read_excel(filepath)
+    df = df.rename(columns={
+        'Market Name': 'Market',
+        'Price Date': 'Date',
+        'Modal Price (Rs./Quintal)': 'Price'
+    })
+    df['Date'] = pd.to_datetime(df['Date'], errors='coerce')
+    df['Year'] = df['Date'].dt.year
+    df['Day'] = df['Date'].dt.day
+    return df
 
-    Returns:
-        dict: Forecast point estimate, confidence intervals, and accuracy metrics
-    """
 
-    # Load and preprocess
-    df = pd.read_excel('C:\Users\naiti\OneDrive\Desktop\Dataset\Ashoknagar\filtered_April_Ashoknagar.xlsx')
-    df[date_col] = pd.to_datetime(df[date_col], errors='coerce')
-    df = df.dropna(subset=[date_col, price_col, district_col])
+# ---------------------------
+# 2. Prepare features
+# ---------------------------
+def prepare_features(df: pd.DataFrame, train_years: list, test_year: int):
+    train_df = df[df['Year'].isin(train_years)]
+    test_df  = df[df['Year'] == test_year]
 
-    # Keep April only
-    df = df[df[date_col].dt.month == 4]
+    # One-hot encode categorical "Market"
+    X_train = pd.get_dummies(train_df[['Market','Year','Day']], drop_first=True)
+    y_train = train_df['Price']
 
-    # Filter district
-    df = df[df[district_col].str.strip().str.lower() == district_name.strip().lower()]
-    if df.empty:
-        raise ValueError(f"No April data for district '{district_name}'")
+    X_test = pd.get_dummies(test_df[['Market','Year','Day']], drop_first=True)
+    X_test = X_test.reindex(columns=X_train.columns, fill_value=0)  # align cols
+    y_test = test_df['Price']
 
-    # Aggregate to yearly April mean price
-    df = df.groupby(df[date_col].dt.year)[price_col].mean().reset_index()
-    df.columns = ["Year", "Price"]
+    return X_train, y_train, X_test, y_test
 
-    # Convert to time series
-    df_ts = pd.Series(df["Price"].values, index=pd.PeriodIndex(df["Year"], freq='Y'))
 
-    # Split train/test
-    train = df_ts.iloc[:-test_years]
-    test = df_ts.iloc[-test_years:]
-
-    # Fit SARIMA model
-    model = ARIMA(train, order=(1, 1, 1))
-    model_fit = model.fit()
-
-    # Forecast for test years
-    forecast_test = model_fit.forecast(steps=test_years)
-    rmse = np.sqrt(mean_squared_error(test, forecast_test))
-    mae = mean_absolute_error(test, forecast_test)
-    mape = np.mean(np.abs((test - forecast_test) / test)) * 100
-
-    # Retrain on full data for next April
-    model_full = ARIMA(df_ts, order=(1, 1, 1))
-    model_full_fit = model_full.fit()
-    forecast_next = model_full_fit.get_forecast(steps=1)
-
-    mean_forecast = forecast_next.predicted_mean.iloc[0]
-    conf_int_80 = forecast_next.conf_int(alpha=0.20).iloc[0]
-    conf_int_95 = forecast_next.conf_int(alpha=0.05).iloc[0]
-
-    result = {
-        "district": district_name,
-        "forecast_price": round(mean_forecast, 2),
-        "80%_range": (round(conf_int_80.iloc[0], 2), round(conf_int_80.iloc[1], 2)),
-        "95%_range": (round(conf_int_95.iloc[0], 2), round(conf_int_95.iloc[1], 2)),
-        "accuracy": {
-            "RMSE": round(rmse, 2),
-            "MAE": round(mae, 2),
-            "MAPE (%)": round(mape, 2)
-        }
+# ---------------------------
+# 3. Train & Evaluate
+# ---------------------------
+def train_and_evaluate(X_train, y_train, X_test, y_test):
+    model = RandomForestRegressor(n_estimators=300, random_state=42)
+    model.fit(X_train, y_train)
+    
+    y_pred = model.predict(X_test)
+    
+    rmse = np.sqrt(mean_squared_error(y_test, y_pred))
+    mae = mean_absolute_error(y_test, y_pred)
+    mape = np.mean(np.abs((y_test - y_pred)/y_test)) * 100
+    
+    avg_pred = np.mean(y_pred)
+    avg_actual = np.mean(y_test)
+    
+    return model, y_pred, {
+        "rmse": rmse,
+        "mae": mae,
+        "mape": mape,
+        "avg_pred": avg_pred,
+        "avg_actual": avg_actual
     }
 
-    return result
+
+# ---------------------------
+# 4. Wrapper Pipeline
+# ---------------------------
+def april_forecast_pipeline(train_path, test_path, train_years, test_year):
+    df_train = load_april_data(train_path)
+    df_test  = load_april_data(test_path)
+    df_all   = pd.concat([df_train, df_test], ignore_index=True)
+
+    X_train, y_train, X_test, y_test = prepare_features(df_all, train_years, test_year)
+    model, y_pred, metrics = train_and_evaluate(X_train, y_train, X_test, y_test)
+    return model, y_pred, metrics
 
 
-forecast_result = forecast_april_price_with_accuracy( test_years=1)
-print(forecast_result)
+# ## Usuage Example
+# model, y_pred, metrics = april_forecast_pipeline(
+#     "/content/All_Combined_April.xlsx",      # 2020–2024
+#     "/content/All_Combined_April_2025.xlsx", # 2025
+#     train_years=[2020,2021,2022,2023,2024],
+#     test_year=2025
+# )
+
+# print("Test RMSE:", metrics["rmse"])
+# print("Test MAE:", metrics["mae"])
+# print("Test MAPE:", metrics["mape"], "%")
+# print("Predicted Avg April 2025 Price:", metrics["avg_pred"])
+# print("Actual Avg April 2025 Price:", metrics["avg_actual"])
