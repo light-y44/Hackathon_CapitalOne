@@ -247,20 +247,20 @@ def submit_initial_inputs():
             principal=loan_amount
         )
     else:
-        print("Hello!")
-        # weather_df = calculate_weather_data(year, district)
-        # indices_df = calculate_indices_data(year, district)
-        # area_district = calulateArea(district, crop, year) or area
+        # print("Hello!")
+        weather_df = calculate_weather_data(year, district)
+        indices_df = calculate_indices_data(year, district)
+        area_district = calulateArea(district, crop, year) or area
 
-        # predicted_yield, predicted_price = calculateYieldPred(
-        #     weather_df, 
-        #     indices_df, 
-        #     area_district, 
-        #     crop, 
-        #     district
-        # )
-    predicted_price = 2400
-    predicted_yield = 3.0
+        predicted_yield, predicted_price = calculateYieldPred(
+            weather_df, 
+            indices_df, 
+            area_district, 
+            crop, 
+            district
+        )
+    # predicted_price = 2400
+    # predicted_yield = 3.0
 
     fi = FarmInputs(
         area_ha=area,
