@@ -135,29 +135,83 @@ def submit_finance_query():
     return jsonify({"message": response})
 
 
+import math
+import numpy as np
+from datetime import datetime, date
+from decimal import Decimal
+
 def to_serializable(val):
-    """Convert numpy / custom values to plain Python types."""
+    """Convert common non-JSON types to JSON-serializable Python primitives."""
+    # None
+    if val is None:
+        return None
+
+    # Numpy scalars
     if isinstance(val, (np.generic,)):
         return val.item()
+
+    # Numpy arrays -> lists
+    if isinstance(val, (np.ndarray,)):
+        return [to_serializable(x) for x in val.tolist()]
+
+    # Built-in collections
+    if isinstance(val, (list, tuple, set)):
+        return [to_serializable(x) for x in val]
+
+    if isinstance(val, dict):
+        return {str(k): to_serializable(v) for k, v in val.items()}
+
+    # Decimal -> float or str (Decimal may be large-precision)
+    if isinstance(val, Decimal):
+        return float(val)
+
+    # datetimes
+    if isinstance(val, (datetime, date)):
+        return val.isoformat()
+
+    # floats with Inf/NaN (JSON doesn't support Infinity/NaN)
+    if isinstance(val, float):
+        if math.isinf(val) or math.isnan(val):
+            # Choose how to map these — I use None, you can use "Infinity" string if you prefer
+            return None
+        return val
+
+    # ints, bools, str are fine
+    if isinstance(val, (int, bool, str)):
+        return val
+
+    # custom objects: attempt to serialize __dict__
     if hasattr(val, "__dict__"):
-        return serialize_recommendations([val])[0]  # recursive
-    return val
+        return to_serializable(vars(val))
+
+    # fallback: try repr (safe) OR string
+    try:
+        return str(val)
+    except Exception:
+        return None
 
 def serialize_recommendations(recs):
-    """Convert Recommendation objects (or nested stuff) into JSON-safe dicts."""
-    serialized = []
-    for rec in recs:
-        if hasattr(rec, "__dict__"):
-            rec_dict = {}
-            for k, v in rec.__dict__.items():
-                rec_dict[k] = to_serializable(v)
-            serialized.append(rec_dict)
-        elif isinstance(rec, dict):
-            rec_dict = {k: to_serializable(v) for k, v in rec.items()}
-            serialized.append(rec_dict)
-        else:
-            serialized.append(to_serializable(rec))
-    return serialized
+    """Serialize recommendations or any nested structure to JSON-safe Python types."""
+    return to_serializable(recs)
+
+def debug_json(obj):
+    try:
+        return json.dumps(obj)
+    except TypeError as e:
+        # print problematic types (walk small sample)
+        def walk(x, path="root"):
+            if isinstance(x, dict):
+                for k,v in x.items():
+                    walk(v, f"{path}.{k}")
+            elif isinstance(x, (list, tuple, set)):
+                for i, v in enumerate(x):
+                    walk(v, f"{path}[{i}]")
+            else:
+                if not isinstance(x, (str, int, float, bool, type(None))):
+                    print("Non-serializable found at", path, "type:", type(x), "value:", repr(x))
+        walk(obj)
+        raise
+
 
 @app.route('/submit_initial_inputs', methods=['POST'])
 def submit_initial_inputs():
@@ -190,18 +244,20 @@ def submit_initial_inputs():
             principal=loan_amount
         )
     else:
+        print("Hello!")
+        # weather_df = calculate_weather_data(year, district)
+        # indices_df = calculate_indices_data(year, district)
+        # area_district = calulateArea(district, crop, year) or area
 
-        weather_df = calculate_weather_data(year, district)
-        indices_df = calculate_indices_data(year, district)
-        area_district = calulateArea(district, crop, year) or area
-
-        predicted_yield, predicted_price = calculateYieldPred(
-            weather_df, 
-            indices_df, 
-            area_district, 
-            crop, 
-            district
-        )
+        # predicted_yield, predicted_price = calculateYieldPred(
+        #     weather_df, 
+        #     indices_df, 
+        #     area_district, 
+        #     crop, 
+        #     district
+        # )
+    predicted_price = 2400
+    predicted_yield = 3.0
 
     fi = FarmInputs(
         area_ha=area,
@@ -219,9 +275,17 @@ def submit_initial_inputs():
 
     out = FarmDebtManager(fi).recommend()
 
+    # Use before jsonify
+    debug_json(out["recommendations"])
+
+    recs_serialized = serialize_recommendations(out["recommendations"][:3])
+    baseline_serialized = serialize_recommendations(out["baseline"])
+    scenarios_serialized = serialize_recommendations(out.get("scenarios"))
+
     return jsonify({
-        "recommendations": serialize_recommendations(out["recommendations"]),
-        "baseline": out["baseline"],
+        "recommendations": recs_serialized,
+        "baseline": baseline_serialized,
+        "scenarios": scenarios_serialized,
         "message": f"Predicted Yield {predicted_yield} for {crop} in {district} for year {year}"
     })
 

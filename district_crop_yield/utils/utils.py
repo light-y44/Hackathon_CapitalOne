@@ -218,3 +218,101 @@ def translate_en_to_hi(text: str) -> str:
     """
     return GoogleTranslator(source="en", target="hi").translate(text)
     
+
+import math
+import re
+from decimal import Decimal
+
+def _fmt_amt(x):
+    """Format numeric amount as rupees; return string or 'N/A' for missing/inf."""
+    try:
+        if x is None:
+            return "N/A"
+        # handle numpy scalars / Decimal
+        if isinstance(x, Decimal):
+            x = float(x)
+        if hasattr(x, "item"):  # numpy scalar
+            x = x.item()
+        x = float(x)
+        if math.isinf(x) or math.isnan(x):
+            return "N/A"
+        # format with comma separator and 2 decimals
+        return f"₹{x:,.2f}"
+    except Exception:
+        return str(x)
+
+def _snake_to_title(s: str) -> str:
+    # convert snake_case and camelCase to Title Case with spaces
+    s = re.sub(r"(_|-)+", " ", s)                 # snake_case -> spaces
+    s = re.sub(r"([a-z])([A-Z])", r"\1 \2", s)    # camelCase -> spaced
+    return s.strip().title()
+
+def _prettify_value(v):
+    if isinstance(v, bool):
+        return "Yes" if v else "No"
+    # numbers that look like money: you can define heuristic keys instead of autos
+    if isinstance(v, (int, float)) and not isinstance(v, bool):
+        # don't automatically format all numbers — but often money fields benefit:
+        return _fmt_amt(v)
+    return v
+
+def prettify_details(details, rename_map=None, drop_keys=None, money_keys=None, keep_raw=False):
+    """
+    - details: dict-like or object (will use vars()).
+    - rename_map: dict of key -> pretty label (overrides auto title-casing).
+    - drop_keys: iterable of keys to remove entirely.
+    - money_keys: set of keys that we *definitely* treat as rupee amounts (and force formatting).
+    - keep_raw: if True include 'raw_details' with original payload.
+    """
+    if details is None:
+        return {}
+
+    # normalize to dict
+    if hasattr(details, "__dict__"):
+        d = vars(details)
+    elif isinstance(details, dict):
+        d = dict(details)
+    else:
+        # try to coerce (e.g., namedtuple)
+        try:
+            d = dict(details)
+        except Exception:
+            return {"raw_details": str(details)} if keep_raw else {}
+
+    rename_map = rename_map or {}
+    drop_keys = set(drop_keys or [])
+    money_keys = set(money_keys or {"repay_amount", "repay_at_harvest", "harvest_cash",
+                                    "principal_remaining", "seasonal_loan_after",
+                                    "emi_after_amortize_monthly", "emi_monthly_after_extension",
+                                    "leftover_after_bullet", "surplus_after_partial_amortize"})
+
+    pretty = {}
+    for k, v in d.items():
+        if k in drop_keys:
+            continue
+
+        # allow mapping to a nicer label
+        label = rename_map.get(k) or _snake_to_title(k)
+
+        # if key is in money_keys, force rupee formatting
+        if k in money_keys:
+            pretty[label] = _fmt_amt(v)
+            continue
+
+        # otherwise heuristics
+        if isinstance(v, (int, float)) and not isinstance(v, bool):
+            # if it looks like a monetary or surplus field (heuristic: name contains 'surplus','loan','emi','repay','principal','cash','amount','outflow')
+            if re.search(r"(surplus|loan|emi|repay|principal|cash|amount|outflow|leftover|harvest)", k, re.IGNORECASE):
+                pretty[label] = _fmt_amt(v)
+            else:
+                # keep numeric but present as-is (or format to 2 decimals)
+                pretty[label] = round(float(v), 2)
+        elif isinstance(v, bool):
+            pretty[label] = "Yes" if v else "No"
+        else:
+            pretty[label] = v
+
+    if keep_raw:
+        pretty["Raw Details"] = d
+
+    return pretty

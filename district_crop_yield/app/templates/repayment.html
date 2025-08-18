@@ -28,25 +28,6 @@
                     {% else %}
                         <div class="summary-item">No baseline data available.</div>
                     {% endif %}
-
-                    <!-- Recommendations -->
-                    <h3>📝 Recommendations</h3>
-                    {% if recommendations %}
-                        {% for rec in recommendations %}
-                            <div class="recommendation">
-                                <strong>Option:</strong> {{ rec.option }} <br>
-                                <strong>Surplus Score:</strong> {{ rec.score_surplus }} <br>
-                                <strong>Details:</strong>
-                                <ul>
-                                    {% for key, value in rec.details.items() %}
-                                        <li>{{ key }}: {{ value }}</li>
-                                    {% endfor %}
-                                </ul>
-                            </div>
-                        {% endfor %}
-                    {% else %}
-                        <p>No recommendations available.</p>
-                    {% endif %}
                 </div>
             </div>
 
@@ -89,9 +70,25 @@
         <!-- Right Panel -->
         <div class="right-panel">
             <div class="section info-box">
-                <h2>📋 Diagram</h2>
+                <h2>📋 Recommendations</h2>
                 <div id="diagramContainer">
-                    <!-- Diagram will be rendered here -->
+                    <!-- Recommendations -->
+                    {% if recommendations %}
+                        {% for rec in recommendations %}
+                            <div class="recommendation">
+                                <strong>Option:</strong> {{ rec.option }} <br>
+                                <strong>Surplus Score:</strong> {{ rec.score_surplus }} <br>
+                                <strong>Details:</strong>
+                                <ul>
+                                    {% for key, value in rec.details.items() %}
+                                        <li>{{ key }}: {{ value }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <p>No recommendations available.</p>
+                    {% endif %}
                 </div>
             </div>
         </div>

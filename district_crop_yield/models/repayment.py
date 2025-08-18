@@ -16,7 +16,12 @@ from dataclasses import dataclass, asdict, field
 from typing import Dict, List, Tuple
 import math
 import json
+import os
+import sys
 
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__),  '..')))
+
+from utils.utils import prettify_details
 
 @dataclass
 class FarmInputs:
@@ -245,7 +250,7 @@ class FarmDebtManager:
                 "option": "full_repay_at_harvest",
                 "score_surplus": round(float(surplus_after_loan), 2),
                 "details": {
-                    "message": "✅ Farmer can fully repay loan at harvest from surplus."
+                    "message": "✅ You can fully repay loan at harvest from surplus."
                 }
             })
 
@@ -265,26 +270,92 @@ class FarmDebtManager:
             # ---------- Add other scenario comparisons ----------
             feasible = []
 
+            # helper to format amounts safely
+            def _fmt_amt(x):
+                try:
+                    if x is None:
+                        return "N/A"
+                    x = float(x)
+                    if math.isinf(x) or math.isnan(x):
+                        return "N/A"
+                    # format with commas and two decimals
+                    return f"₹{x:,.2f}"
+                except Exception:
+                    return str(x)
+
             # bullet option (if feasible)
             if bool(bullet.get("is_sufficient", False)):
-                feasible.append(("bullet", float(bullet.get("leftover_after_bullet", -math.inf)), bullet))
+                leftover = bullet.get("leftover_after_bullet")
+                leftover_fmt = _fmt_amt(leftover)
+                if leftover is not None and leftover_fmt != "N/A":
+                    msg = (
+                        f"Repay the full outstanding loan at harvest using the seasonal surplus. "
+                        f"After repayment you will have approximately {leftover_fmt} remaining."
+                    )
+                else:
+                    msg = (
+                        "Repay the full outstanding loan at harvest using the seasonal surplus."
+                    )
+                feasible.append((msg, float(bullet.get("leftover_after_bullet", -math.inf)), bullet))
 
             # extend options: keep 24,36 for pool (extend_candidates[1:])
             for ext in extend_candidates[1:]:
-                feasible.append((f"extend_{int(ext['new_tenure_months'])}", float(ext.get("surplus_after_newloan", -math.inf)), ext))
+                # try to read the new tenure, fallback to an available field
+                new_tenure = int(ext.get("new_tenure_months") or ext.get("tenure") or 0)
+                surplus = ext.get("surplus_after_newloan", ext.get("surplus_after_extension", None))
+                surplus_val = float(surplus) if surplus is not None and not (isinstance(surplus, str) and surplus == "") else -math.inf
+                surplus_fmt = _fmt_amt(surplus)
+                # optional EMI info if present
+                emi_after = ext.get("emi_monthly_after_extension") or ext.get("emi_after_extension") or ext.get("emi_monthly_new")
+                emi_part = f" The estimated monthly payment after this change is {_fmt_amt(emi_after)}." if emi_after is not None else ""
+                msg = (
+                    f"Consider extending the loan tenure to {new_tenure} months to lower your monthly payments.{emi_part} "
+                    f"This change is estimated to result in a seasonal surplus of about {surplus_fmt}."
+                )
+                feasible.append((msg, surplus_val, ext))
 
             # partials
             for pct, tenure, out in partials:
-                feasible.append((f"partial_{int(pct*100)}pct_{int(tenure)}m", float(out.get("surplus_after_partial_amortize", -math.inf)), out))
+                # compute repay amount (prefer a provided field, else compute from principal)
+                repay_amt = out.get("repay_amount")
+                if repay_amt is None:
+                    try:
+                        repay_amt = round(float(self.i.loan_principal) * float(pct), 2)
+                    except Exception:
+                        repay_amt = None
+                repay_fmt = _fmt_amt(repay_amt)
+                surplus = out.get("surplus_after_partial_amortize", out.get("surplus_after_partial", None))
+                surplus_val = float(surplus) if surplus is not None and not (isinstance(surplus, str) and surplus == "") else -math.inf
+                surplus_fmt = _fmt_amt(surplus)
+                msg = (
+                    f"Partially repay {repay_fmt}, which is {int(pct * 100)}% of the principal, "
+                    f"and amortize the remaining balance over {int(tenure)} months. "
+                    f"This plan is estimated to leave a seasonal surplus of approximately {surplus_fmt}."
+                )
+                feasible.append((msg, surplus_val, out))
 
-            # sort by score descending
+            # sort by score descending (higher seasonal surplus first)
             feasible_sorted = sorted(feasible, key=lambda x: x[1], reverse=True)
 
+            RENAME_MAP = {
+                "emi_after_amortize_monthly": "Estimated Monthly EMI After Amortize",
+                "harvest_can_afford_partial": "Harvest Can Afford Partial Repayment",
+                "harvest_cash": "Cash Available at Harvest",
+                "is_sufficient": "Is Repayment Sufficient",
+                "principal_remaining": "Principal Remaining",
+                "repay_at_harvest": "Repayable at Harvest",
+                "seasonal_loan_after": "Seasonal Loan Outflow After Change",
+                "surplus_after_partial_amortize": "Seasonal Surplus After Plan"
+            }
+            DROP_KEYS = {"internal_flag", "debug_trace"} 
+
             for key, score, payload in feasible_sorted:
+                pretty_details = prettify_details(payload, rename_map=RENAME_MAP, drop_keys=DROP_KEYS, keep_raw=False)
+
                 recs.append({
-                    "option": key,
+                    "option": key,  # now a readable English sentence
                     "score_surplus": round(float(score), 2) if score is not None and not math.isinf(score) else float("-inf"),
-                    "details": payload
+                    "details": pretty_details
                 })
 
         return {

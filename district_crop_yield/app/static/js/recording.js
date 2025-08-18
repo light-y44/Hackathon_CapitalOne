@@ -61,6 +61,15 @@ function createNotificationElement(baseline, recommendations) {
 
     a.addEventListener("click", (e) => {
         e.preventDefault();
+        let recsForUrl = recommendations;
+        try {
+            // If recommendations is a stringified JSON, this will parse it.
+            if (typeof recsForUrl === "string") {
+                recsForUrl = JSON.parse(recsForUrl);
+            }
+        } catch (err) {
+            // ignore parse errors — we'll stringify whatever it currently is below
+        }
         const params = new URLSearchParams({
             gross_revenue: gross_revenue !== "N/A" ? gross_revenue : "",
             net_revenue_after_marketing: net_rev_after_market !== "N/A" ? net_rev_after_market : "",
@@ -73,9 +82,9 @@ function createNotificationElement(baseline, recommendations) {
             surplus_before_loan: seasonal_surplus_before_loan !== "N/A" ? seasonal_surplus_before_loan : "",
             surplus_after_loan: seasonal_surplus_after_loan !== "N/A" ? seasonal_surplus_after_loan : "",
             debt_sustainability_index: debt_sustainability_index !== "N/A" ? debt_sustainability_index : "",
-            recommendations: recommendations ?? []
-
         });
+        
+        params.append("recommendations", JSON.stringify(recsForUrl ?? []));
         window.location.href = `/notification_page?${params.toString()}`;
     });
 
