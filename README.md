@@ -1,2 +1,4 @@
 # Krishi Mitra: AI agriculture advisor and farmer debt manager. 
-## We have not uploaded the fined tuned weights of the LLM due to it's large size and github restriction. 
+## Please find the link to our entire project, it contains all the weights and models. 
+
+https://drive.google.com/file/d/1Mku19WTKXKjrQlG-mILl68_S-s7okC37/view?usp=sharing
