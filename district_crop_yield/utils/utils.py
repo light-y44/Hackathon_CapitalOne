@@ -8,9 +8,16 @@ import joblib
 from huggingface_hub import login
 from deep_translator import GoogleTranslator
 from models.Mid_season_price_prediction import evaluate_model
+from dotenv import load_dotenv
+
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__),  '..')))
 from models.crop_yield import YieldNN
+
+env_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../.env"))
+
+# Load it
+load_dotenv(dotenv_path=env_path)
 
 current_dir = os.path.dirname(__file__) 
 district_area_path = os.path.join(current_dir, "../data/all_crops_all_districts.csv")

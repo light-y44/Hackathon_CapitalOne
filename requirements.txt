@@ -18,4 +18,4 @@ statsmodels
 soundfile
 torchaudio
 deep-translator
-pip install openpyxl
+openpyxl
