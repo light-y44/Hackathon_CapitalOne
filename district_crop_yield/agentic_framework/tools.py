@@ -31,7 +31,17 @@ def get_doc_using_rag(query):
   ans = "\n".join([doc.page_content for doc in vectorstore.similarity_search(query, k=3)])
   return ans
 
+rag_tool = Tool(
+    name="RAG",
+    func=get_doc_using_rag,
+    description=(
+        "Use this to retrieve relevant information from the uploaded documents. "
+        "Input: a natural language question (string). "
+        "Output: up to 3 relevant passages of text concatenated together."
+    )
+)
+
 
 if __name__ == "__main__":
-    query = "What is the capital of France?"
-    print(get_doc_using_rag(query))
+    query = "what is the best fertilizer for wheat?"
+    print(rag_tool(query))

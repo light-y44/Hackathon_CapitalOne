@@ -6,7 +6,7 @@ import json
 
 import os 
 
-from tools import google_search_tool
+from tools import google_search_tool, rag_tool
 from prompts import Prompts
 
 env_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../.env"))
@@ -28,7 +28,8 @@ class Agent():
             google_api_key=os.getenv("GOOGLE_API_KEY")
         )
         self.tools = {
-            "GoogleSearch": google_search_tool.run
+            "GoogleSearch": google_search_tool,
+            "RAG": rag_tool
         }
         self.memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
         self.planner_chain = build_planner_chain(self.llm, prompts.planner_prompt)
@@ -55,7 +56,31 @@ class Agent():
             except Exception as e:
                 raise ValueError(f"Planner output not valid JSON: {plan_output}") from e
 
+            print(f"Plan json ---> {plan_json.get('plan')}")
             # Step 2: Check decision
+            for step in plan_json.get("plan", []):
+                tool_name = step["tool"]
+                action = step["action"]
+
+                # print(f"tool name -> {tool_name}")
+                # print(f"action -> {action}")
+                # print(f"Step -> {step}")
+                if tool_name in self.tools:
+                    try:
+                        result = self.tools[tool_name](action)
+                        print(f"Tool {tool_name} executed with action '{action}', result: {result}")
+                        print("\n")
+                    except Exception as e:
+                        result = f"Error running {tool_name} on action '{action}': {e}"
+                        print(f"Error occurred: {result} on tool {tool_name}")
+                        print("\n")
+                else:
+                    result = f"Tool {tool_name} not available."
+
+                # Store results under tool_name + action
+                tool_results[f"{tool_name}:{action}"] = result
+
+            # Step 3: Execute tools
             if plan_json.get("decision") == "stop":
                 # Final step → answer
                 # print(f"""
@@ -74,23 +99,6 @@ class Agent():
                 self.memory.chat_memory.add_user_message(query)
                 self.memory.chat_memory.add_ai_message(final_answer)
                 return final_answer
-
-            # Step 3: Execute tools
-            for step in plan_json.get("plan", []):
-                tool_name = step["tool"]
-                action = step["action"]
-
-                if tool_name in self.tools:
-                    try:
-                        result = self.tools[tool_name](action)
-                    except Exception as e:
-                        result = f"Error running {tool_name} on action '{action}': {e}"
-                else:
-                    result = f"Tool {tool_name} not available."
-
-                # Store results under tool_name + action
-                tool_results[f"{tool_name}:{action}"] = result
-
 
 if __name__ == "__main__":
     agent = Agent()

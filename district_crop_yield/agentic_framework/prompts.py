@@ -11,8 +11,14 @@ class Prompts:
                 - Stop once you believe you have enough information.
 
                 Tools available: 
-                - "GoogleSearch": for current events or factual knowledge.
-                - "RAG": for retrieving internal docs.
+                - "GoogleSearch": for current events, news, or factual knowledge available on the internet.
+                - "RAG": for retrieving relevant passages from internal documents, uploaded files, or proprietary datasets.
+
+                Guidelines:
+                - Prefer RAG when the query might be answered from internal documents (e.g., company policies, research papers, uploaded PDFs).
+                - Use GoogleSearch when external, real-time, or general factual knowledge is needed.
+                - For complex queries, you may combine both tools: e.g., use GoogleSearch to get a fact, then RAG to enrich it with internal context.
+                - Always think step by step. If more than one piece of information is needed, plan multiple tool calls.
 
                 Output rules:
                 - Always return a JSON object between <<<JSON_START>>> and <<<JSON_END>>> ONLY.
@@ -25,6 +31,7 @@ class Prompts:
 
                 Examples:
 
+                Example 1 (GoogleSearch only):
                 User query: "Find the capital of France, then explain why it's important historically."
                 <<<JSON_START>>>
                 {{
@@ -41,11 +48,49 @@ class Prompts:
                 <<<JSON_START>>>
                 {{
                     "plan": [
-                        {{"tool": "RAG", "reason": "Find historical importance of Paris", "action": "historical importance of Paris"}}
+                        {{"tool": "RAG", "reason": "Find historical importance of Paris in internal docs", "action": "historical importance of Paris"}}
                     ],
                     "tool_results": {{"GoogleSearch": "Paris"}},
                     "decision": "stop",
-                    "final_thought": "We now have the capital (Paris), next use RAG for context, then stop."
+                    "final_thought": "We now have the capital (Paris), next use RAG for historical context, then stop."
+                }}
+                <<<JSON_END>>>
+
+                Example 2 (RAG only):
+                User query: "Summarize the safety protocols mentioned in the uploaded training manual."
+                <<<JSON_START>>>
+                {{
+                    "plan": [
+                        {{"tool": "RAG", "reason": "Retrieve safety protocols from the internal training manual", "action": "safety protocols from training manual"}}
+                    ],
+                    "tool_results": {{}},
+                    "decision": "stop",
+                    "final_thought": "Since this is in internal documents, RAG is sufficient."
+                }}
+                <<<JSON_END>>>
+
+                Example 3 (Mix of GoogleSearch + RAG):
+                User query: "Compare the latest WHO guidelines on COVID-19 vaccination with the hospital's internal policies."
+                <<<JSON_START>>>
+                {{
+                    "plan": [
+                        {{"tool": "GoogleSearch", "reason": "Fetch the latest WHO vaccination guidelines", "action": "latest WHO COVID-19 vaccination guidelines"}}
+                    ],
+                    "tool_results": {{}},
+                    "decision": "continue",
+                    "final_thought": "Start by getting the external guidelines from GoogleSearch."
+                }}
+                <<<JSON_END>>>
+
+                After GoogleSearch returned guidelines text:
+                <<<JSON_START>>>
+                {{
+                    "plan": [
+                        {{"tool": "RAG", "reason": "Retrieve hospital's internal COVID-19 vaccination policies", "action": "hospital internal vaccination policy"}}
+                    ],
+                    "tool_results": {{"GoogleSearch": "<WHO guidelines text>"}},
+                    "decision": "stop",
+                    "final_thought": "We now have WHO guidelines and hospital policy from RAG, enough to compare."
                 }}
                 <<<JSON_END>>>
 
@@ -56,6 +101,7 @@ class Prompts:
                 User query: {query}
             """
         )
+
 
         self.answer_prompt = PromptTemplate(
             input_variables=["query", "chat_history", "tool_results"],
