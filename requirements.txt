@@ -19,3 +19,9 @@ soundfile
 torchaudio
 deep-translator
 openpyxl
+sentence-transformers
+faiss-cpu
+langchain
+langgraph
+langchain-google-genai
+langchain-community
