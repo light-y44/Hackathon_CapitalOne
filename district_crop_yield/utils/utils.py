@@ -13,6 +13,8 @@ from dotenv import load_dotenv
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__),  '..')))
 from models.crop_yield import YieldNN
+from utils.calcWeather import calculate_weather_data
+from utils.calIndx import calculate_indices_data
 
 env_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../.env"))
 
@@ -178,6 +180,49 @@ def calculateYieldPred(weather_df, indices_df, area_district, crop, district):
     predicted_price = evaluate_model(price_model, price_df)
     print(f"Predicted price: {predicted_price} and Predicted yield: {predicted_yield}")
     return predicted_yield, predicted_price
+
+
+def calculatePricePredTool(text: str) -> float:
+    print(text)
+    return evaluate_model(price_model, price_df)
+
+
+
+def calculateYieldPred_Tool_structured(year, district, crop, area) -> float:
+    """
+    Wrapper for StructuredTool that takes a Pydantic object as input.
+    """
+    weather_df = calculate_weather_data(year, district)
+    indices_df = calculate_indices_data(year, district)
+
+    input_data = {
+        'T2M': weather_df['avg_temp'],
+        'PRECTOTCORR': weather_df['total_rainfall'],
+        'ALLSKY_SFC_SW_DWN': weather_df['avg_solar_radiation'],
+        'NDVI': indices_df['ndvi'],
+        'EVI': indices_df['evi'],
+        'NDWI': indices_df['ndwi'],
+        'Area': area,
+        'crop_type': crop,
+        'district': district
+    }
+
+    preprocessed_sample = preprocess_single_sample(
+        input_data, 
+        label_encoders=label_encoders, 
+        scaler=scaler
+    )
+
+    # Convert to torch tensor
+    X_tensor = torch.tensor(preprocessed_sample, dtype=torch.float32).unsqueeze(0)
+    
+    model.eval()
+    with torch.no_grad():
+        predicted_yield = model(X_tensor).item()
+
+    print(f"Predicted yield: {predicted_yield}")
+    return predicted_yield
+
 
 
 def huggingFaceAuth():

@@ -2,10 +2,15 @@ from langchain_community.utilities import GoogleSerperAPIWrapper
 from langchain.agents import Tool
 from langchain.vectorstores import FAISS
 from langchain_community.embeddings import HuggingFaceEmbeddings
-
-
 from dotenv import load_dotenv
 import os
+import sys
+from langchain.tools import StructuredTool
+
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__),  '..')))
+
+from utils.utils import calculateYieldPred_Tool_structured, calculatePricePredTool
 
 env_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../.env"))
 
@@ -41,7 +46,23 @@ rag_tool = Tool(
     )
 )
 
+crop_pred_tool = StructuredTool.from_function(
+    name="CropPrediction",
+    func=calculateYieldPred_Tool_structured,
+    description="Predict crop yields based on weather and indices data.",
+)
+
+price_pred_tool = StructuredTool.from_function(
+    name="PricePrediction",
+    func=calculatePricePredTool,
+    description="Predict crop prices based on historical data."
+)
 
 if __name__ == "__main__":
-    query = "what is the best fertilizer for wheat?"
-    print(rag_tool(query))
+    input = {
+       "year": 2023,
+       "district": "Ashoknagar",
+       "crop": "Wheat",
+       "area": 100.0
+    }
+    print(crop_pred_tool.run(input))

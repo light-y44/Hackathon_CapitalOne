@@ -94,6 +94,32 @@ class Prompts:
                 }}
                 <<<JSON_END>>>
 
+                Example 4 (CropPrediction):
+                User query: "Predict the crop yield for Wheat in Ashoknagar for the year 2023 on a farm of area 100.0 hectares."
+                <<<JSON_START>>>
+                {{
+                    "plan": [
+                        {{"tool": "CropPrediction", "reason": "User asked for crop yield prediction", "action": {{ "year": 2023, "district": "Ashoknagar", "crop": "Wheat", "area": 100.0 }} }}
+                    ],
+                    "tool_results": {{}},
+                    "decision": "stop",
+                    "final_thought": "Crop yield tool gives the requested prediction."
+                }}
+                <<<JSON_END>>>
+
+                Example 5 (PricePrediction):
+                User query: "What will be the price of Wheat in Ashoknagar for the year 2023?"
+                <<<JSON_START>>>
+                {{
+                    "plan": [
+                        {{"tool": "PricePrediction", "reason": "User asked for price prediction", "action": "Price for Wheat in Ashoknagar for the year 2023." }}
+                    ],
+                    "tool_results": {{}},
+                    "decision": "stop",
+                    "final_thought": "Price prediction tool gives the requested prediction."
+                }}
+                <<<JSON_END>>>
+
                 Now create the plan for this input:
 
                 Chat history: {chat_history}

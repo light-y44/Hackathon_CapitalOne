@@ -6,7 +6,7 @@ import json
 
 import os 
 
-from tools import google_search_tool, rag_tool
+from tools import google_search_tool, rag_tool, crop_pred_tool, price_pred_tool
 from prompts import Prompts
 
 env_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../.env"))
@@ -29,7 +29,9 @@ class Agent():
         )
         self.tools = {
             "GoogleSearch": google_search_tool,
-            "RAG": rag_tool
+            "RAG": rag_tool,
+            "CropPrediction": crop_pred_tool,
+            "PricePrediction": price_pred_tool
         }
         self.memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
         self.planner_chain = build_planner_chain(self.llm, prompts.planner_prompt)
@@ -102,6 +104,6 @@ class Agent():
 
 if __name__ == "__main__":
     agent = Agent()
-    plan_result = agent.run("What is the best fertilizer to grow wheat?")
+    plan_result = agent.run("What will be the rate of Wheat in Indore for the year 2026?")
     print(f"\n")
     print("planner RESULTS:\n", plan_result)
