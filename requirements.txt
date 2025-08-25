@@ -1,27 +1,43 @@
-earthengine-api==0.1.326
-google-cloud-storage
+# Core scientific stack
 pandas
-numpy
+numpy<2
 scikit-learn
-python-dotenv
+statsmodels
 tqdm
 requests
-torch
+python-dotenv
+openpyxl
+
+# Google Earth Engine + Cloud
+earthengine-api==0.1.326
+google-cloud-storage
+
+# Audio processing
 SpeechRecognition
 pyaudio
 sounddevice
-Flask
+soundfile
 pydub
+
+# Deep learning stack (CPU only — works with transformers/peft/accelerate)
+torch==2.2.2
+torchvision==0.17.2
+torchaudio==2.2.2
 transformers
 peft
-statsmodels
-soundfile
-torchaudio
+accelerate
+
+# Web framework
+Flask
+
+# Utilities
 deep-translator
-openpyxl
-sentence-transformers
+
+sentence-transformers<3
 faiss-cpu
 langchain
 langgraph
 langchain-google-genai
 langchain-community
+python-docx
+pypdf

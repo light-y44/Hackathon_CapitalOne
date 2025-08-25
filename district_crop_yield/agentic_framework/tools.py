@@ -1,5 +1,9 @@
 from langchain_community.utilities import GoogleSerperAPIWrapper
 from langchain.agents import Tool
+from langchain.vectorstores import FAISS
+from langchain_community.embeddings import HuggingFaceEmbeddings
+
+
 from dotenv import load_dotenv
 import os
 
@@ -7,6 +11,12 @@ env_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../.env")
 
 load_dotenv(env_path)
 
+OUTPUT_VDB_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "../rag/faiss"))
+
+
+embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+
+vectorstore = FAISS.load_local(OUTPUT_VDB_PATH, embeddings, allow_dangerous_deserialization=True)
 
 serper = GoogleSerperAPIWrapper(serper_api_key = os.getenv("SERPER_API_KEY"))
 
@@ -17,3 +27,11 @@ google_search_tool = Tool(
     description="Useful for answering questions about current events or factual knowledge"
 )
 
+def get_doc_using_rag(query):
+  ans = "\n".join([doc.page_content for doc in vectorstore.similarity_search(query, k=3)])
+  return ans
+
+
+if __name__ == "__main__":
+    query = "What is the capital of France?"
+    print(get_doc_using_rag(query))
