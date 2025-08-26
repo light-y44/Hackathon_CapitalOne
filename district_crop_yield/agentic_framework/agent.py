@@ -3,11 +3,14 @@ from langchain.memory import ConversationBufferMemory
 from dotenv import load_dotenv
 from langchain.schema import StrOutputParser
 import json
+import sys
 
 import os 
 
-from tools import google_search_tool, rag_tool, crop_pred_tool, price_pred_tool
-from prompts import Prompts
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__),  '..')))
+
+from agentic_framework.tools import google_search_tool, rag_tool, crop_pred_tool, price_pred_tool
+from agentic_framework.prompts import Prompts
 
 env_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../.env"))
 

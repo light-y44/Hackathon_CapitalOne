@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import FarmerInputForm from './components/FarmerInputForm';
 import BaselineSummary from './components/BaselineSummary';
 import AIChat from './components/AIChat';
@@ -77,57 +77,6 @@ function App() {
   const handleBackFromDetailed = () => {
     setShowDetailedAnalysis(false);
   };
-
-  // const mockSummary: BaselineSummaryType = {
-  //   grossRevenue: 126464,
-  //   netRevenueAfterMarketing: 123935,
-  //   netFarmIncome: 80935,
-  //   seasonalOfffarmIncome: 15000,
-  //   totalAvailable: 95935
-  // };
-
-  // const mockRecommendations: Recommendation[] = [
-  //   {
-  //     option: "Partially repay ₹40,000.00, which is 50% of the principal, and amortize the remaining balance over 36 months.",
-  //     score_surplus: -19922,
-  //     details: [
-  //       "Cash Available at Harvest: ₹80,935.10",
-  //       "Estimated Monthly EMI After Amortize: ₹1,309.55",
-  //       "Harvest Can Afford Partial Repayment: Yes",
-  //       "Is Repayment Sufficient: No",
-  //       "Principal Remaining: ₹40,000.00",
-  //       "Repayable at Harvest: ₹40,000.00",
-  //       "Seasonal Loan Outflow After Change: ₹7,857.29",
-  //       "Seasonal Surplus After Plan: ₹-19,922.19"
-  //     ]
-  //   },
-  //   {
-  //     option: "Partially repay ₹40,000.00, which is 50% of the principal, and amortize the remaining balance over 24 months.",
-  //     score_surplus: -23250,
-  //     details: [
-  //       "Cash Available at Harvest: ₹80,935.10",
-  //       "Estimated Monthly EMI After Amortize: ₹1,864.31",
-  //       "Harvest Can Afford Partial Repayment: Yes",
-  //       "Is Repayment Sufficient: No",
-  //       "Principal Remaining: ₹40,000.00",
-  //       "Repayable at Harvest: ₹40,000.00",
-  //       "Seasonal Loan Outflow After Change: ₹11,185.86",
-  //       "Seasonal Surplus After Plan: ₹-23,250.78"
-  //     ]
-  //   },
-  //   {
-  //     option: "Partially repay ₹20,000.00, which is 25% of the principal, and amortize the remaining balance over 36 months.",
-  //     score_surplus: -23850,
-  //     details: [
-  //       "Cash Available at Harvest: ₹80,935.10",
-  //       "Estimated Monthly EMI After Amortize: ₹2,500.45",
-  //       "Harvest Can Afford Partial Repayment: Yes",
-  //       "Is Repayment Sufficient: No",
-  //       "Principal Remaining: ₹60,000.00",
-  //       "Repayable at Harvest: ₹20,000.00"
-  //     ]
-  //   }
-  // ];
 
   if (showDetailedAnalysis && farmerData && baselineSummary) {
     return (

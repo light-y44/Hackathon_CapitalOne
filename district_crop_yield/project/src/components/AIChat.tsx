@@ -1,12 +1,15 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { ChatMessage, ThinkingStep } from '../types';
-import { Send, Mic, MicOff, Volume2 } from 'lucide-react';
+import { Send, Mic, MicOff } from 'lucide-react';
 
 interface AIChatProps {
   onThinkingStepsUpdate: (steps: ThinkingStep[]) => void;
 }
 
 const AIChat: React.FC<AIChatProps> = ({ onThinkingStepsUpdate }) => {
+  // Use a single state for the MediaRecorder instance
+  const mediaRecorderRef = useRef<MediaRecorder | null>(null);
+  
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
       id: '1',
@@ -16,9 +19,11 @@ const AIChat: React.FC<AIChatProps> = ({ onThinkingStepsUpdate }) => {
     }
   ]);
   const [inputMessage, setInputMessage] = useState('');
-  const [isRecording, setIsRecording] = useState(false);
+  // Consolidate all processing states into a single boolean
   const [isProcessing, setIsProcessing] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  const flaskappRoute = 'http://127.0.0.1:5000';
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -83,58 +88,153 @@ const AIChat: React.FC<AIChatProps> = ({ onThinkingStepsUpdate }) => {
     }, 4000);
   };
 
-  const handleSendMessage = () => {
-    if (!inputMessage.trim()) return;
+  // Refactored to accept the message content as an argument
+  const handleSendMessage = async (content: string, lang: string) => {
+    if (!content.trim()) return;
 
-    const newMessage: ChatMessage = {
-      id: Date.now().toString(),
-      type: 'user',
-      content: inputMessage,
-      timestamp: new Date()
-    };
-
-    setMessages(prev => [...prev, newMessage]);
+    // Add user message to chat immediately
+    if (lang == 'eng') {
+      const newUserMessage: ChatMessage = {
+        id: Date.now().toString(),
+        type: 'user',
+        content: content,
+        timestamp: new Date()
+      };
+      setMessages(prev => [...prev, newUserMessage]);
+    }
+    
+    // Clear input box
     setInputMessage('');
+    
+    // Set processing state to true
     setIsProcessing(true);
-
     simulateThinkingSteps();
 
-    // Simulate AI response
-    setTimeout(() => {
-      const responses = [
-        'आपके गेहूं की फसल के लिए, इस समय सिंचाई का विशेष ध्यान रखना जरूरी है। मिट्टी की नमी जांचकर सिंचाई करें।',
-        'PMFBY के तहत आप अपनी फसल का बीमा करवा सकते हैं। यह प्राकृतिक आपदाओं से होने वाले नुकसान की भरपाई करता है।',
-        'आपकी मासिक EMI ₹3,461 है। वर्तमान आय के अनुसार यह manageable लगती है, लेकिन seasonal planning जरूरी है।'
-      ];
+    try {
+      const res = await fetch(`${flaskappRoute}/api/submit_query`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ query: content, lang: lang })
+      });
+
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+
+      const result = await res.json();
 
       const botResponse: ChatMessage = {
         id: (Date.now() + 1).toString(),
         type: 'bot',
-        content: responses[Math.floor(Math.random() * responses.length)],
+        content: result.message,
         timestamp: new Date()
       };
 
       setMessages(prev => [...prev, botResponse]);
+
+    } catch (error) {
+      console.error('Error submitting query:', error);
+      const botError: ChatMessage = {
+        id: (Date.now() + 1).toString(),
+        type: 'bot',
+        content: 'Sorry, I am unable to process your request at the moment.',
+        timestamp: new Date()
+      };
+      setMessages(prev => [...prev, botError]);
+
+    } finally {
       setIsProcessing(false);
-    }, 4500);
+    }
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
-      handleSendMessage();
+      // Pass the current input value to the handler
+      handleSendMessage(inputMessage, 'eng');
     }
   };
 
-  const toggleRecording = () => {
-    setIsRecording(!isRecording);
-    if (!isRecording) {
-      // Simulate voice recording
-      setTimeout(() => {
-        setIsRecording(false);
-        setInputMessage('फसल की सिंचाई कब करनी चाहिए?');
-      }, 3000);
+  const toggleRecording = async () => {
+    // If we're already recording, stop
+    if (mediaRecorderRef.current && mediaRecorderRef.current.state === "recording") {
+      mediaRecorderRef.current.stop();
+      return;
     }
+    
+    // If not, start recording
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      const mediaRecorder = new MediaRecorder(stream);
+      mediaRecorderRef.current = mediaRecorder;
+      let audioChunks: BlobPart[] = [];
+      setIsProcessing(true); // Show loader for recording and upload
+
+      mediaRecorder.ondataavailable = e => {
+        audioChunks.push(e.data);
+      };
+
+      mediaRecorder.onstop = async () => {
+        const blob = new Blob(audioChunks, { type: 'audio/webm' });
+        // The rest of the process is now handled in a single flow
+        await handleAudioUploadAndQuery(blob);
+      };
+
+      mediaRecorder.start();
+      
+    } catch (err) {
+      console.error('Error accessing microphone:', err);
+      setIsProcessing(false);
+    }
+  };
+
+  // Combines the audio upload and query submission into one function
+  const handleAudioUploadAndQuery = async (blob: Blob) => {
+      const formData = new FormData();
+      formData.append("audio", blob, "recording.webm");
+
+      try {
+          const uploadResponse = await fetch(`${flaskappRoute}/api/upload_audio`, {
+              method: "POST",
+              body: formData
+          });
+
+          if (!uploadResponse.ok) {
+              throw new Error(`Upload failed with status: ${uploadResponse.status}`);
+          }
+
+          const data = await uploadResponse.json();
+          const hindi_msg = data.hindi_text;
+          const english_msg = data.english_text;
+          const audioUrl = URL.createObjectURL(blob);
+
+          // Add a new user message for the transcribed text
+          const newUserMessage: ChatMessage = {
+            id: Date.now().toString(),
+            type: 'user',
+            content: hindi_msg,
+            timestamp: new Date(),
+            audioUrl: audioUrl
+          };
+          setMessages(prev => [...prev, newUserMessage]);
+          
+          // Submit the query with the English transcription
+          await handleSendMessage(english_msg, 'hi');
+
+      } catch (error) {
+          console.error("Error uploading audio:", error);
+          const errorMessage: ChatMessage = {
+            id: (Date.now() + 1).toString(),
+            type: 'bot',
+            content: 'Sorry, I couldn\'t process that audio.',
+            timestamp: new Date()
+          };
+          setMessages(prev => [...prev, errorMessage]);
+      } finally {
+        setIsProcessing(false);
+      }
   };
 
   return (
@@ -157,13 +257,10 @@ const AIChat: React.FC<AIChatProps> = ({ onThinkingStepsUpdate }) => {
                 ? 'bg-green-600 text-white' 
                 : 'bg-gray-100 text-gray-900'
             }`}>
-              <p className="text-sm">{message.content}</p>
-              {message.isAudio && (
-                <div className="flex items-center space-x-2 mt-2 opacity-75">
-                  <Volume2 size={14} />
-                  <span className="text-xs">Audio message</span>
-                </div>
+              {message.audioUrl && (
+                  <audio controls src={message.audioUrl} className="w-full mb-2" />
               )}
+              <p className="text-sm">{message.content}</p>
             </div>
           </div>
         ))}
@@ -200,15 +297,15 @@ const AIChat: React.FC<AIChatProps> = ({ onThinkingStepsUpdate }) => {
             <button
               onClick={toggleRecording}
               className={`absolute right-3 top-1/2 transform -translate-y-1/2 p-1 rounded-full transition-colors ${
-                isRecording ? 'text-red-500 bg-red-100' : 'text-gray-400 hover:text-gray-600'
+                isProcessing && mediaRecorderRef.current?.state === 'recording' ? 'text-red-500 bg-red-100' : 'text-gray-400 hover:text-gray-600'
               }`}
             >
-              {isRecording ? <MicOff size={18} /> : <Mic size={18} />}
+              {isProcessing && mediaRecorderRef.current?.state === 'recording' ? <MicOff size={18} /> : <Mic size={18} />}
             </button>
           </div>
           <div className="flex space-x-2">
             <button
-              onClick={handleSendMessage}
+              onClick={() => handleSendMessage(inputMessage, 'eng')}
               disabled={!inputMessage.trim() || isProcessing}
               className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors"
             >

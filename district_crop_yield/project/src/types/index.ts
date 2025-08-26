@@ -43,5 +43,5 @@ export interface ChatMessage {
   type: 'user' | 'bot';
   content: string;
   timestamp: Date;
-  isAudio?: boolean;
+  audioUrl?: string;
 }

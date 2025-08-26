@@ -11,6 +11,7 @@ import numpy as np
 import math
 from datetime import datetime, date
 from decimal import Decimal
+import time
 
 # Add the project root to sys.path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__),  '..')))
@@ -22,14 +23,16 @@ from utils.repaymentLogic import preSeasonCalc
 from FT_model.model import FineTunedLlama
 from models.stt import load_asr_model
 from models.repayment import FarmInputs, FarmDebtManager
+from agentic_framework.agent import Agent
 
 app = Flask(__name__)
 
 CORS(app, resources={r"/api/*": {"origins": "*"}})
 
+agent = Agent()
 
-# UPLOAD_FOLDER = "uploads"
-# os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+UPLOAD_FOLDER = "uploads"
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 # BASE_MODEL="TinyLlama/TinyLlama-1.1B-Chat-v1.0"
 
@@ -40,7 +43,7 @@ CORS(app, resources={r"/api/*": {"origins": "*"}})
 # llama = FineTunedLlama(BASE_MODEL, GEN_FINETUNED_DIR)
 # finance_llama = FineTunedLlama(BASE_MODEL, FINANCE_FINETUNED_DIR)
 
-# asr_pipe = load_asr_model()
+asr_pipe = load_asr_model()
 
 
 # Temporary in-memory store for repayment notifications
@@ -87,51 +90,54 @@ CORS(app, resources={r"/api/*": {"origins": "*"}})
 #     pass 
 
 
-# @app.route('/api/upload_audio', methods=['POST'])
-# def upload_audio():
-#     if 'audio' not in request.files:
-#         return jsonify({"error": "No file uploaded"}), 400
+@app.route('/api/upload_audio', methods=['POST'])
+def upload_audio():
+    if 'audio' not in request.files:
+        return jsonify({"error": "No file uploaded"}), 400
     
-#     audio_file = request.files['audio']
-#     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-#     webm_path = os.path.join(UPLOAD_FOLDER, f"recording_{timestamp}.webm")
-#     audio_file.save(webm_path)
+    audio_file = request.files['audio']
+    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+    webm_path = os.path.join(UPLOAD_FOLDER, f"recording_{timestamp}.webm")
+    audio_file.save(webm_path)
 
-#     # Convert to WAV
-#     wav_path = webm_path.replace(".webm", ".wav")
-#     sound = AudioSegment.from_file(webm_path, format="webm")
-#     sound.export(wav_path, format="wav")
+    # Convert to WAV
+    wav_path = webm_path.replace(".webm", ".wav")
+    sound = AudioSegment.from_file(webm_path, format="webm")
+    sound.export(wav_path, format="wav")
 
-#     # Transcribe
-#     hindi_text = asr_pipe(wav_path)["text"]
-#     # print("Transcribed Hindi text:", hindi_text)
-#     english_text = translate_hi_to_en(hindi_text)
+    # Transcribe
+    hindi_text = asr_pipe(wav_path)["text"]
+    # print("Transcribed Hindi text:", hindi_text)
+    english_text = translate_hi_to_en(hindi_text)
 
-#     return jsonify({
-#         "message": "Audio transcribed successfully",
-#         "hindi_text": hindi_text,
-#         "english_text": english_text
-#     })
+    return jsonify({
+        "message": "Audio transcribed successfully",
+        "hindi_text": hindi_text,
+        "english_text": english_text
+    })
 
 
-# @app.route('/api/submit_query', methods=['POST'])
-# def submit_query():
-#     query = request.form.get("query")
-
-#     print("Request form data:", request.form)
-
-#     if not query:
-#         return jsonify({"message": "No query provided"}), 400
+@app.route('/api/submit_query', methods=['POST'])
+def submit_query():
+    data = request.get_json()
+    query = data.get("query", "").strip()
+    lang = data.get("lang", "en")
+    if not query:
+        return jsonify({"message": "No query provided"}), 400
     
-#     response = llama.ask(query, "agriculture")
+    # response = llama.ask(query, "agriculture")
+    time.sleep(2)
+    response = agent.run(query)
 
-#     if "<|assistant|>" in response:
-#         response = response.split("<|assistant|>")[-1].strip()
+    if "<|assistant|>" in response:
+        response = response.split("<|assistant|>")[-1].strip()
 
-#     # Translate response to Hindi
-#     response = translate_en_to_hi(response)
-    
-#     return jsonify({"message": response})
+    # Translate response to Hindi
+    if lang == "hi":
+        response = translate_en_to_hi(response)
+
+    return jsonify({"message": response})
+
 
 # @app.route('/api/submit_finance_query', methods=['POST'])
 # def submit_finance_query():
@@ -225,7 +231,6 @@ def debug_json(obj):
 @app.route('/api/submit_initial_inputs', methods=['POST'])
 def submit_initial_inputs():
 
-    # Get form inputs -> In form of json 
     data = request.get_json()
 
     print("Received form data:", data)
@@ -261,7 +266,6 @@ def submit_initial_inputs():
         )
         predicted_price = np.mean(predicted_price)
     else:
-        # print("Hello!")
         weather_df = calculate_weather_data(year, district)
         indices_df = calculate_indices_data(year, district)
         area_district = calulateArea(district, crop, year) or area
@@ -273,8 +277,6 @@ def submit_initial_inputs():
             crop, 
             district
         )
-    # predicted_price = 2400
-    # predicted_yield = 3.0
 
     fi = FarmInputs(
         area_ha=area,
@@ -298,9 +300,6 @@ def submit_initial_inputs():
     recs_serialized = serialize_recommendations(out["recommendations"][:3])
     baseline_serialized = serialize_recommendations(out["baseline"])
     scenarios_serialized = serialize_recommendations(out.get("scenarios"))
-
-    gl_rec = recs_serialized
-    gl_baseline = baseline_serialized
 
     return jsonify({
         "recommendations": recs_serialized,
