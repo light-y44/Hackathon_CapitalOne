@@ -12,7 +12,7 @@ This cleaned up version avoids NumPy arrays in outputs and ensures all returned 
 native Python types (float/int/bool) to be JSON-serializable.
 """
 
-from dataclasses import dataclass, asdict, field
+from dataclasses import dataclass, field
 from typing import Dict, List, Tuple
 import math
 import json

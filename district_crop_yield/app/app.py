@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
-
 import os
 from datetime import datetime
 from pydub import AudioSegment
@@ -18,7 +17,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__),  '..')))
 
 from utils.calcWeather import calculate_weather_data
 from utils.calIndx import calculate_indices_data
-from utils.utils import  calulateArea, calculateYieldPred, huggingFaceAuth, translate_hi_to_en, translate_en_to_hi
+from utils.utils import  calulateArea, calculateYieldPred, huggingFaceAuth, translate_hi_to_en, translate_en_to_hi, debug_json, serialize_recommendations
 from utils.repaymentLogic import preSeasonCalc
 from FT_model.model import FineTunedLlama
 from models.stt import load_asr_model
@@ -45,50 +44,7 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 asr_pipe = load_asr_model()
 
-
-# Temporary in-memory store for repayment notifications
-# repayment_notifications = []
-
 # huggingFaceAuth()
-
-# gl_rec = None
-# gl_baseline = None
-
-# @app.route('/api/')
-# def index():
-#     return render_template("index.html", notifications=repayment_notifications)
-
-# @app.route('/api/notification_page')
-# def notification_page():
-#     baseline_fields = [
-#         "gross_revenue",
-#         "net_revenue_after_marketing",
-#         "net_farm_income",
-#         "seasonal_offfarm_income",
-#         "total_available",
-#         "seasonal_household_need",
-#         "emi_monthly_baseline",
-#         "seasonal_loan_outflow_baseline",
-#         "surplus_before_loan",
-#         "surplus_after_loan",
-#         "debt_sustainability_index"
-#     ]
-#     baseline = {field: request.args.get(field) for field in baseline_fields}
-
-#     recs_raw = request.args.get("recommendations", "[]")
-#     try:
-#         recommendations = json.loads(recs_raw)
-#         print("Decoded recommendations:", recommendations)
-#     except Exception:
-#         print("I am here")
-#         recommendations = []
-
-#     return render_template("repayment.html", baseline=baseline, recommendations=recommendations)
-
-# @app.route('/api/get_insurance')
-# def get_insurance():
-#     pass 
-
 
 @app.route('/api/upload_audio', methods=['POST'])
 def upload_audio():
@@ -139,101 +95,10 @@ def submit_query():
     return jsonify({"message": response})
 
 
-# @app.route('/api/submit_finance_query', methods=['POST'])
-# def submit_finance_query():
-#     query = request.form.get("query")
-#     if not query:
-#         return jsonify({"message": "No query provided"}), 400
-    
-#     response = finance_llama.ask(query, "finance", inputs = [gl_baseline, gl_rec])
-
-#     if "<|assistant|>" in response:
-#         response = response.split("<|assistant|>")[-1].strip()
-
-#     return jsonify({"message": response})
-
-
-
-
-def to_serializable(val):
-    """Convert common non-JSON types to JSON-serializable Python primitives."""
-    # None
-    if val is None:
-        return None
-
-    # Numpy scalars
-    if isinstance(val, (np.generic,)):
-        return val.item()
-
-    # Numpy arrays -> lists
-    if isinstance(val, (np.ndarray,)):
-        return [to_serializable(x) for x in val.tolist()]
-
-    # Built-in collections
-    if isinstance(val, (list, tuple, set)):
-        return [to_serializable(x) for x in val]
-
-    if isinstance(val, dict):
-        return {str(k): to_serializable(v) for k, v in val.items()}
-
-    # Decimal -> float or str (Decimal may be large-precision)
-    if isinstance(val, Decimal):
-        return float(val)
-
-    # datetimes
-    if isinstance(val, (datetime, date)):
-        return val.isoformat()
-
-    # floats with Inf/NaN (JSON doesn't support Infinity/NaN)
-    if isinstance(val, float):
-        if math.isinf(val) or math.isnan(val):
-            # Choose how to map these — I use None, you can use "Infinity" string if you prefer
-            return None
-        return val
-
-    # ints, bools, str are fine
-    if isinstance(val, (int, bool, str)):
-        return val
-
-    # custom objects: attempt to serialize __dict__
-    if hasattr(val, "__dict__"):
-        return to_serializable(vars(val))
-
-    # fallback: try repr (safe) OR string
-    try:
-        return str(val)
-    except Exception:
-        return None
-
-def serialize_recommendations(recs):
-    """Serialize recommendations or any nested structure to JSON-safe Python types."""
-    return to_serializable(recs)
-
-def debug_json(obj):
-    try:
-        return json.dumps(obj)
-    except TypeError as e:
-        # print problematic types (walk small sample)
-        def walk(x, path="root"):
-            if isinstance(x, dict):
-                for k,v in x.items():
-                    walk(v, f"{path}.{k}")
-            elif isinstance(x, (list, tuple, set)):
-                for i, v in enumerate(x):
-                    walk(v, f"{path}[{i}]")
-            else:
-                if not isinstance(x, (str, int, float, bool, type(None))):
-                    print("Non-serializable found at", path, "type:", type(x), "value:", repr(x))
-        walk(obj)
-        raise
-
-
 @app.route('/api/submit_initial_inputs', methods=['POST'])
 def submit_initial_inputs():
 
     data = request.get_json()
-
-    print("Received form data:", data)
 
     district = data.get("district", "").strip().title()
     crop = data.get("crop", "").strip().title()
@@ -247,8 +112,6 @@ def submit_initial_inputs():
     monthly_expenses = float(data.get("monthlyExpenses", 0.0))
     tenure = int(data.get("tenure", 0))
     insurance_premium = float(data.get("insurancePremium", 0.0))
-
-    print(district, crop, year, area, loan_amount, interest_rate, month, off_farm_income, input_cost, monthly_expenses, tenure, insurance_premium)
 
     if month == "November":
         predicted_yield, predicted_price = preSeasonCalc(

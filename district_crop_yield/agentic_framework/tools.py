@@ -18,7 +18,6 @@ load_dotenv(env_path)
 
 OUTPUT_VDB_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "../rag/faiss"))
 
-
 embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
 
 vectorstore = FAISS.load_local(OUTPUT_VDB_PATH, embeddings, allow_dangerous_deserialization=True)
