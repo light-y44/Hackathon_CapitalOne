@@ -1,4 +1,6 @@
-from flask import Flask, render_template, request, jsonify, redirect, url_for
+from flask import Flask, render_template, request, jsonify
+from flask_cors import CORS
+
 import os
 from datetime import datetime
 from pydub import AudioSegment
@@ -22,123 +24,127 @@ from models.stt import load_asr_model
 from models.repayment import FarmInputs, FarmDebtManager
 
 app = Flask(__name__)
-UPLOAD_FOLDER = "uploads"
-os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-BASE_MODEL="TinyLlama/TinyLlama-1.1B-Chat-v1.0"
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 
-current_dir = os.path.dirname(__file__) 
-GEN_FINETUNED_DIR = os.path.join(current_dir, "../FT_model/adapter")
-FINANCE_FINETUNED_DIR = os.path.join(current_dir,"../FT_model/finance_adapter")
 
-llama = FineTunedLlama(BASE_MODEL, GEN_FINETUNED_DIR)
-finance_llama = FineTunedLlama(BASE_MODEL, FINANCE_FINETUNED_DIR)
+# UPLOAD_FOLDER = "uploads"
+# os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-asr_pipe = load_asr_model()
+# BASE_MODEL="TinyLlama/TinyLlama-1.1B-Chat-v1.0"
+
+# current_dir = os.path.dirname(__file__) 
+# GEN_FINETUNED_DIR = os.path.join(current_dir, "../FT_model/adapter")
+# FINANCE_FINETUNED_DIR = os.path.join(current_dir,"../FT_model/finance_adapter")
+
+# llama = FineTunedLlama(BASE_MODEL, GEN_FINETUNED_DIR)
+# finance_llama = FineTunedLlama(BASE_MODEL, FINANCE_FINETUNED_DIR)
+
+# asr_pipe = load_asr_model()
 
 
 # Temporary in-memory store for repayment notifications
-repayment_notifications = []
+# repayment_notifications = []
 
-huggingFaceAuth()
+# huggingFaceAuth()
 
-gl_rec = None
-gl_baseline = None
+# gl_rec = None
+# gl_baseline = None
 
-@app.route('/')
-def index():
-    return render_template("index.html", notifications=repayment_notifications)
+# @app.route('/api/')
+# def index():
+#     return render_template("index.html", notifications=repayment_notifications)
 
-@app.route('/notification_page')
-def notification_page():
-    baseline_fields = [
-        "gross_revenue",
-        "net_revenue_after_marketing",
-        "net_farm_income",
-        "seasonal_offfarm_income",
-        "total_available",
-        "seasonal_household_need",
-        "emi_monthly_baseline",
-        "seasonal_loan_outflow_baseline",
-        "surplus_before_loan",
-        "surplus_after_loan",
-        "debt_sustainability_index"
-    ]
-    baseline = {field: request.args.get(field) for field in baseline_fields}
+# @app.route('/api/notification_page')
+# def notification_page():
+#     baseline_fields = [
+#         "gross_revenue",
+#         "net_revenue_after_marketing",
+#         "net_farm_income",
+#         "seasonal_offfarm_income",
+#         "total_available",
+#         "seasonal_household_need",
+#         "emi_monthly_baseline",
+#         "seasonal_loan_outflow_baseline",
+#         "surplus_before_loan",
+#         "surplus_after_loan",
+#         "debt_sustainability_index"
+#     ]
+#     baseline = {field: request.args.get(field) for field in baseline_fields}
 
-    recs_raw = request.args.get("recommendations", "[]")
-    try:
-        recommendations = json.loads(recs_raw)
-        print("Decoded recommendations:", recommendations)
-    except Exception:
-        print("I am here")
-        recommendations = []
+#     recs_raw = request.args.get("recommendations", "[]")
+#     try:
+#         recommendations = json.loads(recs_raw)
+#         print("Decoded recommendations:", recommendations)
+#     except Exception:
+#         print("I am here")
+#         recommendations = []
 
-    return render_template("repayment.html", baseline=baseline, recommendations=recommendations)
+#     return render_template("repayment.html", baseline=baseline, recommendations=recommendations)
 
-@app.route('/get_insurance')
-def get_insurance():
-    pass 
+# @app.route('/api/get_insurance')
+# def get_insurance():
+#     pass 
 
 
-@app.route('/upload_audio', methods=['POST'])
-def upload_audio():
-    if 'audio' not in request.files:
-        return jsonify({"error": "No file uploaded"}), 400
+# @app.route('/api/upload_audio', methods=['POST'])
+# def upload_audio():
+#     if 'audio' not in request.files:
+#         return jsonify({"error": "No file uploaded"}), 400
     
-    audio_file = request.files['audio']
-    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-    webm_path = os.path.join(UPLOAD_FOLDER, f"recording_{timestamp}.webm")
-    audio_file.save(webm_path)
+#     audio_file = request.files['audio']
+#     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+#     webm_path = os.path.join(UPLOAD_FOLDER, f"recording_{timestamp}.webm")
+#     audio_file.save(webm_path)
 
-    # Convert to WAV
-    wav_path = webm_path.replace(".webm", ".wav")
-    sound = AudioSegment.from_file(webm_path, format="webm")
-    sound.export(wav_path, format="wav")
+#     # Convert to WAV
+#     wav_path = webm_path.replace(".webm", ".wav")
+#     sound = AudioSegment.from_file(webm_path, format="webm")
+#     sound.export(wav_path, format="wav")
 
-    # Transcribe
-    hindi_text = asr_pipe(wav_path)["text"]
-    # print("Transcribed Hindi text:", hindi_text)
-    english_text = translate_hi_to_en(hindi_text)
+#     # Transcribe
+#     hindi_text = asr_pipe(wav_path)["text"]
+#     # print("Transcribed Hindi text:", hindi_text)
+#     english_text = translate_hi_to_en(hindi_text)
 
-    return jsonify({
-        "message": "Audio transcribed successfully",
-        "hindi_text": hindi_text,
-        "english_text": english_text
-    })
+#     return jsonify({
+#         "message": "Audio transcribed successfully",
+#         "hindi_text": hindi_text,
+#         "english_text": english_text
+#     })
 
 
-@app.route('/submit_query', methods=['POST'])
-def submit_query():
-    query = request.form.get("query")
+# @app.route('/api/submit_query', methods=['POST'])
+# def submit_query():
+#     query = request.form.get("query")
 
-    print("Request form data:", request.form)
+#     print("Request form data:", request.form)
 
-    if not query:
-        return jsonify({"message": "No query provided"}), 400
+#     if not query:
+#         return jsonify({"message": "No query provided"}), 400
     
-    response = llama.ask(query, "agriculture")
+#     response = llama.ask(query, "agriculture")
 
-    if "<|assistant|>" in response:
-        response = response.split("<|assistant|>")[-1].strip()
+#     if "<|assistant|>" in response:
+#         response = response.split("<|assistant|>")[-1].strip()
 
-    # Translate response to Hindi
-    response = translate_en_to_hi(response)
+#     # Translate response to Hindi
+#     response = translate_en_to_hi(response)
     
-    return jsonify({"message": response})
+#     return jsonify({"message": response})
 
-@app.route('/submit_finance_query', methods=['POST'])
-def submit_finance_query():
-    query = request.form.get("query")
-    if not query:
-        return jsonify({"message": "No query provided"}), 400
+# @app.route('/api/submit_finance_query', methods=['POST'])
+# def submit_finance_query():
+#     query = request.form.get("query")
+#     if not query:
+#         return jsonify({"message": "No query provided"}), 400
     
-    response = finance_llama.ask(query, "finance", inputs = [gl_baseline, gl_rec])
+#     response = finance_llama.ask(query, "finance", inputs = [gl_baseline, gl_rec])
 
-    if "<|assistant|>" in response:
-        response = response.split("<|assistant|>")[-1].strip()
+#     if "<|assistant|>" in response:
+#         response = response.split("<|assistant|>")[-1].strip()
 
-    return jsonify({"message": response})
+#     return jsonify({"message": response})
 
 
 
@@ -216,21 +222,28 @@ def debug_json(obj):
         raise
 
 
-@app.route('/submit_initial_inputs', methods=['POST'])
+@app.route('/api/submit_initial_inputs', methods=['POST'])
 def submit_initial_inputs():
-    # Get form inputs
-    district = request.form.get("district").strip().title()
-    crop = request.form.get("crop").strip().title()
-    year = int(request.form.get("year"))
-    area = float(request.form.get("area"))
-    loan_amount = float(request.form.get("loan"))
-    interest_rate = float(request.form.get("interest"))
-    month = request.form.get("month")
-    off_farm_income = request.form.get("non-farm-inc", 0.0, type=float)
-    input_cost = request.form.get("input-cost", 0.0, type=float)
-    monthly_expenses = request.form.get("monthly-exp", 0.0, type=float)
-    tenure = request.form.get("tenure", 0, type=int)
-    insurance_premium = request.form.get("ins-prem", 0.0, type=float)
+
+    # Get form inputs -> In form of json 
+    data = request.get_json()
+
+    print("Received form data:", data)
+
+    district = data.get("district", "").strip().title()
+    crop = data.get("crop", "").strip().title()
+    year = int(data.get("year"))
+    area = float(data.get("farmArea")) 
+    loan_amount = float(data.get("loanAmount"))
+    interest_rate = float(data.get("interestRate"))
+    month = data.get("month")
+    off_farm_income = float(data.get("nonFarmIncome", 0.0))
+    input_cost = float(data.get("inputCost", 0.0))
+    monthly_expenses = float(data.get("monthlyExpenses", 0.0))
+    tenure = int(data.get("tenure", 0))
+    insurance_premium = float(data.get("insurancePremium", 0.0))
+
+    print(district, crop, year, area, loan_amount, interest_rate, month, off_farm_income, input_cost, monthly_expenses, tenure, insurance_premium)
 
     if month == "November":
         predicted_yield, predicted_price = preSeasonCalc(
@@ -246,6 +259,7 @@ def submit_initial_inputs():
             interest_rate=interest_rate,
             principal=loan_amount
         )
+        predicted_price = np.mean(predicted_price)
     else:
         # print("Hello!")
         weather_df = calculate_weather_data(year, district)

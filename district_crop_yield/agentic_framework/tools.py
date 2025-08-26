@@ -33,7 +33,7 @@ google_search_tool = Tool(
 )
 
 def get_doc_using_rag(query):
-  ans = "\n".join([doc.page_content for doc in vectorstore.similarity_search(query, k=3)])
+  ans = "\n".join([doc.page_content for doc in vectorstore.similarity_search(query, k=1)])
   return ans
 
 rag_tool = Tool(
@@ -52,7 +52,7 @@ crop_pred_tool = StructuredTool.from_function(
     description="Predict crop yields based on weather and indices data.",
 )
 
-price_pred_tool = StructuredTool.from_function(
+price_pred_tool = Tool(
     name="PricePrediction",
     func=calculatePricePredTool,
     description="Predict crop prices based on historical data."

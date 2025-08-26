@@ -29,6 +29,7 @@ accelerate
 
 # Web framework
 Flask
+flask-cors
 
 # Utilities
 deep-translator

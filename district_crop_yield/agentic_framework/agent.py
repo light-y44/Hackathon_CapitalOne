@@ -33,7 +33,7 @@ class Agent():
             "CropPrediction": crop_pred_tool,
             "PricePrediction": price_pred_tool
         }
-        self.memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
+        self.memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True, k=1)
         self.planner_chain = build_planner_chain(self.llm, prompts.planner_prompt)
         self.answer_chain = build_answer_chain(self.llm, prompts.answer_prompt)
 
