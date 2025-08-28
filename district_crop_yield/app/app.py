@@ -46,6 +46,12 @@ asr_pipe = load_asr_model()
 
 # huggingFaceAuth()
 
+
+# Globally maintain recommendations, baseline summary and farmer data
+g_recommendations = []
+g_baseline_summary = {}
+g_farmer_data = {}
+
 @app.route('/api/upload_audio', methods=['POST'])
 def upload_audio():
     if 'audio' not in request.files:
@@ -97,7 +103,7 @@ def submit_query():
 
 @app.route('/api/submit_initial_inputs', methods=['POST'])
 def submit_initial_inputs():
-
+    global g_recommendations, g_baseline_summary, g_farmer_data
     data = request.get_json()
 
     district = data.get("district", "").strip().title()
@@ -112,6 +118,7 @@ def submit_initial_inputs():
     monthly_expenses = float(data.get("monthlyExpenses", 0.0))
     tenure = int(data.get("tenure", 0))
     insurance_premium = float(data.get("insurancePremium", 0.0))
+
 
     if month == "November":
         predicted_yield, predicted_price = preSeasonCalc(
@@ -164,6 +171,15 @@ def submit_initial_inputs():
     baseline_serialized = serialize_recommendations(out["baseline"])
     scenarios_serialized = serialize_recommendations(out.get("scenarios"))
 
+    g_recommendations = recs_serialized
+    g_baseline_summary = baseline_serialized
+    g_farmer_data = {
+        "district": district,
+        "crop": crop,
+        "year": year,
+        "area": area
+    }
+
     return jsonify({
         "recommendations": recs_serialized,
         "baseline": baseline_serialized,
@@ -171,6 +187,13 @@ def submit_initial_inputs():
         "message": f"Predicted Yield {predicted_yield} for {crop} in {district} for year {year}"
     })
 
+@app.route('/api/get_financial_details', methods=['GET'])
+def get_financial_details():
+    return jsonify({
+        "recommendations": g_recommendations,
+        "baseline": g_baseline_summary,
+        "farmer_data": g_farmer_data
+    })
 
 if __name__ == "__main__":
     app.run(debug=True)

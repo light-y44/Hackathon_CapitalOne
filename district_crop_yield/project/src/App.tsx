@@ -99,7 +99,7 @@ function App() {
               <Wheat className="text-white" size={24} />
             </div>
             <div className="text-center">
-              <h1 className="text-2xl font-bold text-gray-900">Krishi Mitra</h1>
+              <h1 className="text-2xl font-bold text-gray-900">Krishi Salah</h1>
               <p className="text-sm text-gray-600">Aapka Krishi Salahkaar!</p>
             </div>
           </div>
@@ -109,7 +109,7 @@ function App() {
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Left Column - Form and Summary */}
-          <div className="lg:col-span-2 space-y-6">
+          <div className="lg:col-span-1 flex flex-col justify-between space-y-6">
             <FarmerInputForm
               onSubmit={handleFormSubmit}
               isCollapsed={isFormCollapsed}
@@ -127,9 +127,13 @@ function App() {
           </div>
 
           {/* Right Column - AI Chat and Thinking Steps */}
-          <div className="space-y-6">
-            <ThinkingSteps steps={thinkingSteps} />
-            <AIChat onThinkingStepsUpdate={setThinkingSteps} />
+          <div className="lg:col-span-2 flex flex-col max-h-[calc(100vh-200px)]">
+            <div className='mb-6'>
+              <AIChat onThinkingStepsUpdate={setThinkingSteps} />
+            </div>
+            <div className='flex-1 overflow-y-auto'>
+              <ThinkingSteps steps={thinkingSteps} />
+            </div>
           </div>
         </div>
       </div>

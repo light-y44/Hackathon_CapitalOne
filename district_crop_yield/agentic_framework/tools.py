@@ -5,6 +5,7 @@ from langchain_community.embeddings import HuggingFaceEmbeddings
 from dotenv import load_dotenv
 import os
 import sys
+import requests 
 from langchain.tools import StructuredTool
 
 
@@ -57,11 +58,29 @@ price_pred_tool = Tool(
     description="Predict crop prices based on historical data."
 )
 
+import requests
+
+def getFinancials(_: str) -> str:
+    """
+    Calls the backend API to fetch financial recommendations.
+    Input is ignored (underscore) since the endpoint requires none.
+    """
+    url = "http://127.0.0.1:5000/api/get_financial_details"
+    try:
+        resp = requests.get(url)  # adjust port if needed
+        resp.raise_for_status()
+        data = resp.json()
+        return str(data)  # return as string for the agent
+    except Exception as e:
+        return f"Error fetching financial details: {e}"
+
+
+get_financial_tool = Tool(
+    name="GetFinancialAdvice",
+    func=getFinancials,
+    description="Get financial advice based on market trends and crop data."
+)
+
 if __name__ == "__main__":
-    input = {
-       "year": 2023,
-       "district": "Ashoknagar",
-       "crop": "Wheat",
-       "area": 100.0
-    }
-    print(crop_pred_tool.run(input))
+    input = "What financial advice can you give to a farmer in Punjab growing wheat with 5 hectares of land?"
+    print(get_financial_tool.run(input))

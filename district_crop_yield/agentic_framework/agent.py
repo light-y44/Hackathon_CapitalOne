@@ -9,7 +9,7 @@ import os
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__),  '..')))
 
-from agentic_framework.tools import google_search_tool, rag_tool, crop_pred_tool, price_pred_tool
+from agentic_framework.tools import google_search_tool, rag_tool, crop_pred_tool, price_pred_tool, get_financial_tool
 from agentic_framework.prompts import Prompts
 
 env_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../.env"))
@@ -34,7 +34,8 @@ class Agent():
             "GoogleSearch": google_search_tool,
             "RAG": rag_tool,
             "CropPrediction": crop_pred_tool,
-            "PricePrediction": price_pred_tool
+            "PricePrediction": price_pred_tool,
+            "GetFinancialAdvice": get_financial_tool
         }
         self.memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True, k=1)
         self.planner_chain = build_planner_chain(self.llm, prompts.planner_prompt)
@@ -50,7 +51,23 @@ class Agent():
     def run(self, query):
         """Full loop: plan → tool execution → stop → final answer."""
         tool_results = {}
+        num_loops = 0
         while True:
+            num_loops += 1
+
+            # If planner loops too much, fallback
+            if num_loops > 5:
+                print("Max iterations reached. Falling back to Answer Agent.")
+                final_answer = self.answer_chain.invoke({
+                    "query": query,
+                    "chat_history": self.memory.load_memory_variables({})["chat_history"],
+                    "tool_results": tool_results,
+                    "final_thought": "Planner exceeded max iterations. Falling back to Answer Agent."
+                })
+                self.memory.chat_memory.add_user_message(query)
+                self.memory.chat_memory.add_ai_message(final_answer)
+                return final_answer
+        
             # Step 1: Planner
             plan_output = self.plan_once(query, tool_results)
 
@@ -67,9 +84,6 @@ class Agent():
                 tool_name = step["tool"]
                 action = step["action"]
 
-                # print(f"tool name -> {tool_name}")
-                # print(f"action -> {action}")
-                # print(f"Step -> {step}")
                 if tool_name in self.tools:
                     try:
                         result = self.tools[tool_name](action)
@@ -88,12 +102,6 @@ class Agent():
             # Step 3: Execute tools
             if plan_json.get("decision") == "stop":
                 # Final step → answer
-                # print(f"""
-                #     "query": {query},
-                #     "chat_history": {self.memory.load_memory_variables({})["chat_history"]},
-                #     "tool_results": {tool_results},
-                #     "plan": {plan_json}
-                # """)
                 final_answer = self.answer_chain.invoke({
                     "query": query,
                     "chat_history": self.memory.load_memory_variables({})["chat_history"],
