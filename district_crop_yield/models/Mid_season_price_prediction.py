@@ -1,8 +1,6 @@
 import pandas as pd
 import numpy as np
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.metrics import mean_squared_error, mean_absolute_error
-
 
 # ---------------------------
 # 1. Data loading & cleaning
@@ -73,10 +71,6 @@ def load_and_preprocess_price_model(X_test_df):
 
 def evaluate_model(model, X_test):
     y_pred = model.predict(X_test)
-
-    # rmse = np.sqrt(mean_squared_error(y_test, y_pred))
-    # mae = mean_absolute_error(y_test, y_pred)
-    # mape = np.mean(np.abs((y_test - y_pred)/y_test)) * 100
     return np.mean(y_pred)
 
 

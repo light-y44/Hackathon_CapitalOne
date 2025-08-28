@@ -12,7 +12,7 @@ This cleaned up version avoids NumPy arrays in outputs and ensures all returned 
 native Python types (float/int/bool) to be JSON-serializable.
 """
 
-from dataclasses import dataclass, asdict, field
+from dataclasses import dataclass, field
 from typing import Dict, List, Tuple
 import math
 import json
@@ -103,8 +103,8 @@ class FarmDebtManager:
         debt_sustainability_index = round((numerator / denom) if denom != 0 and denom != math.inf else math.inf, 3)
 
         return {
-            # "Predicted Price": round(float(self.i.price_per_q), 2),
-            # "Predicted Yield": round(float(self.i.yield_q_per_ha), 2),
+            "predicted_price": round(float(self.i.price_per_q), 2),
+            "predicted_yield": round(float(self.i.yield_q_per_ha), 2),
             "gross_revenue": round(float(gross), 2),
             "net_revenue_after_marketing": round(float(net_rev), 2),
             "net_farm_income": round(float(net_farm_income), 2),
